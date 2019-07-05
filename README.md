@@ -1,15 +1,13 @@
 # 2019 S2 R Workshop
 
-## Material
+### Workshop1 - Introduction to R and RStudio
 
-### Workshop1
+### Workshop2 - Introduction to R Markdown
 
-### Workshop2
+### Workshop3 - Data Visualization 
 
-### Workshop3
+### Workshop4 - Data Type and Import Data
 
-### Workshop4
+### Workshop5 - Data Wrangling 1
 
-### Workshop5
-
-### Workshop6
+### Workshop6 - Data Wrangling 2
