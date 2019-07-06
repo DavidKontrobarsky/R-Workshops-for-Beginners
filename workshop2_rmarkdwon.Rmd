@@ -20,7 +20,7 @@ tutorial_html_dependency()
 ```
 
 
-# Introduction to R Markdown
+# Reproducible Reporting
 
 ## What is R Markdown?
 
@@ -421,9 +421,6 @@ knitr::opts_chunk$set(
 * [Reproduible Reporting](https://resources.rstudio.com/the-essentials-of-data-science/reproducible-reporting-58-03)
 
 * [Interctive Reporting](https://resources.rstudio.com/the-essentials-of-data-science/interactive-reporting-60-01)
-
-
-
 
 
 
