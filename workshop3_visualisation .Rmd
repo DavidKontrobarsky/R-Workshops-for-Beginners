@@ -13,12 +13,38 @@ knitr::opts_chunk$set(
   warning = FALSE)
 ```
 
-%>% pipe 
+
 ```{r}
 library(tidyverse)
 library(learnr)
 library(ggplot2)
+library(readr)
 ```
+
+## A simple example of manipulating visualisation 
+It is an interesting dataset with different kinds of chocolates in rows and many ingredients in columns.
+* Different chocolates in rows can be defined as observations and ingredients are our variables.
+* Our variables include fiber, fat, calories countries and etc...
+* Use glimpse function to have a look at our data type relative to different variables  
+```{r}
+chocolates <- read_csv("data/chocolates.csv")
+head(chocolates)
+glimpse(chocolates) 
+```
+
+### Transform `Type` into factor  
+* Use the `mutate` function in the `tidyverse` package 
+* Pipe`%>%`Operator -- This operator will forward a value, or the result of an expression, into the next function call/expression.
+* 
+```{r}
+chocolates %>% 
+  mutate(Type = factor(Type)) %>%
+  ggplot(aes(x = Sugars_g, y = Calories, color = Type)) +
+  geom_point() + 
+  ggtitle("The relationship between calories and sugars relative to chocolate types") +
+  xlab("Sugars")
+```
+
 
 ## Scatter plot
 * Using function geom_point() in the ggplot2 package 
@@ -71,14 +97,16 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(cyl), color = factor(c
 ## Facetting 
 ### Using facet_wrap()
 * Using mpg as our data frame 
+* Type of the data: character, integer and double
 ```{r}
+glimpse(mpg)
 ggplot(data = mtcars, aes(x = wt, y = mpg)) + 
   geom_point() + 
   facet_wrap(~factor(cyl))
 ```
 
 ### Using facet_grid()
-* Adding facets categorized by multiple varibles 
+* Adding facets categorized by multiple varibles
 ```{r}
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy)) + 
