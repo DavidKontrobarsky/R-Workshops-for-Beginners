@@ -296,6 +296,8 @@ When you install package form Bioconductor, you might be asking the follow quest
 ![](images/Github_logo.png){width="10%" height="10%"}
 
 ```{r eval=FALSE, echo=TRUE}
+if(!"devtools" %in% installed.packages())
+  install.packages("devtools")
 devtools::install_github("hadley/emo")
 ```
 

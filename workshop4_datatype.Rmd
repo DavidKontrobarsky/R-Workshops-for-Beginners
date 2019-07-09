@@ -19,6 +19,40 @@ knitr::opts_chunk$set(echo = FALSE,
 tutorial_html_dependency()
 ```
 
-# Data Types and Input
+# Data Structures
 
-## 
+## Data types
+
+
+
+
+
+## Vector
+
+
+### Atomic vectors
+
+There are four common types of atomic vectors:
+
+* double
+
+* integer
+
+* logical 
+
+* character
+
+
+
+
+
+## Data.frame vs tibble
+
+####
+
+
+
+
+
+
+
