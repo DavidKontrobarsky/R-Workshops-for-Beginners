@@ -68,7 +68,7 @@ These are the locations of respondents to an R Consortium survey conducted in 20
 
 **8% of R users are between 18-24 BUT 45% of R users are between 25-34!**
 
-Sample of Australian organisations/companies that sent employees to [useR! 2018](https://user2018.r-project.org): ABS, CSIRO, ATO, Microsoft, Energy Qld, Auto and General, Bank of Qld, BHP, AEMO, Google, Flight Centre, Youi, Amadeus Investment Partners,  Yahoo, Sydney Trains, Tennis Australia, Rio Tinto, Reserve Bank of Australia, PwC, Oracle, Netflix, NOAA Fisheries, NAB, Menulog, Macquarie Bank, Honeywell, Geoscience Australia, DFAT, DPI, CBA, Bank of Italy, Australian Red Cross Blood Service, Amazon, Bunnings.
+Sample of Australian organisations/companies that sent employees to [useR! 2018](https://user2018.r-project.org): 
 
 
 ## Introduction to RStudio

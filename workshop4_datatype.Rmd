@@ -65,7 +65,7 @@ There are four common types of atomic vectors:
 
 ## [**readr**](https://readr.tidyverse.org/index.html) package ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="10%" height="10%"}
 
-
+**readr** provides a fast and friendly way to read and write **rectangular data** in **R**.
 
 
 ### Load package
@@ -74,20 +74,46 @@ There are four common types of atomic vectors:
 library(readr)
 ```
 
-* [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) : read comma separated files end with `.csv`.
 
-* [`read_tsv()`](https://readr.tidyverse.org/reference/read_delim.html) : read tab separated files.
+### Read rectangular data
 
-* [`read_delim()`](https://readr.tidyverse.org/reference/read_delim.html) : read general delimited files.
+#### File end with `.csv`
 
-* [`read_fwf()`](https://readr.tidyverse.org/reference/read_fwf.html) : read fixed width files.
+* [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) : read comma separated files into a tibble.
 
-* [`read_table()`](https://readr.tidyverse.org/reference/read_table.html) : read tabular files where columns are separated by white-space.
 
-* [`read_log()`](https://readr.tidyverse.org/reference/read_log.html) : read web log files.
+#### File end with `.tsv`
+
+* [`read_tsv()`](https://readr.tidyverse.org/reference/read_delim.html) : read tab separated files into a tibble.
+
+
+#### File end with `.txt`
+
+* [`read_fwf()`](https://readr.tidyverse.org/reference/read_fwf.html) : read fixed width files into a tibble.
+
+* [`read_table()`](https://readr.tidyverse.org/reference/read_table.html) : read tabular files where columns are separated by white-space into a tibble.
+
+
+#### File end with `.log`
+
+* [`read_log()`](https://readr.tidyverse.org/reference/read_log.html) : read web log files into a tibble.
+
+
+### Write rectangular files
+
+* [`write_csv()`](https://readr.tidyverse.org/reference/format_delim.html) : write `.csv` file.
+
+* [`write_tsv()`](https://readr.tidyverse.org/reference/format_delim.html) : write `.tsv` file.
+
+
+
+
 
 
 ## [**readxl**](https://readxl.tidyverse.org/index.html) package ![](https://readxl.tidyverse.org/logo.png){width="10%" height="10%"}
+
+The **readxl** package makes it easy to get data out of **Excel** and into **R**.
+
 
 ### Installation
 
@@ -107,9 +133,9 @@ library(readxl)
 
 #### Read Excel file
 
-* [`read_xls()`](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls`.
+* [`read_xls()`](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls` into a tibble.
 
-* [`read_xlsx()`](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx`.
+* [`read_xlsx()`](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx` into a tibble.
 
 * [`read_excel()`](https://readxl.tidyverse.org/reference/read_excel.html) : both `xls` file and `xlsx` file.
 
@@ -126,6 +152,7 @@ library(readxl)
 
 ## [**haven**]((https://haven.tidyverse.org/index.html)) package ![](https://haven.tidyverse.org/logo.png){width="10%" height="10%"}
 
+**Haven** enables **R** to read and write data various data formats in **SAS**, **SPSS** and **Stata**.
 
 
 ### Installation
@@ -146,16 +173,14 @@ library(haven)
 
 #### Read SAS file
 
-* [`read_sas()`](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat`.
+* [`read_sas()`](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat` into a tibble.
 
-* [`read_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` in version 5 to 8.
+* [`read_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` (version 5 to 8) into a tibble.
 
 
 #### Write SAS file
 
-* [`write_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file in version 5 to 8.
-
-
+* [`write_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file (version 5 to 8).
 
 
 
@@ -163,9 +188,9 @@ library(haven)
 
 #### Read SPSS file
 
-* [`read_sav()`](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav`.
+* [`read_sav()`](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav` into a tibble.
 
-* [`read_por()`](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por`.
+* [`read_por()`](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por` into a tibble.
 
 * [`read_spss()`](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
 
@@ -182,11 +207,11 @@ library(haven)
 
 #### Read Stata file
 
-* [`read_dta()`](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` in version 8 to 15.
+* [`read_dta()`](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` (version 8 to 15) into a tibble.
 
 
 #### Write Stata file
 
-* [`write_dta()`](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file in version 8 to 15.
+* [`write_dta()`](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
 
 
