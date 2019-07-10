@@ -19,9 +19,13 @@ knitr::opts_chunk$set(echo = FALSE,
 tutorial_html_dependency()
 ```
 
-# Data Structures
+# Explore Data
 
 ## Data types
+
+```{r}
+library(readr)
+```
 
 
 
@@ -44,15 +48,145 @@ There are four common types of atomic vectors:
 
 
 
-
-
 ## Data.frame vs tibble
 
-####
+
+
+
+
+## Data Import
 
 
 
 
 
+
+
+
+## [**readr**](https://readr.tidyverse.org/index.html) package ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="10%" height="10%"}
+
+
+
+
+### Load package
+
+```
+library(readr)
+```
+
+* [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) : read comma separated files end with `.csv`.
+
+* [`read_tsv()`](https://readr.tidyverse.org/reference/read_delim.html) : read tab separated files.
+
+* [`read_delim()`](https://readr.tidyverse.org/reference/read_delim.html) : read general delimited files.
+
+* [`read_fwf()`](https://readr.tidyverse.org/reference/read_fwf.html) : read fixed width files.
+
+* [`read_table()`](https://readr.tidyverse.org/reference/read_table.html) : read tabular files where columns are separated by white-space.
+
+* [`read_log()`](https://readr.tidyverse.org/reference/read_log.html) : read web log files.
+
+
+## [**readxl**](https://readxl.tidyverse.org/index.html) package ![](https://readxl.tidyverse.org/logo.png){width="10%" height="10%"}
+
+### Installation
+
+```
+install.packages("readxl")
+```
+
+
+### Load package
+
+```
+library(readxl)
+```
+
+
+### ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Microsoft_Excel_2013_logo.svg/1043px-Microsoft_Excel_2013_logo.svg.png){width="5%" height="5%"}
+
+#### Read Excel file
+
+* [`read_xls()`](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls`.
+
+* [`read_xlsx()`](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx`.
+
+* [`read_excel()`](https://readxl.tidyverse.org/reference/read_excel.html) : both `xls` file and `xlsx` file.
+
+**`read_excel()` will automatically choosing the function for you, use `read_xls()` and `read_xlsx()` directly if you know the path of your excel file.**
+
+
+
+
+
+
+
+
+
+
+## [**haven**]((https://haven.tidyverse.org/index.html)) package ![](https://haven.tidyverse.org/logo.png){width="10%" height="10%"}
+
+
+
+### Installation
+
+```
+install.packages("haven")
+```
+
+
+### Load package
+
+```
+library(haven)
+```
+
+
+### ![](https://upload.wikimedia.org/wikipedia/commons/9/97/স্যাস_লোগো.png){width="10%" height="10%"}
+
+#### Read SAS file
+
+* [`read_sas()`](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat`.
+
+* [`read_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` in version 5 to 8.
+
+
+#### Write SAS file
+
+* [`write_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file in version 5 to 8.
+
+
+
+
+
+### ![](https://cdn.freebiesupply.com/logos/large/2x/spss-1-logo-png-transparent.png){width="10%" height="10%"}
+
+#### Read SPSS file
+
+* [`read_sav()`](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav`.
+
+* [`read_por()`](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por`.
+
+* [`read_spss()`](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
+
+
+#### Write SPSS file
+
+* [`write_sav()`](https://haven.tidyverse.org/reference/read_spss.html) : create `.zsav` file.
+
+
+
+
+
+### ![](http://www.freelogovectors.net/wp-content/uploads/2019/07/stata-logo.jpg){width="10%" height="10%"}
+
+#### Read Stata file
+
+* [`read_dta()`](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` in version 8 to 15.
+
+
+#### Write Stata file
+
+* [`write_dta()`](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file in version 8 to 15.
 
 
