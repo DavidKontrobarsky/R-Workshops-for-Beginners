@@ -10,12 +10,12 @@
 
 * Workshop5 - Data Wrangling 1 (6 September)
 
-* Workshop6 - Data Wrangling 2
+* Workshop6 - Data Wrangling 2 (13 September)
 
 
 ## Room Booking
 
-* Date: Every Friday from Week 2 to Week 7 (9 Aug - 6 Sep)
+* Date: Every Friday from Week 2 to Week 7 (9 Aug - 13 Sep)
 
 * Time: 2 pm to 3 pm
 
