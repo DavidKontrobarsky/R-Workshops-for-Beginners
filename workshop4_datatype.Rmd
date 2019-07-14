@@ -19,22 +19,14 @@ knitr::opts_chunk$set(echo = FALSE,
 tutorial_html_dependency()
 ```
 
-# Explore Data
-
-## Data types
-
-```{r}
+```{r library}
 library(readr)
 ```
 
 
+# Explore Data
 
-
-
-## Vector
-
-
-### Atomic vectors
+## Data types
 
 There are four common types of atomic vectors:
 
@@ -48,16 +40,57 @@ There are four common types of atomic vectors:
 
 
 
-## Data.frame vs tibble
+## Vector vs List
+
+
+### Atomic Vectors
+
+There are four common types of atomic vectors:
+
+* double
+
+* integer
+
+* logical 
+
+* character
+
+
+
+## Data frame vs Tibble
 
 
 
 
 
-## Data Import
+## Data Import and Export
+
+In order to analyze the data with R, **first**, we need to **import the data into R**. Data might save as **difference format**.
+
+In this workshop we focus on the data save **in disk**.
+
+![](images/Data_comma.png){width="70%" height="70%"}
+
+The picture above is "chocolate" data save in comma separated format.
+
+
+### Workflow
+
+![](images/Workflow_1.png){width="70%" height="70%"}
 
 
 
+### Package
+
+Data Import and Export in any software is crucial and sometimes complicated. Thanks for the contributors in R community. The packages they create make our life much easier.
+
+In the following workshops, we will learn how to Import and Outport difference format of data using these 3 packages:
+
+* **readr** ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="8%" height="8%"}
+
+* **readxl** ![](https://readxl.tidyverse.org/logo.png){width="8%" height="8%"}
+
+* **haven** ![](https://haven.tidyverse.org/logo.png){width="8%" height="8%"}
 
 
 
@@ -66,6 +99,11 @@ There are four common types of atomic vectors:
 ## [**readr**](https://readr.tidyverse.org/index.html) package ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="10%" height="10%"}
 
 **readr** provides a fast and friendly way to read and write **rectangular data** in **R**.
+
+
+### What is rectangular data?
+
+Rectangular data refer to a two-dimensional data frame with rows indicating observations and columns indicating variables.
 
 
 ### Load package
@@ -79,24 +117,41 @@ library(readr)
 
 #### File end with `.csv`
 
-* [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) : read comma separated files into a tibble.
+* [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) : read **comma separated** files into a tibble.
+
+![](images/Csv_file.png){width="80%" height="80%"}
+
+[More detail about comma-separated file](https://en.wikipedia.org/wiki/Comma-separated_values)
 
 
 #### File end with `.tsv`
 
-* [`read_tsv()`](https://readr.tidyverse.org/reference/read_delim.html) : read tab separated files into a tibble.
+* [`read_tsv()`](https://readr.tidyverse.org/reference/read_delim.html) : read **tab separated** files into a tibble.
+
+![](images/Tab_file.png){width="80%" height="80%"}
+
+[More detail about Tab-separated file](https://en.wikipedia.org/wiki/Tab-separated_values)
 
 
 #### File end with `.txt`
 
-* [`read_fwf()`](https://readr.tidyverse.org/reference/read_fwf.html) : read fixed width files into a tibble.
+* [`read_fwf()`](https://readr.tidyverse.org/reference/read_fwf.html) : read **fixed width** files into a tibble.
 
-* [`read_table()`](https://readr.tidyverse.org/reference/read_table.html) : read tabular files where columns are separated by white-space into a tibble.
+![](images/Fixed_width.png){width="80%" height="80%"}
+
+[More detail about fixed-width file](https://www.oracle.com/webfolder/technetwork/data-quality/edqhelp/Content/introduction/getting_started/configuring_fixed_width_text_file_formats.htm)
+
+
+* [`read_table()`](https://readr.tidyverse.org/reference/read_table.html) : read **tabular** files where columns are separated by white-space into a tibble.
 
 
 #### File end with `.log`
 
-* [`read_log()`](https://readr.tidyverse.org/reference/read_log.html) : read web log files into a tibble.
+* [`read_log()`](https://readr.tidyverse.org/reference/read_log.html) : read **web log** files into a tibble.
+
+![](images/Log_file.png){width="80%" height="80%"}
+
+[More detail about web log file](https://www.loganalyzer.net/log-analysis-tutorial/what-is-log-file.html)
 
 
 ### Write rectangular files
@@ -213,5 +268,11 @@ library(haven)
 #### Write Stata file
 
 * [`write_dta()`](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
+
+
+
+
+
+
 
 
