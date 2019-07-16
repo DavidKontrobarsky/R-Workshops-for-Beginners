@@ -26,38 +26,144 @@ library(readr)
 
 # Explore Data
 
-## Data types
+## Vector
+
+In R, there are **two types** of vectors:
+
+1. **atomic vector**
+
+2. **list**
+
+*Vector is a different story in R*
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT19Qkj9CWzGXV9d3DP186TE_X1cvl8kzB9UKQ297_H82XNZBZv){width="30%" height="30%"}
+
+
+### Atomic Vector
+
+Atomic vector is a vector can **only** contain the **same type** of elements. Atomic vectors are normally create by `c()`.
+
+Atomic vectors are always flat, even if you nest the `c()`.
+
+```{r echo=TRUE}
+c(1, 2, 3)
+```
+
+is the as:
+
+```{r echo=TRUE}
+c(1, c(2, c(3)))
+```
+
+You can evaluate the specific element using `[` 
+
+```{r echo=TRUE}
+atomic <- c(3, 4, 5)
+atomic[1]
+```
+
 
 There are four common types of atomic vectors:
 
-* double
+* **logical**
 
-* integer
+* **double**
 
-* logical 
+* **integer**
 
-* character
+* **character**
 
-
-
-## Vector vs List
+You can ask R to determine the type of object using `type()`.
 
 
-### Atomic Vectors
+#### Logical
 
-There are four common types of atomic vectors:
+Logical vector only have three possible value: `TRUE`, `FALSE` and `NA`. We can also use shortcut `T` and `F` as `TRUE` and `FALSE` in R. `NA` is stand for "**Not Available**".
 
-* double
+For example:
 
-* integer
-
-* logical 
-
-* character
+```{r echo=TRUE}
+typeof(c(TRUE, FALSE, T, F, NA))
+```
 
 
+#### Numeric
 
-## Data frame vs Tibble
+**integer** and **double** vectors are **collectively** known as **numeric** vectors. Number in R default as double. when you see a number like `1` in R, which you might think of as integer. The type actually as double. 
+
+```{r echo=TRUE}
+typeof(1)
+```
+
+If you explicitly want an integer, you need to add `L` after the number:
+
+```{r echo=TRUE}
+typeof(1L)
+```
+
+Or using `:` to generate an integer sequence,
+
+```{r echo=TRUE}
+typeof(1:3)
+```
+
+Integer have one special value `NA`, double have four special value: `NA`, `NaN`, `-Inf` and `Inf`. `NaN` stand for "**Not a Number**" and `Inf` stand for "**Infinite**".
+
+```{r echo=TRUE}
+c(-1, 0, 1)/0 
+```
+
+
+#### Character
+
+In R, it a character surrounded by `"`. Each element in a character vector is a **string**, each string can contain any amount of data.
+
+```{r echo=TRUE}
+typeof(NA)
+typeof("NA")
+```
+
+
+
+### List
+
+List is a vector can contain **different type** of elements. we can construct lists using `list()`.
+
+```{r echo=TRUE}
+list(c(TRUE, FALSE), 1:3, c(3, 4, 5), "a")
+```
+
+A list can also contain another list,
+
+```{r echo=TRUE}
+x <- list(1, 2, 3, 4)
+```
+
+is not the same as:
+
+```{r echo=TRUE}
+y <- list(1, list(2, list(3, 4)))
+```
+
+
+
+
+## Data frame
+
+A data frame is a list of equal-length vectors
+
+
+
+
+
+
+
+### [Tibble](https://tibble.tidyverse.org)  ![](https://d33wubrfki0l68.cloudfront.net/f55c43407ae8944b985e2547fe868e5e2b3f9621/720bb/images/hex-tibble.png){width="10%" height="10%"}
+
+
+
+
+
 
 
 
@@ -82,9 +188,9 @@ The picture above is "chocolate" data save in comma separated format.
 
 ### Package
 
-Data Import and Export in any software is crucial and sometimes complicated. Thanks for the contributors in R community. The packages they create make our life much easier.
+**Data Import and Export** in any software is **crucial** and sometimes **complicated**. Thanks for the contributors in R community. The packages they create make our life much easier.
 
-In the following workshops, we will learn how to Import and Outport difference format of data using these 3 packages:
+In the following workshops, we will learn how to **Import** and **Export** difference format of **data** using these **3 packages**:
 
 * **readr** ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="8%" height="8%"}
 
@@ -117,7 +223,7 @@ library(readr)
 
 #### File end with `.csv`
 
-* [`read_csv()`](https://readr.tidyverse.org/reference/read_delim.html) : read **comma separated** files into a tibble.
+* [read_csv()](https://readr.tidyverse.org/reference/read_delim.html) : read **comma separated** files into a tibble.
 
 ![](images/Csv_file.png){width="80%" height="80%"}
 
@@ -126,7 +232,7 @@ library(readr)
 
 #### File end with `.tsv`
 
-* [`read_tsv()`](https://readr.tidyverse.org/reference/read_delim.html) : read **tab separated** files into a tibble.
+* [read_tsv()](https://readr.tidyverse.org/reference/read_delim.html) : read **tab separated** files into a tibble.
 
 ![](images/Tab_file.png){width="80%" height="80%"}
 
@@ -135,19 +241,19 @@ library(readr)
 
 #### File end with `.txt`
 
-* [`read_fwf()`](https://readr.tidyverse.org/reference/read_fwf.html) : read **fixed width** files into a tibble.
+* [read_fwf()](https://readr.tidyverse.org/reference/read_fwf.html) : read **fixed width** files into a tibble.
 
 ![](images/Fixed_width.png){width="80%" height="80%"}
 
 [More detail about fixed-width file](https://www.oracle.com/webfolder/technetwork/data-quality/edqhelp/Content/introduction/getting_started/configuring_fixed_width_text_file_formats.htm)
 
 
-* [`read_table()`](https://readr.tidyverse.org/reference/read_table.html) : read **tabular** files where columns are separated by white-space into a tibble.
+* [read_table()](https://readr.tidyverse.org/reference/read_table.html) : read **tabular** files where columns are separated by white-space into a tibble.
 
 
 #### File end with `.log`
 
-* [`read_log()`](https://readr.tidyverse.org/reference/read_log.html) : read **web log** files into a tibble.
+* [read_log()](https://readr.tidyverse.org/reference/read_log.html) : read **web log** files into a tibble.
 
 ![](images/Log_file.png){width="80%" height="80%"}
 
@@ -156,9 +262,9 @@ library(readr)
 
 ### Write rectangular files
 
-* [`write_csv()`](https://readr.tidyverse.org/reference/format_delim.html) : write `.csv` file.
+* [write_csv()](https://readr.tidyverse.org/reference/format_delim.html) : write `.csv` file.
 
-* [`write_tsv()`](https://readr.tidyverse.org/reference/format_delim.html) : write `.tsv` file.
+* [write_tsv()](https://readr.tidyverse.org/reference/format_delim.html) : write `.tsv` file.
 
 
 
@@ -188,11 +294,11 @@ library(readxl)
 
 #### Read Excel file
 
-* [`read_xls()`](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls` into a tibble.
+* [read_xls()](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls` into a tibble.
 
-* [`read_xlsx()`](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx` into a tibble.
+* [read_xlsx()](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx` into a tibble.
 
-* [`read_excel()`](https://readxl.tidyverse.org/reference/read_excel.html) : both `xls` file and `xlsx` file.
+* [read_excel()](https://readxl.tidyverse.org/reference/read_excel.html) : both `xls` file and `xlsx` file.
 
 **`read_excel()` will automatically choosing the function for you, use `read_xls()` and `read_xlsx()` directly if you know the path of your excel file.**
 
@@ -228,14 +334,14 @@ library(haven)
 
 #### Read SAS file
 
-* [`read_sas()`](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat` into a tibble.
+* [read_sas()](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat` into a tibble.
 
-* [`read_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` (version 5 to 8) into a tibble.
+* [read_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` (version 5 to 8) into a tibble.
 
 
 #### Write SAS file
 
-* [`write_xpt()`](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file (version 5 to 8).
+* [write_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file (version 5 to 8).
 
 
 
@@ -243,16 +349,16 @@ library(haven)
 
 #### Read SPSS file
 
-* [`read_sav()`](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav` into a tibble.
+* [read_sav()](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav` into a tibble.
 
-* [`read_por()`](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por` into a tibble.
+* [read_por()](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por` into a tibble.
 
-* [`read_spss()`](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
+* [read_spss()](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
 
 
 #### Write SPSS file
 
-* [`write_sav()`](https://haven.tidyverse.org/reference/read_spss.html) : create `.zsav` file.
+* [write_sav()](https://haven.tidyverse.org/reference/read_spss.html) : create `.zsav` file.
 
 
 
@@ -262,12 +368,12 @@ library(haven)
 
 #### Read Stata file
 
-* [`read_dta()`](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` (version 8 to 15) into a tibble.
+* [read_dta()](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` (version 8 to 15) into a tibble.
 
 
 #### Write Stata file
 
-* [`write_dta()`](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
+* [write_dta()](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
 
 
 
