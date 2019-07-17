@@ -124,6 +124,9 @@ typeof("NA")
 ```
 
 
+### Factor
+
+In R, factors are used to store categorical data.
 
 ### List
 
@@ -146,13 +149,32 @@ y <- list(1, list(2, list(3, 4)))
 ```
 
 
+**Lists can used to build up more complicated data structures in R.**
+
+
+
+
 
 
 ## Data frame
 
-A data frame is a list of equal-length vectors
+Data frame is one of the **most common** data structure you’ll deal with in R. Different form matrix, data frame can store **different types** of data in **each column**.
+
+We can create a data frame using the function `data.frame()`, it have the option`stringsAsFactors`. Default as `TRUE`, if you don't want to convert the **character** as **factor**, set it as `FALSE`.
+
+Type these commands below into your **Console** pane:
+
+```
+id <- c(101, 102, 103)
+name <- c("Mary", "Jack", "Lily")
+age <- c(27L, 72L, 45L)
+female <- c(TRUE, FALSE, TRUE)
+data.frame(id, name, age, female, stringsAsFactors = FALSE)
+```
+![](images/Sample_dataframe.png){width="35%" height="35%"}
 
 
+A **Data frame** can consider as a **list** where every element is a **atomic vector** has the **same length**. The **numbers** of **elements** in a list can consider as the numbers of **columns**. The **length** of **one atomic vector** is the numbers of **rows**.
 
 
 
@@ -160,7 +182,70 @@ A data frame is a list of equal-length vectors
 
 ### [Tibble](https://tibble.tidyverse.org)  ![](https://d33wubrfki0l68.cloudfront.net/f55c43407ae8944b985e2547fe868e5e2b3f9621/720bb/images/hex-tibble.png){width="10%" height="10%"}
 
+`tibble` is a **data frame**, it tweak some older behaviours of `data.frame`, make it **easier** to analyze large datasets containing complex objects.
 
+
+#### Installation
+
+```
+install.packages("tibble")
+```
+
+
+#### Load library
+
+```{r echo=TRUE}
+library(tibble)
+```
+
+
+#### Usage
+
+You can convert an existing object to tibble using `as_tibble()`:
+
+```
+as_tibble(iris)
+```
+
+Or you can create a new tibble with column vector using `tibble()`, type these commands into your **Console** pane:
+
+```
+tibble(id, name, age, female)
+```
+
+![](images/Sample_tibble.png){width="35%" height="35%"}
+
+Ttibble will summary numbers of rows, columns and the type of each column for you.
+
+
+### `tibble` vs `data.frame`
+
+There are two main differences between `tiblle` and `data.frame`:
+
+* printing
+
+* subseting
+
+#### Printing
+
+**Tibble** only print the **first 10 rows**, and the **columns** of data that **fit on screen** (**Not all columns**)
+
+Type this command in your **Console** pane:
+
+```
+ggplot2::midwest
+```
+
+Then type this:
+
+```
+as.data.frame(ggplot2::midwest)
+```
+
+In the classic `data.frame`, it will print all the columns of your data. Which might looks messy if you working on a large data set.
+
+
+#### Subseting
 
 
 
