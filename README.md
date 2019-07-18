@@ -12,6 +12,8 @@
 
 * Workshop4 - Data Type and Import Data (30 August)
 
+   * Speaker : Earo Wang
+
 * Workshop5 - Data Wrangling 1 (6 September)
 
 * Workshop6 - Data Wrangling 2 (13 September)
