@@ -16,6 +16,8 @@
 
 * Workshop5 - Data Wrangling 1 (6 September)
 
+   * Speaker : Mitchell O'Hara-Wild
+
 * Workshop6 - Data Wrangling 2 (13 September)
 
 
