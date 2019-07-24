@@ -120,10 +120,10 @@ library(readr)
 
 In order to use these functions to input data into R, you need to specific the path of file to read.
 
-For example, you want to input a comma separated file `education.csv` into R:
+For example, you want to input a comma separated file `rock.csv` into R:
 
-```
-education <- read_csv("data/education.csv")
+```{r echo=TRUE}
+read_csv("data/rock.csv")
 ```
 
 ### Exercise ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJdqyYaKrHLuQIavnUazs3LvZEWSKfOMmdmSsIFYvBHUMRta9m){width="15%" height="15%"}
@@ -160,8 +160,6 @@ CO2 <- read_tsv("data/CO2.tsv")
 
 
 
-
-
 ### [**readxl**](https://readxl.tidyverse.org/index.html) package ![](https://readxl.tidyverse.org/logo.png){width="10%" height="10%"}
 
 The **readxl** package makes it easy to get data out of **Excel** and into **R**.
@@ -173,17 +171,15 @@ The **readxl** package makes it easy to get data out of **Excel** and into **R**
 install.packages("readxl")
 ```
 
-
 ### Load package
 
-```
+```{r echo=TRUE}
 library(readxl)
 ```
 
-
 ### ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Microsoft_Excel_2013_logo.svg/1043px-Microsoft_Excel_2013_logo.svg.png){width="5%" height="5%"}
 
-#### Read Excel file
+### Read Excel file
 
 * [read_xls()](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls` into a tibble.
 
@@ -193,11 +189,38 @@ library(readxl)
 
 **`read_excel()` will automatically choosing the function for you, use `read_xls()` and `read_xlsx()` directly if you know the path of your excel file.**
 
+### Usage
+
+#### In one excel file, there might exist several spreadsheets.
+
+![](images/Excel_datasets.png){width="80%" height="60%"}
+
+#### Suppose you want to input data from spreadsheet `chickwts` of `datasets.xls` into R:
+
+```{r echo=TRUE}
+read_xls("data/datasets.xls", sheet = "chickwts")
+```
+
+#### Sometimes, data might store in a specific range in Excel and without column name.
+
+![](images/Excel_geometry.png){width="80%" height="60%"}
+
+#### Suppose you want to input data within range `B3:D6` of `geometry.xlsx` into R:
+
+```{r echo=TRUE}
+read_xlsx("data/geometry.xlsx", range = "B3:D6", col_names = FALSE)
+```
+
 
 ### Exercise ![](https://i.gifer.com/7GpN.gif){width="10%" height="10%"}
 
+Now, please input the data from spreadsheet `other` of `deaths.xlsx` into R.
 
+![](images/Excel_deaths.png){width="80%" height="60%"}
 
+```{r eval=FALSE}
+read_xlsx("data/deaths.xlsx", sheet = "other", range = "A5:F15")
+```
 
 
 ## Uncommon data format
