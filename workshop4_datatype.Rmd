@@ -26,6 +26,261 @@ library(readr)
 
 # Explore Data
 
+## Data Import and Export
+
+In order to analyze the data with R, **first**, we need to **import the data into R**. Data might save as **difference format**.
+
+In this workshop we focus on the data save **in disk**.
+
+This is how data save in csv file looks like:
+
+![](images/Data_comma.png){width="80%" height="80%"}
+
+And this is what we want in R:
+
+```{r}
+read_csv("data/chocolates.csv")
+```
+
+### Workflow
+
+![](images/Workflow_1.png){width="70%" height="70%"}
+
+
+### Tools
+
+**Data Import and Export** in any software is **crucial** and sometimes **complicated**. In the following workshops, we will learn how to **Import** and **Export** difference format of **data** using these **3 packages**:
+
+* **readr** ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="8%" height="8%"}
+
+* **readxl** ![](https://readxl.tidyverse.org/logo.png){width="8%" height="8%"}
+
+* **haven** ![](https://haven.tidyverse.org/logo.png){width="8%" height="8%"}
+
+
+
+## Common data format
+
+### [**readr**](https://readr.tidyverse.org/index.html) package ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="10%" height="10%"}
+
+**readr** provides a fast and friendly way to read and write **rectangular data** in **R**.
+
+
+#### What is rectangular data?
+
+Rectangular data refer to a two-dimensional data frame with rows indicating observations and columns indicating variables.
+
+
+### Installation
+
+```
+install.packages("readr")
+```
+
+### Load package
+
+```
+library(readr)
+```
+
+### File end with `.csv`
+
+* [read_csv()](https://readr.tidyverse.org/reference/read_delim.html) : reads **comma separated** files into a tibble.
+
+![](images/Data_comma.png){width="80%" height="80%"}
+
+[More detail about comma-separated file](https://en.wikipedia.org/wiki/Comma-separated_values)
+
+* [read_csv2()](https://readr.tidyverse.org/reference/read_delim.html) : reads **semicolon separated** files into a tibble, common in countries where `,` is used as the **decimal place**.
+
+![](images/Csv2_file.png){width="80%" height="80%"}
+
+
+### File end with `.tsv`
+
+* [read_tsv()](https://readr.tidyverse.org/reference/read_delim.html) : reads **tab separated** files into a tibble.
+
+![](images/Tab_file.png){width="80%" height="80%"}
+
+[More detail about Tab-separated file](https://en.wikipedia.org/wiki/Tab-separated_values)
+
+
+### File end with `.txt`
+
+* [read_fwf()](https://readr.tidyverse.org/reference/read_fwf.html) : reads **fixed width** files into a tibble.
+
+![](images/Fixed_width.png){width="80%" height="80%"}
+
+[More detail about fixed-width file](https://www.oracle.com/webfolder/technetwork/data-quality/edqhelp/Content/introduction/getting_started/configuring_fixed_width_text_file_formats.htm)
+
+
+* [read_table()](https://readr.tidyverse.org/reference/read_table.html) : reads a common **variation** of **fixed width files** where columns are **separated by white space**.
+
+### Usage
+
+In order to use these functions to input data into R, you need to specific the path of file to read.
+
+For example, you want to input a comma separated file `education.csv` into R:
+
+```
+education <- read_csv("data/education.csv")
+```
+
+### Exercise ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJdqyYaKrHLuQIavnUazs3LvZEWSKfOMmdmSsIFYvBHUMRta9m){width="15%" height="15%"}
+
+Import the following files (saved in your `data` subdirectory) into R using functions in `readr` package:
+
+* `chocolates.csv`
+
+* `iris.csv`
+
+* `CO2.tsv`
+
+(Hint: same file extension doesn't means the data will save in the same format.)
+
+```{r eval=FALSE}
+# chocolates.csv save in comma separated format
+chocolates <- read_csv("data/chocolates.csv")
+
+# iris.csv save in semicolon separated format
+iris <- read_csv2("data/iris.csv")
+
+# CO2.tsv save in tab separated format
+CO2 <- read_tsv("data/CO2.tsv")
+```
+
+
+### Write rectangular files
+
+* [write_csv()](https://readr.tidyverse.org/reference/format_delim.html) : write `.csv` file in comma separated format.
+
+* [write_csv2()](https://readr.tidyverse.org/reference/format_delim.html) : write `.csv` file in semicolon separated format.
+
+* [write_tsv()](https://readr.tidyverse.org/reference/format_delim.html) : write `.tsv` file.
+
+
+
+
+
+### [**readxl**](https://readxl.tidyverse.org/index.html) package ![](https://readxl.tidyverse.org/logo.png){width="10%" height="10%"}
+
+The **readxl** package makes it easy to get data out of **Excel** and into **R**.
+
+
+### Installation
+
+```
+install.packages("readxl")
+```
+
+
+### Load package
+
+```
+library(readxl)
+```
+
+
+### ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Microsoft_Excel_2013_logo.svg/1043px-Microsoft_Excel_2013_logo.svg.png){width="5%" height="5%"}
+
+#### Read Excel file
+
+* [read_xls()](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls` into a tibble.
+
+* [read_xlsx()](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx` into a tibble.
+
+* [read_excel()](https://readxl.tidyverse.org/reference/read_excel.html) : both `xls` file and `xlsx` file.
+
+**`read_excel()` will automatically choosing the function for you, use `read_xls()` and `read_xlsx()` directly if you know the path of your excel file.**
+
+
+### Exercise ![](https://i.gifer.com/7GpN.gif){width="10%" height="10%"}
+
+
+
+
+
+## Uncommon data format
+
+### [**readr**](https://readr.tidyverse.org/index.html) package ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="10%" height="10%"}
+
+#### File end with `.log`
+
+* [read_log()](https://readr.tidyverse.org/reference/read_log.html) : read **web log** files into a tibble.
+
+![](https://gluu.org/docs/ce/img/admin-guide/logs/tail-log.png){width="80%" height="80%"}
+
+[More detail about web log file](https://www.loganalyzer.net/log-analysis-tutorial/what-is-log-file.html)
+
+
+
+### [**haven**]((https://haven.tidyverse.org/index.html)) package ![](https://haven.tidyverse.org/logo.png){width="10%" height="10%"}
+
+**Haven** enables **R** to read and write data various data formats in **SAS**, **SPSS** and **Stata**.
+
+
+### Installation
+
+```
+install.packages("haven")
+```
+
+
+### Load package
+
+```
+library(haven)
+```
+
+
+### ![](https://upload.wikimedia.org/wikipedia/commons/9/97/স্যাস_লোগো.png){width="10%" height="10%"}
+
+#### Read SAS file
+
+* [read_sas()](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat` into a tibble.
+
+* [read_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` (version 5 to 8) into a tibble.
+
+
+#### Write SAS file
+
+* [write_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file (version 5 to 8).
+
+
+
+### ![](https://cdn.freebiesupply.com/logos/large/2x/spss-1-logo-png-transparent.png){width="10%" height="10%"}
+
+#### Read SPSS file
+
+* [read_sav()](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav` into a tibble.
+
+* [read_por()](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por` into a tibble.
+
+* [read_spss()](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
+
+
+#### Write SPSS file
+
+* [write_sav()](https://haven.tidyverse.org/reference/read_spss.html) : create `.zsav` file.
+
+
+
+
+
+### ![](http://www.freelogovectors.net/wp-content/uploads/2019/07/stata-logo.jpg){width="10%" height="10%"}
+
+#### Read Stata file
+
+* [read_dta()](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` (version 8 to 15) into a tibble.
+
+
+#### Write Stata file
+
+* [write_dta()](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
+
+
+
+
 ## Vector
 
 In R, there are **two types** of vectors:
@@ -254,211 +509,7 @@ In the classic `data.frame`, it will print all the columns of your data. Which m
 
 
 
-## Data Import and Export
 
-In order to analyze the data with R, **first**, we need to **import the data into R**. Data might save as **difference format**.
-
-In this workshop we focus on the data save **in disk**.
-
-![](images/Data_comma.png){width="70%" height="70%"}
-
-The picture above is "chocolate" data save in comma separated format.
-
-
-### Workflow
-
-![](images/Workflow_1.png){width="70%" height="70%"}
-
-
-
-### Package
-
-**Data Import and Export** in any software is **crucial** and sometimes **complicated**. Thanks for the contributors in R community. The packages they create make our life much easier.
-
-In the following workshops, we will learn how to **Import** and **Export** difference format of **data** using these **3 packages**:
-
-* **readr** ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="8%" height="8%"}
-
-* **readxl** ![](https://readxl.tidyverse.org/logo.png){width="8%" height="8%"}
-
-* **haven** ![](https://haven.tidyverse.org/logo.png){width="8%" height="8%"}
-
-
-
-
-
-## [**readr**](https://readr.tidyverse.org/index.html) package ![](https://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png){width="10%" height="10%"}
-
-**readr** provides a fast and friendly way to read and write **rectangular data** in **R**.
-
-
-### What is rectangular data?
-
-Rectangular data refer to a two-dimensional data frame with rows indicating observations and columns indicating variables.
-
-
-### Load package
-
-```
-library(readr)
-```
-
-
-### Read rectangular data
-
-#### File end with `.csv`
-
-* [read_csv()](https://readr.tidyverse.org/reference/read_delim.html) : read **comma separated** files into a tibble.
-
-![](images/Csv_file.png){width="80%" height="80%"}
-
-[More detail about comma-separated file](https://en.wikipedia.org/wiki/Comma-separated_values)
-
-
-#### File end with `.tsv`
-
-* [read_tsv()](https://readr.tidyverse.org/reference/read_delim.html) : read **tab separated** files into a tibble.
-
-![](images/Tab_file.png){width="80%" height="80%"}
-
-[More detail about Tab-separated file](https://en.wikipedia.org/wiki/Tab-separated_values)
-
-
-#### File end with `.txt`
-
-* [read_fwf()](https://readr.tidyverse.org/reference/read_fwf.html) : read **fixed width** files into a tibble.
-
-![](images/Fixed_width.png){width="80%" height="80%"}
-
-[More detail about fixed-width file](https://www.oracle.com/webfolder/technetwork/data-quality/edqhelp/Content/introduction/getting_started/configuring_fixed_width_text_file_formats.htm)
-
-
-* [read_table()](https://readr.tidyverse.org/reference/read_table.html) : read **tabular** files where columns are separated by white-space into a tibble.
-
-
-#### File end with `.log`
-
-* [read_log()](https://readr.tidyverse.org/reference/read_log.html) : read **web log** files into a tibble.
-
-![](images/Log_file.png){width="80%" height="80%"}
-
-[More detail about web log file](https://www.loganalyzer.net/log-analysis-tutorial/what-is-log-file.html)
-
-
-### Write rectangular files
-
-* [write_csv()](https://readr.tidyverse.org/reference/format_delim.html) : write `.csv` file.
-
-* [write_tsv()](https://readr.tidyverse.org/reference/format_delim.html) : write `.tsv` file.
-
-
-
-
-
-
-## [**readxl**](https://readxl.tidyverse.org/index.html) package ![](https://readxl.tidyverse.org/logo.png){width="10%" height="10%"}
-
-The **readxl** package makes it easy to get data out of **Excel** and into **R**.
-
-
-### Installation
-
-```
-install.packages("readxl")
-```
-
-
-### Load package
-
-```
-library(readxl)
-```
-
-
-### ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Microsoft_Excel_2013_logo.svg/1043px-Microsoft_Excel_2013_logo.svg.png){width="5%" height="5%"}
-
-#### Read Excel file
-
-* [read_xls()](https://readxl.tidyverse.org/reference/read_excel.html) : read legacy format excel file end with `.xls` into a tibble.
-
-* [read_xlsx()](https://readxl.tidyverse.org/reference/read_excel.html) : read xml-based format excel file end with `.xlsx` into a tibble.
-
-* [read_excel()](https://readxl.tidyverse.org/reference/read_excel.html) : both `xls` file and `xlsx` file.
-
-**`read_excel()` will automatically choosing the function for you, use `read_xls()` and `read_xlsx()` directly if you know the path of your excel file.**
-
-
-
-
-
-
-
-
-
-
-## [**haven**]((https://haven.tidyverse.org/index.html)) package ![](https://haven.tidyverse.org/logo.png){width="10%" height="10%"}
-
-**Haven** enables **R** to read and write data various data formats in **SAS**, **SPSS** and **Stata**.
-
-
-### Installation
-
-```
-install.packages("haven")
-```
-
-
-### Load package
-
-```
-library(haven)
-```
-
-
-### ![](https://upload.wikimedia.org/wikipedia/commons/9/97/স্যাস_লোগো.png){width="10%" height="10%"}
-
-#### Read SAS file
-
-* [read_sas()](https://haven.tidyverse.org/reference/read_sas.html) : read SAS file end with `.sas7bdat` or `.sas7bcat` into a tibble.
-
-* [read_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : read SAS transport files end with `.xpt` (version 5 to 8) into a tibble.
-
-
-#### Write SAS file
-
-* [write_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file (version 5 to 8).
-
-
-
-### ![](https://cdn.freebiesupply.com/logos/large/2x/spss-1-logo-png-transparent.png){width="10%" height="10%"}
-
-#### Read SPSS file
-
-* [read_sav()](https://haven.tidyverse.org/reference/read_spss.html): read SPSS file end with `.sav` or `.zsav` into a tibble.
-
-* [read_por()](https://haven.tidyverse.org/reference/read_spss.html) : read SPSS file end with `.por` into a tibble.
-
-* [read_spss()](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
-
-
-#### Write SPSS file
-
-* [write_sav()](https://haven.tidyverse.org/reference/read_spss.html) : create `.zsav` file.
-
-
-
-
-
-### ![](http://www.freelogovectors.net/wp-content/uploads/2019/07/stata-logo.jpg){width="10%" height="10%"}
-
-#### Read Stata file
-
-* [read_dta()](https://haven.tidyverse.org/reference/read_dta.html): read Stata file end with `.dta` (version 8 to 15) into a tibble.
-
-
-#### Write Stata file
-
-* [write_dta()](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
 
 
 
