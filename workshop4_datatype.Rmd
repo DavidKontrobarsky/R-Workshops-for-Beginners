@@ -30,6 +30,8 @@ library(readr)
 
 In order to analyze the data with R, **first**, we need to **import the data into R**. Data might save as **difference format**.
 
+![](images/Workflow_1.png){width="70%" height="70%"}
+
 In this workshop we focus on the data save **in disk**.
 
 This is how data save in csv file looks like:
@@ -41,10 +43,6 @@ And this is what we want in R:
 ```{r}
 read_csv("data/chocolates.csv")
 ```
-
-### Workflow
-
-![](images/Workflow_1.png){width="70%" height="70%"}
 
 
 ### Tools
@@ -269,6 +267,12 @@ library(haven)
 
 * [write_xpt()](https://haven.tidyverse.org/reference/read_xpt.html) : write `.xpt` file (version 5 to 8).
 
+#### Usage
+
+```
+read_sas("data/mtcars.sas7bdat")
+write_sas(InsectSprays, "data/InsectSprays.sas7bdat")
+```
 
 
 ### ![](https://cdn.freebiesupply.com/logos/large/2x/spss-1-logo-png-transparent.png){width="10%" height="10%"}
@@ -281,14 +285,16 @@ library(haven)
 
 * [read_spss()](https://haven.tidyverse.org/reference/read_spss.html) : uses either `read_por()` or `read_sav()` based on the file extension.
 
-
 #### Write SPSS file
 
 * [write_sav()](https://haven.tidyverse.org/reference/read_spss.html) : create `.zsav` file.
 
+#### Usage
 
-
-
+```
+read_sav("data/mtcars.sav")
+write_sav(Indometh, "data/Indometh.sav")
+```
 
 ### ![](http://www.freelogovectors.net/wp-content/uploads/2019/07/stata-logo.jpg){width="10%" height="10%"}
 
@@ -301,6 +307,12 @@ library(haven)
 
 * [write_dta()](https://haven.tidyverse.org/reference/read_dta.html): create `.dta` file (version 8 to 15).
 
+#### Usage
+
+```
+read_dta("data/mtcars.dta")
+write_dta(trees, "data/trees.dta")
+```
 
 
 
@@ -531,12 +543,32 @@ In the classic `data.frame`, it will print all the columns of your data. Which m
 
 
 
+## Resources
+
+### Online Books
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+
+- [Advanced R](https://adv-r.hadley.nz/)
 
 
+### Cheat Sheets
+
+- [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 
+### Videos
+
+- [Data Science Essntials](https://resources.rstudio.com/the-essentials-of-data-science)
+
+- [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
 
 
+### Blogs
+
+- [R-bloggers](https://www.r-bloggers.com)
 
 
 

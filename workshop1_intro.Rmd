@@ -388,6 +388,15 @@ If you want to save your results or figures, you need to "write" it down from R.
 
 ## Resources
 
+### Online Books
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+
+- [Advanced R](https://adv-r.hadley.nz/)
+
+
 ### Cheat Sheets
 
 - [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
