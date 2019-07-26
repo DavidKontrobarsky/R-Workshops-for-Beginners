@@ -454,7 +454,7 @@ list(1, list(2, 3, 4))
 
 ### Data frame
 
-Data frame is one of the **most common** data structure you’ll deal with in R. Different form matrix, data frame can store **different types** of data in **each column**.
+Data frame is one of the **most common** data structure you’ll deal with in R. It can store **different types** of data in **each column**.
 
 We can create a data frame using the function `data.frame()`, it have the option`stringsAsFactors`. Default as `TRUE`, if you don't want to convert the **character** as **factor**, set it as `FALSE`.
 
