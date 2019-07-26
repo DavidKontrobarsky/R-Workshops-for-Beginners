@@ -28,3 +28,6 @@
 * Time: 2 pm to 3 pm
 
 * Location: CL_19Anc/331 Tute (Learning and Teaching Building)   
+
+![](poster_black.png)
+
