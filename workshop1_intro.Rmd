@@ -296,6 +296,8 @@ When you install package form Bioconductor, you might be asking the follow quest
 ![](images/Github_logo.png){width="10%" height="10%"}
 
 ```{r eval=FALSE, echo=TRUE}
+if(!"devtools" %in% installed.packages())
+  install.packages("devtools")
 devtools::install_github("hadley/emo")
 ```
 
@@ -385,6 +387,15 @@ If you want to save your results or figures, you need to "write" it down from R.
 
 
 ## Resources
+
+### Online Books
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+
+- [Advanced R](https://adv-r.hadley.nz/)
+
 
 ### Cheat Sheets
 
