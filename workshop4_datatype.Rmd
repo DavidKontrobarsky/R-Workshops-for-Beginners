@@ -315,58 +315,72 @@ write_dta(trees, "data/trees.dta")
 ```
 
 
+## Vector vs List
 
-## Vector
+Now we have learn how to read different format of data into R, and you have hear the words `tibble` again and again. You must wonder what is `tibble`?
 
-In R, there are **two types** of vectors:
+![](https://media1.tenor.com/images/04e06f38ce1831ce381f5364c7c3956b/tenor.gif?itemid=11333297){width="20%" height="20%"}
 
-1. **atomic vector**
-
-2. **list**
-
-*Vector is a different story in R*
-
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT19Qkj9CWzGXV9d3DP186TE_X1cvl8kzB9UKQ297_H82XNZBZv){width="30%" height="30%"}
+In order to answer this question, first we need to know what is `vector`, `list` and `data frame` in R.
 
 
-### Atomic Vector
+### Vector
 
-Atomic vector is a vector can **only** contain the **same type** of elements. Atomic vectors are normally create by `c()`.
+Vector can **only** contain the **same type** of elements. it can create by `c()`.
 
-Atomic vectors are always flat, even if you nest the `c()`.
+For example:
 
 ```{r echo=TRUE}
-c(1, 2, 3)
-```
-
-is the as:
-
-```{r echo=TRUE}
-c(1, c(2, c(3)))
+number <- c(3, 4, 5)
 ```
 
 You can evaluate the specific element using `[` 
 
 ```{r echo=TRUE}
-atomic <- c(3, 4, 5)
-atomic[1]
+number[1]
 ```
 
 
-There are four common types of atomic vectors:
-
-* **logical**
+There are four common types of vectors:
 
 * **double**
 
 * **integer**
 
+* **logical**
+
 * **character**
 
-You can ask R to determine the type of object using `type()`.
+You can ask R to determine the type of object using `typeof()`.
 
 
-#### Logical
+### Numbers
+
+**Double** vectors somtimes known as **numeric** vectors. Number in R **default** as **double**. when you see a number like `1` in R, which you might think of as integer. The type actually as double. 
+
+```{r echo=TRUE}
+typeof(c(1, 2, 3))
+```
+
+If you explicitly want an **integer**, you need to add `L` after the number:
+
+```{r echo=TRUE}
+typeof(c(1L, 2L, 3L))
+```
+
+Or using `:` to generate an integer sequence,
+
+```{r echo=TRUE}
+typeof(c(1:3))
+```
+
+Integer have one special value `NA`, double have four special value: `NA`, `NaN`, `-Inf` and `Inf`. `NaN` stand for "**Not a Number**" and `Inf` stand for "**Infinite**".
+
+```{r echo=TRUE}
+c(-1, 0, 1)/0 
+```
+
+### Logical
 
 Logical vector only have three possible value: `TRUE`, `FALSE` and `NA`. We can also use shortcut `T` and `F` as `TRUE` and `FALSE` in R. `NA` is stand for "**Not Available**".
 
@@ -377,34 +391,7 @@ typeof(c(TRUE, FALSE, T, F, NA))
 ```
 
 
-#### Numeric
-
-**integer** and **double** vectors are **collectively** known as **numeric** vectors. Number in R default as double. when you see a number like `1` in R, which you might think of as integer. The type actually as double. 
-
-```{r echo=TRUE}
-typeof(1)
-```
-
-If you explicitly want an integer, you need to add `L` after the number:
-
-```{r echo=TRUE}
-typeof(1L)
-```
-
-Or using `:` to generate an integer sequence,
-
-```{r echo=TRUE}
-typeof(1:3)
-```
-
-Integer have one special value `NA`, double have four special value: `NA`, `NaN`, `-Inf` and `Inf`. `NaN` stand for "**Not a Number**" and `Inf` stand for "**Infinite**".
-
-```{r echo=TRUE}
-c(-1, 0, 1)/0 
-```
-
-
-#### Character
+### Character
 
 In R, it a character surrounded by `"`. Each element in a character vector is a **string**, each string can contain any amount of data.
 
@@ -416,11 +403,28 @@ typeof("NA")
 
 ### Factor
 
-In R, factors are used to store categorical data.
+In R, factors are used to store categorical data. The different between character and **factor** is we **know all the possible value** of a factor. In a **character vector**, we **don't know** all the possible value.
+
+We can create a fator using function `factor`:
+
+```{r echo=TRUE}
+factor(c("yes", "yes", "no", "yes", "no"))
+```
+
+The **Levels** of factor default in alphabetical order.
+
+The order of the levels of a factor can be set using the `levels` argument in `factor()`:
+
+```{r echo=TRUE}
+factor(c("yes", "yes", "no", "yes", "no"), levels = c("yes", "no"))
+```
+
+![](https://media1.tenor.com/images/63e26d81afe6d31948dfdf31bc5b1561/tenor.gif?itemid=12771647){width="20%" height="20%"}
+
 
 ### List
 
-List is a vector can contain **different type** of elements. we can construct lists using `list()`.
+List can contain **different type** of elements. we can construct lists using `list()`.
 
 ```{r echo=TRUE}
 list(c(TRUE, FALSE), 1:3, c(3, 4, 5), "a")
@@ -429,14 +433,16 @@ list(c(TRUE, FALSE), 1:3, c(3, 4, 5), "a")
 A list can also contain another list,
 
 ```{r echo=TRUE}
-x <- list(1, 2, 3, 4)
+list(1, 2, 3, 4)
 ```
 
 is not the same as:
 
 ```{r echo=TRUE}
-y <- list(1, list(2, list(3, 4)))
+list(1, list(2, 3, 4))
 ```
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT19Qkj9CWzGXV9d3DP186TE_X1cvl8kzB9UKQ297_H82XNZBZv){width="30%" height="30%"}
 
 
 **Lists can used to build up more complicated data structures in R.**
@@ -444,9 +450,9 @@ y <- list(1, list(2, list(3, 4)))
 
 
 
+## data.frame vs tibble
 
-
-## Data frame
+### Data frame
 
 Data frame is one of the **most common** data structure you’ll deal with in R. Different form matrix, data frame can store **different types** of data in **each column**.
 
@@ -463,16 +469,15 @@ data.frame(id, name, age, female, stringsAsFactors = FALSE)
 ```
 ![](images/Sample_dataframe.png){width="35%" height="35%"}
 
+### What is the connection between vector, list and data frame?
 
-A **Data frame** can consider as a **list** where every element is a **atomic vector** has the **same length**. The **numbers** of **elements** in a list can consider as the numbers of **columns**. The **length** of **one atomic vector** is the numbers of **rows**.
-
-
+A **Data frame** can consider as a **list** where every element is a **vector** has the **same length**. The **numbers** of **elements** in a list can consider as the numbers of **columns**. The **length** of **one atomic vector** is the numbers of **rows**.
 
 
 
 ### [Tibble](https://tibble.tidyverse.org)  ![](https://d33wubrfki0l68.cloudfront.net/f55c43407ae8944b985e2547fe868e5e2b3f9621/720bb/images/hex-tibble.png){width="10%" height="10%"}
 
-`tibble` is a **data frame**, it tweak some older behaviours of `data.frame`, make it **easier** to analyze large datasets containing complex objects.
+`tibble` is also a **data frame**, it tweak some older behaviours of `data.frame`, make it **easier** to analyze large datasets containing complex objects.
 
 
 #### Installation
@@ -516,9 +521,12 @@ There are two main differences between `tiblle` and `data.frame`:
 
 * subseting
 
-#### Printing
+
+### Printing
 
 **Tibble** only print the **first 10 rows**, and the **columns** of data that **fit on screen** (**Not all columns**)
+
+Also **tibble** will tell you the **numbers of rows and columns** of the data set.
 
 Type this command in your **Console** pane:
 
@@ -535,10 +543,74 @@ as.data.frame(ggplot2::midwest)
 In the classic `data.frame`, it will print all the columns of your data. Which might looks messy if you working on a large data set.
 
 
-#### Subseting
+### Subseting
+
+If you want to **pull out a single variable**, you use these two tools, `$` and `[[`. `[[` can extract by **name or position**; `$` **only** extracts by **name**.
+
+```{r echo=TRUE}
+set.seed(001)
+xnorm <- rnorm(6)
+ynorm <- rnorm(6)
+
+df <- data.frame(xnorm, ynorm)
+
+tb <- tibble(xnorm, ynorm)
+```
+
+#### Extract by `$`
+
+```{r echo=TRUE}
+df$x
+
+df$xnorm
+```
+
+Then try:
+
+```
+tb$x
+```
+
+Oops!
+
+Try again:
+
+```{r echo=TRUE}
+tb$xnorm
+```
 
 
 
+#### Extract by `[[`
+
+```{r echo=TRUE}
+df[[2]]
+
+tb[[2]]
+
+df[["y"]]
+
+tb[["ynorm"]]
+```
+
+
+### Interacting between `data.frame` and `tibble`
+
+You can convert a `data.frame` objetc into `tibble` using function `as_tibble()`:
+
+```{r echo=TRUE}
+class(iris)
+
+class(as_tibble(iris))
+```
+
+You can aslo convert a `tibble` into `data.frame` using function `as.data.frame()`:
+
+```{r echo=TRUE}
+class(ggplot2::midwest)
+
+class(as.data.frame(ggplot2::midwest))
+```
 
 
 
