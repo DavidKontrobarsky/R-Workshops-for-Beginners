@@ -8,7 +8,7 @@ knitr::opts_chunk$set(
   message = FALSE,
   echo = FALSE,
   fig.path = "images/",
-  out.width = "100%"
+  fig.align="center"
 )
 library(magrittr)
 ```
@@ -44,8 +44,7 @@ map <- leaflet() %>%
   addTiles()%>%
   addMarkers(lng = 145.132480, lat = -37.913697, popup = "Location for R Workshops") %>%
   setView(lng = 145.132480, lat = -37.913697, zoom = 16.5) %>%
-  fitBounds(lng1 = 145.132480-0.002, lng2 = 145.132480+0.002, lat1 = -37.913697-0.001, lat2 = -37.913697+0.0015)
-map
+  fitBounds(lng1 = 145.132480-0.003, lng2 = 145.132480+0.003, lat1 = -37.913697-0.001, lat2 = -37.913697+0.001)
 mapshot(map, file = "Map.png")
 ```
 
