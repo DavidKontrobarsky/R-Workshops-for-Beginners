@@ -10,7 +10,6 @@ knitr::opts_chunk$set(
   fig.path = "images/",
   out.width = "100%"
 )
-library(leaflet)
 library(magrittr)
 ```
 
@@ -38,12 +37,30 @@ library(magrittr)
 * Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)   
 
 ```{r eval=FALSE}
-map <- leaflet() %>%
+library(leaflet)
+leaflet() %>%
   addTiles()%>%
   addMarkers(lng = 145.132480, lat = -37.913697, popup = "Location for R Workshops") %>%
-  setView(lng = 145.132480, lat = -37.913697, zoom = 100)
-map
+  setView(lng = 145.132480, lat = -37.913697, zoom = 16)
 ```
+
+## Sign up
+
+Scan QR code to sign up:
+
+![](images/Signup_QRcode.png){width="40%" height="40%"}
+
+Or sign up within this [link](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
+
+
+## Installation
+
+**Please install R and RStudio before you attend the workshop**.
+
+* [Install R](https://cran.csiro.au)
+
+* [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
+
 
 ## Poster for R Workshops
 
