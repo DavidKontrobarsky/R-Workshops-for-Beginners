@@ -1,8 +1,12 @@
 ---
-output: github_document
+output:
+   html_document:
+      self_contained: false
+      keep_md: true
 ---
 
-<!-- README.md is generated from this README.Rmd. Please edit this file -->
+
+<!-- README.md is generated from this README.Rmd. -->
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -16,7 +20,6 @@ knitr::opts_chunk$set(
 library(leaflet)
 library(magrittr)
 ```
-
 
 # R Workshops for Beginners
 
@@ -51,4 +54,4 @@ map
 
 ## Poster for R Workshops
 
-![](poster_black.png)
+![](images/poster_black.png)
