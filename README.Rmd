@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from this README.Rmd. Please edit this file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  message = FALSE,
+  echo = FALSE,
+  fig.path = "images/",
+  out.width = "100%"
+)
+library(leaflet)
+library(magrittr)
+```
+
+
+# R Workshops for Beginners
+
+* Workshop 1 - Introduction to R and RStudio (9 August)
+
+* Workshop 2 - Introduction to R Markdown (16 August)
+
+* Workshop 3 - Data Visualization (23 August)
+
+* Workshop 4 - Data Types and Import Data (30 August)
+
+* Workshop 5 - Data Wrangling 1 (6 September)
+
+* Workshop 6 - Data Wrangling 2 (13 September)
+
+
+## Time and Location
+
+* Date: Every Friday from Week 2 to 7
+
+* Time: 2 to 3 pm
+
+* Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)   
+
+```{r}
+map <- leaflet() %>%
+  addTiles()%>%
+  addMarkers(lng = 145.132480, lat = -37.913697, popup = "Location for R Workshops") %>%
+  setView(lng = 145.132480, lat = -37.913697, zoom = 100)
+map
+```
+
+## Poster for R Workshops
+
+![](poster_black.png)
