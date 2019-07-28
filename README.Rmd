@@ -37,7 +37,7 @@ library(magrittr)
 
 * Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)   
 
-```{r eval=FALSE}
+```{r fig.height= 4,fig.width=6}
 library(leaflet)
 library(mapview)
 map <- leaflet() %>%
@@ -45,10 +45,13 @@ map <- leaflet() %>%
   addMarkers(lng = 145.132480, lat = -37.913697, popup = "Location for R Workshops") %>%
   setView(lng = 145.132480, lat = -37.913697, zoom = 16.5) %>%
   fitBounds(lng1 = 145.132480-0.003, lng2 = 145.132480+0.003, lat1 = -37.913697-0.001, lat2 = -37.913697+0.001)
+map
+```
+
+```{r eval=FALSE}
 mapshot(map, file = "Map.png")
 ```
 
-![](images/Map.png){width="60%" height="60%"}
 
 ## Sign up
 

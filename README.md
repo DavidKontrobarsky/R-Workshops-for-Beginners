@@ -25,7 +25,7 @@ Time and Location
 
 -   Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)
 
-<img src="images/Map.png" style="width:60.0%" style="height:60.0%" />
+<img src="images/unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
 
 Sign up
 -------
