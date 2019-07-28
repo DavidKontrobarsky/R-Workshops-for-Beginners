@@ -1,17 +1,10 @@
 ---
-output:
-   html_document:
-      self_contained: false
-      keep_md: true
+output: github_document
 ---
-
-
-<!-- README.md is generated from this README.Rmd. -->
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
   message = FALSE,
   echo = FALSE,
   fig.path = "images/",
@@ -44,7 +37,7 @@ library(magrittr)
 
 * Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)   
 
-```{r}
+```{r eval=FALSE}
 map <- leaflet() %>%
   addTiles()%>%
   addMarkers(lng = 145.132480, lat = -37.913697, popup = "Location for R Workshops") %>%
