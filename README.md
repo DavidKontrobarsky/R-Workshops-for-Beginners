@@ -14,6 +14,8 @@ R Workshops for Beginners
 
 -   Workshop 6 - Data Wrangling 2 (13 September)
 
+![](images/Hexwall.png)
+
 Time and Location
 -----------------
 
