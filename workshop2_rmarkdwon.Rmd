@@ -312,7 +312,7 @@ Straight after the `` ```{r `` you can use a text string to name the chunk. This
 
 After you name the chunk, you can also set the behavior of the chunk.
 
-### **Explore Time (5 mins)**
+### **Explore Time (10 mins)**
 
 #### Code evaluation
 
