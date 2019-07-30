@@ -88,9 +88,11 @@ You can generate three types of output by:
 
 * HTML: `Knit > Knit HTML`
 
-* PDF: `Knit > Knit PDF`
-
 * Word: `Knit > Knit Word`
+
+* PDF: `Knit > Knit PDF` 
+
+(**PDF output requires LaTeX, it might take significant amount of time to install. Please try it after workshop**)
 
 ### Slide for Presentation
 
