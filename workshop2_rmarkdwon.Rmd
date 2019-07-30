@@ -28,11 +28,9 @@ When you writing report and doing analysis with some software, you might need to
 
 But R Markdown allow you embed R code in a Markdown document, produce **textual output** along with **graphics** in a **single file**. 
 
-
 ### A quick tour of R Markdown
 
 ![](https://vimeo.com/178485416)
-
 
 ### Installation
 
@@ -40,21 +38,17 @@ But R Markdown allow you embed R code in a Markdown document, produce **textual 
 install.packages("rmarkdown")
 ```
 
-
 ### Create a R Markdown Document
 
 ![](images/Rmarkdown_1.png){width="40%" height="40%"}
 
-
 **You can always switch the output when you generate the output**
-
 
 ![](images/Rmd_output_format.png){width="40%" height="40%"}
 
 #### Or you can create a R Markdown document by:
 
 `File > New File > R Markdown > Document`
-
 
 ### Notice that the file contains three types of content
 
@@ -76,7 +70,7 @@ YAML has `---` at the top and bottom. For example,
 ```
 ---
 title: "Introduction to R Markdown"
-author: "Professor Di Cook""
+author: "R is fun""
 output: html_document
 ---
 ```
@@ -88,6 +82,7 @@ It require `knitr` package.
 ```
 install.packages("knitr")
 ```
+### **Explore Time (5 mins)**
 
 You can generate three types of output by:
 
@@ -96,7 +91,6 @@ You can generate three types of output by:
 * PDF: `Knit > Knit PDF`
 
 * Word: `Knit > Knit Word`
-
 
 ### Slide for Presentation
 
@@ -125,14 +119,13 @@ Create a new web app:
 `File > New File > R Markdown > Shiny Web app`
 
 
-
-
 ## Markdown syntax
 
 When you knit your file, [Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdown) transforms the marked up text into formatted text in your final file format.
 
 ![](images/Rmarkdown_basics.png){width="80%" height="80%"}
 
+### **Explore Time (15 mins)**
 
 ### Headings
 
@@ -278,14 +271,9 @@ You can insert an image in two way:
 ![](images/Insert_image.jpg)
 ```
 
-
 Produces:
 
 ![](images/Insert_image.jpg)
-
-
-
-
 
 
 ## Code chunks
@@ -320,18 +308,17 @@ Straight after the `` ```{r `` you can use a text string to name the chunk. This
 
 3. You can set up networks of cached chunks to avoid re-performing expensive computations on every run. More on that below.
 
-
 ### Chunk option
 
 After you name the chunk, you can also set the behavior of the chunk.
 
+### **Explore Time (5 mins)**
 
 #### Code evaluation
 
 #### `eval = FALSE`
 
 Default value is `TRUE`, if `FALSE`, knitr will not run the code in the code chunk.
-
 
 #### Results
 
@@ -394,10 +381,6 @@ knitr::opts_chunk$set(
 * `fig.width = 4` and `fig.height = 4` set the width and heigth of all figure in output file as 4.
 
 
-
-
-
-
 ## Resources
 
 ### Cheat sheet
@@ -408,11 +391,9 @@ knitr::opts_chunk$set(
 
 * [Latex Cheatsheet](https://wch.github.io/latexsheet/)
 
-
 ### Online course
 
-[R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
-
+* [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
 
 ### Video
 
@@ -423,9 +404,39 @@ knitr::opts_chunk$set(
 * [Interctive Reporting](https://resources.rstudio.com/the-essentials-of-data-science/interactive-reporting-60-01)
 
 
+## Prevue
 
+### **Next workshop** we will talk about **Data Visualization**
 
+```{r map,cache=TRUE,cache.path='cache/',fig.height=8,fig.width=8}
+# Library
+library(tidyverse)
+library(rmapshaper)
+library(sugarbag)
+library(randomcoloR)
+library(ggthemes)
 
+# Simplify and Extract polygons
+map_sf <- read_rds(gzcon(url("https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_AUS_2_sf.rds")))
+
+map_simplify <- ms_simplify(map_sf, keep = 0.01, keep_shapes = TRUE)
+
+geo_map <- fortify_sfc(map_simplify)
+
+# Assign random color for each local area
+df <- data.frame(
+  NAME_2 = unique(geo_map$NAME_2), 
+  newColor = distinctColorPalette(length(unique(geo_map$NAME_2))),
+  stringsAsFactors=FALSE)
+
+# Merge color with data
+complete_data <- geo_map %>% left_join(df, by = c("NAME_2" = "NAME_2"))
+
+# Plot map
+ggplot(complete_data, aes(x = long, y = lat, group = interaction(GID_2, polygon))) +
+  geom_polygon(fill=complete_data$newColor, color="black") +
+  theme_map()
+```
 
 
 
