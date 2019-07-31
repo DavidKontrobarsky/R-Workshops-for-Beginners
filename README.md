@@ -16,6 +16,8 @@ R Workshops for Beginners
 
 ![](images/Hexwall.png)
 
+([R script to neatly align hexagon stickers](https://github.com/mitchelloharawild/hexwall), by Mitch O'Hara-Wild)
+
 Time and Location
 -----------------
 

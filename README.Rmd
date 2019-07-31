@@ -29,6 +29,8 @@ library(magrittr)
 
 ![](images/Hexwall.png)
 
+([R script to neatly align hexagon stickers](https://github.com/mitchelloharawild/hexwall), by Mitch O'Hara-Wild)
+
 ## Time and Location
 
 * Date: Every Friday from Week 2 to 7
