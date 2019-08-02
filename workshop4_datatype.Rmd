@@ -405,7 +405,7 @@ typeof("NA")
 
 In R, factors are used to store categorical data. The different between character and **factor** is we **know all the possible value** of a factor. In a **character vector**, we **don't know** all the possible value.
 
-We can create a fator using function `factor`:
+We can create a factor using function `factor`:
 
 ```{r echo=TRUE}
 factor(c("yes", "yes", "no", "yes", "no"))
@@ -477,7 +477,7 @@ A **Data frame** can consider as a **list** where every element is a **vector** 
 
 ### [Tibble](https://tibble.tidyverse.org)  ![](https://d33wubrfki0l68.cloudfront.net/f55c43407ae8944b985e2547fe868e5e2b3f9621/720bb/images/hex-tibble.png){width="10%" height="10%"}
 
-`tibble` is also a **data frame**, it tweak some older behaviours of `data.frame`, make it **easier** to analyze large datasets containing complex objects.
+`tibble` is also a **data frame**, it tweak some older behaviors of `data.frame`, make it **easier** to analyze large data sets containing complex objects.
 
 
 #### Installation
@@ -510,7 +510,7 @@ tibble(id, name, age, female)
 
 ![](images/Sample_tibble.png){width="35%" height="35%"}
 
-Ttibble will summary numbers of rows, columns and the type of each column for you.
+Tibble will summary numbers of rows, columns and the type of each column for you.
 
 
 ### `tibble` vs `data.frame`
@@ -596,7 +596,7 @@ tb[["ynorm"]]
 
 ### Interacting between `data.frame` and `tibble`
 
-You can convert a `data.frame` objetc into `tibble` using function `as_tibble()`:
+You can convert a `data.frame` object into `tibble` using function `as_tibble()`:
 
 ```{r echo=TRUE}
 class(iris)
@@ -604,7 +604,7 @@ class(iris)
 class(as_tibble(iris))
 ```
 
-You can aslo convert a `tibble` into `data.frame` using function `as.data.frame()`:
+You can also convert a `tibble` into `data.frame` using function `as.data.frame()`:
 
 ```{r echo=TRUE}
 class(ggplot2::midwest)

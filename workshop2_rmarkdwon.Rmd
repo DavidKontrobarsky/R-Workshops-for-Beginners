@@ -82,7 +82,7 @@ It require `knitr` package.
 ```
 install.packages("knitr")
 ```
-### **Explore Time (5 mins)**
+### **Explore Time (10 mins)**
 
 You can generate three types of output by:
 
@@ -135,7 +135,7 @@ When you knit your file, [Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdow
 
 `##` is a second level heading, or subsection
 
-`###` is a third level heading, or subsubsection
+`###` is a third level heading, or sub subsection
 
 
 ### Lists
@@ -178,7 +178,7 @@ Bold text surrounded by `*` or `-`.
 
 Italicized text surrounded by `**` or `--`.
 
-Strikethrough text surrounded by `~~`
+Strike-through text surrounded by `~~`
 
 For example,
 
@@ -364,7 +364,7 @@ Align graphics in the center of final document. other option is `'left'` or `'ri
 
 ### Global option
 
-You can set all chunk behaviour once at the top of the `.Rmd file` using a chunk like:
+You can set all chunk behavior once at the top of the `.Rmd file` using a chunk like:
 
 ```
 knitr::opts_chunk$set(
@@ -380,7 +380,7 @@ knitr::opts_chunk$set(
 
 * `message = FALSE` and `warning = FALSE` prevents all messages or warnings from appearing in the finished file.
 
-* `fig.width = 4` and `fig.height = 4` set the width and heigth of all figure in output file as 4.
+* `fig.width = 4` and `fig.height = 4` set the width and height of all figure in output file as 4.
 
 
 ## Resources

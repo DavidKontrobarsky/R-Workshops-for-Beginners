@@ -128,7 +128,7 @@ The working directory of this example is `~/Desktop/shiba`
 ![](images/Confusing.jpg){width="30%" height="30%"}
 
 
-### Let's try this example
+### Let's try this example **(5 mins)**
 
 First, create a data directory, `New Folder > data`
 
@@ -158,10 +158,9 @@ But **"cars"" is under the subdirectory "data" of your working directory**, ther
 
 
 
+## Let's write something 
 
-
-
-## Let's write something
+### **Your turn (15 mins)**
 
 (This section is based on http://r4ds.had.co.nz/workflow-basics.html)
 
@@ -254,7 +253,6 @@ range(x)
 ```
 
 
-
 ## Packages
 
 ### What is package and function?
@@ -289,7 +287,7 @@ When you install package form Bioconductor, you might be asking the follow quest
 
 ![](images/Install_package.png){width="60%" height="60%"}
 
-**Enter `n` in your Consolepane**. That is your computor find some of your package can be updated when you installing a package. Normally, we will answer `n`. Because if will greatly increasing the time to update all the packages if answer `a`. And we not necessary require the latest version until your really need it.
+**Enter `n` in your Consolepane**. That is your computer find some of your package can be updated when you installing a package. Normally, we will answer `n`. Because if will greatly increasing the time to update all the packages if answer `a`. And we not necessary require the latest version until your really need it.
 
 
 - From github repos
@@ -312,6 +310,8 @@ library(ggplot2)
 
 ## Let's make a plot
 
+### **Explore Time (5 mins)**
+
 Type the R command below into your Console pane.
 
 ```
@@ -330,7 +330,7 @@ You can press the "Zoom" button to make the plot bigger in a separate window.
 
 ### Need some Help?
 
-Everytime you need some help of the function, you can type "?" and the name of function in the Console pane.
+Every time you need some help of the function, you can type "?" and the name of function in the Console pane.
 
 ```
 ?ggplot
@@ -341,7 +341,7 @@ Everytime you need some help of the function, you can type "?" and the name of f
 
 ### Cheatsheets
 
-Rstudio provide some guide of quick reference for specific pakage.
+Rstudio provide some guide of quick reference for specific package.
 
 Available on [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
