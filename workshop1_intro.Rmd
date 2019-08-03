@@ -80,12 +80,12 @@ An integrated development environment for R.
 ![](images/Rstudio.png){width="70%" height="70%"}
 
 
-### What the difference between R and RStudio?
+### What is the difference between R and RStudio?
 
 ![](images/Diff_R_RS.jpg){width="80%" height="80%"}
 
 
-**RStudio help you more efficiently write R language.**
+**RStudio help you more efficiently write R code.**
 
 
 
@@ -110,12 +110,12 @@ Eg,
 
 RStudio projects make it straightforward to divide your work into multiple contexts, each with their own working directory, workspace, history, and source documents.
 
-**Help you bettter organized your work**
+**Helps you better organise your work**
 
 [More detail using Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
 
 
-### What is Working directory?
+### What is a working directory?
 
 Suppose you want to bring data form somewhere of your computer into R or save results and figures form R back out to your computer. You need to tell R where the data is or where you want to save the results and figure. R will default your working directory as the "address".
 
@@ -181,7 +181,7 @@ sin(pi / 2)
 
 ### Create objects
 
-**Somthing you want the computer to memorize**
+**Something you want the computer to memorize**
 
 You can create new objects with `<-`:
 
@@ -255,7 +255,7 @@ range(x)
 
 ## Packages
 
-### What is package and function?
+### What are packages and functions?
 
 You can consider function as a tool, package is a set of tools to handle specific problems.
 
@@ -328,7 +328,7 @@ You can press the "Zoom" button to make the plot bigger in a separate window.
 ![](images/PLots_2.png){width="50%" height="50%"}
 
 
-### Need some Help?
+### Need some help?
 
 Every time you need some help of the function, you can type "?" and the name of function in the Console pane.
 
