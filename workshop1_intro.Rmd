@@ -47,7 +47,7 @@ tutorial_html_dependency()
 
 * Yijia Pan
 
-Workshop 1 material prepared by : Jiaying Wu
+Workshop 1 material prepared by : Jiaying Wu, Dianne Cook
 
 #### More Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
 
