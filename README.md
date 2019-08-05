@@ -2,7 +2,24 @@
 R Workshops for Beginners
 =========================
 
+Advisors :
+
+-   [Dianne Cook](http://dicook.org)
+
+-   [Patricia Menéndez](https://www.patriciamenendez.com)
+
+Organizers :
+
+-   Jiaying Wu
+
+-   Yijia Pan
+
+Workshop Contents:
+------------------
+
 -   Workshop 1 - Introduction to R and RStudio (9 August)
+
+    -   Speaker: [Dianne Cook](http://dicook.org)
 
 -   Workshop 2 - Introduction to R Markdown (16 August)
 
@@ -10,7 +27,11 @@ R Workshops for Beginners
 
 -   Workshop 4 - Data Types and Import Data (30 August)
 
+    -   Speaker: [Earo Wang](https://earo.me)
+
 -   Workshop 5 - Data Wrangling 1 (6 September)
+
+    -   Speaker: [Mitch O'Hara-Wild](https://www.mitchelloharawild.com)
 
 -   Workshop 6 - Data Wrangling 2 (13 September)
 

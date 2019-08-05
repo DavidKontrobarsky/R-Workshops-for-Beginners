@@ -10,12 +10,27 @@ knitr::opts_chunk$set(
   fig.path = "images/",
   fig.align="center"
 )
-library(magrittr)
 ```
 
 # R Workshops for Beginners
 
+Advisers : 
+
+* [Dianne Cook](http://dicook.org)
+
+* [Patricia Menéndez](https://www.patriciamenendez.com)
+
+Organizers : 
+
+* Jiaying Wu
+
+* Yijia Pan
+
+## Workshop Contents:
+
 * Workshop 1 - Introduction to R and RStudio (9 August)
+     
+     * Speaker: [Dianne Cook](http://dicook.org)
 
 * Workshop 2 - Introduction to R Markdown (16 August)
 
@@ -23,7 +38,11 @@ library(magrittr)
 
 * Workshop 4 - Data Types and Import Data (30 August)
 
+     * Speaker: [Earo Wang](https://earo.me)
+
 * Workshop 5 - Data Wrangling 1 (6 September)
+
+     * Speaker: [Mitch O'Hara-Wild](https://www.mitchelloharawild.com)
 
 * Workshop 6 - Data Wrangling 2 (13 September)
 
@@ -40,8 +59,8 @@ library(magrittr)
 * Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)   
 
 ```{r fig.height= 4,fig.width=6}
+library(magrittr)
 library(leaflet)
-library(mapview)
 map <- leaflet() %>%
   addTiles()%>%
   addMarkers(lng = 145.132480, lat = -37.913697, popup = "Location for R Workshops") %>%
@@ -51,9 +70,9 @@ map
 ```
 
 ```{r eval=FALSE}
+library(mapview)
 mapshot(map, file = "Map.png")
 ```
-
 
 ## Sign up
 
@@ -63,7 +82,6 @@ mapshot(map, file = "Map.png")
 
 Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
 
-
 ## Installation
 
 **Please install R and RStudio before you attend the workshop**.
@@ -71,7 +89,6 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 * [Install R](https://cran.csiro.au)
 
 * [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
-
 
 ## Poster for R Workshops
 

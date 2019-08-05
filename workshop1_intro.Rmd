@@ -21,6 +21,38 @@ tutorial_html_dependency()
 
 # Week of introduction
 
+## Team members for Workshop 1
+
+#### **Speaker** : [Professor Dianne Cook]((http://dicook.org))
+
+#### **Helpers** :
+
+* Amy Tran
+
+* David Kontrobarsky
+
+* Dun Yong Tan
+
+* Geethanjali Gangula
+
+* James Louis Nguyen
+
+* Jiaying Wu
+
+* Thi Minh Chau Nguyen 
+
+* Weihao Li
+
+* Yih Ting Eng 
+
+* Yijia Pan
+
+Workshop 1 material prepared by : Jiaying Wu
+
+#### More Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
+
+
+
 ## Introduction to R
 
 ### What is ![](images/Rlogo.svg){width="6%" height="6%"}? 
