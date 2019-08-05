@@ -2,7 +2,7 @@
 R Workshops for Beginners
 =========================
 
-Advisors :
+Advisers :
 
 -   [Dianne Cook](http://dicook.org)
 
