@@ -21,7 +21,7 @@ tutorial_html_dependency()
 
 # Week of introduction
 
-## Team members for Workshop 1
+## Instructors for Workshop 1
 
 #### **Speaker** : [Professor Dianne Cook]((http://dicook.org))
 
@@ -49,7 +49,7 @@ tutorial_html_dependency()
 
 Workshop 1 material prepared by : Jiaying Wu, Dianne Cook
 
-#### More Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
+#### Workshop Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
 
 
 
@@ -124,7 +124,7 @@ An integrated development environment for R.
 
 ## Project
 
-### Create a Project
+### **Let's open your Rstudio and create a Project (3 mins)**
 
 ![](images/Project_2.png){width="50%" height="50%"}
 
@@ -140,7 +140,7 @@ Eg,
 
 ### Why ![](images/Project_logo.png){width="7%" height="7%"}?
 
-RStudio projects make it straightforward to divide your work into multiple contexts, each with their own working directory, workspace, history, and source documents.
+RStudio projects make it straightforward to divide your work into multiple contexts, each with their own working directory, work space, history, and source documents.
 
 **Helps you better organise your work**
 
@@ -192,7 +192,7 @@ But **"cars"" is under the subdirectory "data" of your working directory**, ther
 
 ## Let's write something 
 
-### **Your turn (15 mins)**
+### **Your turn (10 mins)**
 
 (This section is based on http://r4ds.had.co.nz/workflow-basics.html)
 
@@ -378,9 +378,9 @@ Rstudio provide some guide of quick reference for specific package.
 Available on [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 
-
-
 ##Quit RStudio
+
+### **Follow the instructions to Quit and Reopen your RStudio (5 mins)**
 
 Before we quit the RStudio, we modify the below preference of RStudio:
 
@@ -444,6 +444,30 @@ If you want to save your results or figures, you need to "write" it down from R.
 ### Blogs
 
 - [R-bloggers](https://www.r-bloggers.com)
+
+
+## Survey and Feedback
+
+### Survey
+
+Please finish the survey **before 18 August 2019**, no personal detail will record within the survey.
+
+**It only take 10 minutes.**
+
+Survey link : https://docs.google.com/forms/d/e/1FAIpQLSeCRbW9K2ruXpHc1qDEhWxKV7Su3Ac7yFcc52oA4zbnKpGiJA/viewform
+
+We will learn how to clean this survey data in Workshop 5 - Data Wrangling 1.
+
+### Feedback
+
+Please provide your feedback for workshop 1, your feedback will help us improve the future experience of workshops.
+
+**5 minutes feedback** : https://docs.google.com/forms/d/e/1FAIpQLScwdOcIn0QUp0xXwAikcgMZsm_G5bd3hR3fypn6lNApZ1-WEg/viewform
+
+#### Once you finished the survey and feedback, you can collect a hexagonal sticker from the helpers in next Workshop. 
+
+![](images/Hexwall.png){width="100%" height="100%"}
+
 
 
 
