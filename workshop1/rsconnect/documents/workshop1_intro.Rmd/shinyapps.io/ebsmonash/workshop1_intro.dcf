@@ -1,0 +1,12 @@
+name: workshop1_intro
+title: workshop1_intro
+username:
+account: ebsmonash
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1074139
+bundleId: 2299594
+url: https://ebsmonash.shinyapps.io/workshop1_intro/
+when: 1565221191.67093
+asMultiple: FALSE
+asStatic: FALSE
