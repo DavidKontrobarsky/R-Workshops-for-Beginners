@@ -23,7 +23,11 @@ Workshop Contents:
 
 -   Workshop 2 - Introduction to R Markdown (16 August)
 
+    -   Speaker: Jiaying Wu
+
 -   Workshop 3 - Data Visualization (23 August)
+
+    -   Speaker: Yijia Pan
 
 -   Workshop 4 - Data Types and Import Data (30 August)
 
