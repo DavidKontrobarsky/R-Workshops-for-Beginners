@@ -2,6 +2,8 @@
 R Workshops for Beginners
 =========================
 
+Short link to this repo: http://bit.ly/MonashBA-R
+
 Advisers :
 
 -   [Dianne Cook](http://dicook.org)
