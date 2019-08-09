@@ -100,7 +100,7 @@ These are the locations of respondents to an R Consortium survey conducted in 20
 
 **8% of R users are between 18-24 BUT 45% of R users are between 25-34!**
 
-Sample of Australian organisations/companies that sent employees to [useR! 2018](https://user2018.r-project.org): 
+Sample of Australian organisations/companies that sent employees to [useR! 2018](https://user2018.r-project.org): ABS, CSIRO, ATO, Microsoft, Energy Qld, Auto and General, Bank of Qld, BHP, AEMO, Google, Flight Centre, Youi, Amadeus Investment Partners,  Yahoo, Sydney Trains, Tennis Australia, Rio Tinto, Reserve Bank of Australia, PwC, Oracle, Netflix, NOAA Fisheries, NAB, Menulog, Macquarie Bank, Honeywell, Geoscience Australia, DFAT, DPI, CBA, Bank of Italy, Australian Red Cross Blood Service, Amazon, Bunnings.
 
 
 ## Introduction to RStudio
@@ -117,10 +117,7 @@ An integrated development environment for R.
 ![](images/Diff_R_RS.jpg){width="80%" height="80%"}
 
 
-**RStudio help you more efficiently write R code.**
-
-
-
+**RStudio help you more efficiently work with R for data analysis.**
 
 ## Project
 
@@ -144,7 +141,7 @@ RStudio projects make it straightforward to divide your work into multiple conte
 
 **Helps you better organise your work**
 
-[More detail using Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+[More detail using a project can be found here](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
 
 
 ### What is a working directory?
@@ -192,7 +189,7 @@ But **"cars"" is under the subdirectory "data" of your working directory**, ther
 
 ## Let's write something 
 
-### **Your turn (10 mins)**
+### **Your turn (6 mins)**
 
 (This section is based on http://r4ds.had.co.nz/workflow-basics.html)
 
@@ -215,7 +212,7 @@ sin(pi / 2)
 
 **Something you want the computer to memorize**
 
-You can create new objects with `<-`:
+You can create new data objects with `<-` (this is called "gets", and if you prefer you can simply use "=" instead, but "<-" is historical and special to R, and kind of fun to use):
 
 ```
 x <- 3 * 4
@@ -265,10 +262,15 @@ Oops!
 
 **Upper case and lower case is matter in R** 
 
+Try again:
+
+```
+r_rocks
+```
 
 ### Calling functions
 
-R has a large collection of built-in functions that are called like this:
+R can be considered to be a functional language. Code for common tasks are bundled into functions, that are used again and again. This follows the DRY (Don't Repeat Yourself) principle of coding. R has a large collection of built-in functions that are called like this:
 
 ```
 function_name(arg1 = val1, arg2 = val2, ...)
@@ -331,9 +333,13 @@ if(!"devtools" %in% installed.packages())
 devtools::install_github("hadley/emo")
 ```
 
+### **Your turn (4 mins)**
+
+- Install the suite of R packages called "tidyverse". This is a bundle of packages that includes `ggplot2`. 
+
 ### Use packages
 
-**Load once if you need to use the package**
+**Load the library in the R session, when you want to use the package. You may have installed many, many packages, but only need a few for any session.**
 
 ```
 library(ggplot2)
@@ -352,12 +358,12 @@ ggplot(data = cars, mapping = aes(x = speed, y = dist)) + geom_point()
 
 In your Plots pane
 
-![](images/PLots.png){width="50%" height="50%"}
+![](images/Plots.png){width="50%" height="50%"}
 
 
 You can press the "Zoom" button to make the plot bigger in a separate window.
 
-![](images/PLots_2.png){width="50%" height="50%"}
+![](images/Plots_2.png){width="50%" height="50%"}
 
 
 ### Need some help?
@@ -378,7 +384,7 @@ Rstudio provide some guide of quick reference for specific package.
 Available on [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 
-##Quit RStudio
+## Quit RStudio
 
 ### **Follow the instructions to Quit and Reopen your RStudio (5 mins)**
 
@@ -468,6 +474,4 @@ Please provide your feedback for workshop 1, your feedback will help us improve 
 
 ![](images/Hexwall.png){width="100%" height="100%"}
 
-
-
-
+([R script to neatly align hexagon stickers](https://github.com/mitchelloharawild/hexwall), by Mitchell O'Hara-Wild)
