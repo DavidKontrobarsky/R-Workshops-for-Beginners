@@ -16,8 +16,8 @@ Organizers :
 
 -   Yijia Pan
 
-Workshop Contents:
-------------------
+Workshop Contents
+-----------------
 
 -   Workshop 1 - [Introduction to R and RStudio (9 August)](https://ebsmonash.shinyapps.io/workshop1_intro/)
 
@@ -56,27 +56,33 @@ Time and Location
 
 -   Location: Room 331, 19 Ancora Imparo Way, Clayton (Learning and Teaching Building)
 
-<img src="images/unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
+<img src="images/Leaflet_location.png" style="width:50.0%" style="height:50.0%" />
 
-Sign up
--------
-
+<details><summary>Sign up</summary>
+<p>
 **Scan** the QR code to sign up:
 
 <img src="images/Signup_QRcode.png" style="width:40.0%" style="height:40.0%" />
 
 Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
 
-Installation
-------------
+</p>
+</details>
 
+<details><summary>Installation</summary>
+<p>
 **Please install R and RStudio before you attend the workshop**.
 
 -   [Install R](https://cran.csiro.au)
 
 -   [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-Poster for R Workshops
-----------------------
+</p>
+</details>
 
+<details><summary>Poster for R Workshops</summary>
+<p>
 ![](images/poster_black.png)
+
+</p>
+</details>
