@@ -56,6 +56,7 @@ Time and Location
 
 <details><summary>Sign up</summary>
 <p>
+    
 **Scan** the QR code to sign up:
 
 <img src="images/Signup_QRcode.png" style="width:40.0%" style="height:40.0%" />
