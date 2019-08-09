@@ -67,6 +67,7 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 <details><summary>Installation</summary>
 <p>
+    
 **Please install R and RStudio before you attend the workshop**.
 
 -   [Install R](https://cran.csiro.au)
@@ -78,6 +79,7 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 <details><summary>Poster for R Workshops</summary>
 <p>
+    
 ![](images/poster_black.png)
 
 </p>
