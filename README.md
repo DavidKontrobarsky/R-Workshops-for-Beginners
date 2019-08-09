@@ -1,6 +1,8 @@
 
 # R Workshops for Beginners
 
+**Short link to this repo: http://bit.ly/MonashBA-R**
+
 Advisers :
 
   - [Dianne Cook](http://dicook.org)
@@ -15,7 +17,7 @@ Organizers :
 
 ## Workshop Contents:
 
-  - Workshop 1 - Introduction to R and RStudio (9 August)
+  - Workshop 1 - [Introduction to R and RStudio (9 August)](https://ebsmonash.shinyapps.io/workshop1_intro/)
     
       - Speaker: [Dianne Cook](http://dicook.org)
 
