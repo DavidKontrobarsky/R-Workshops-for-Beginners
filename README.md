@@ -8,7 +8,7 @@ R Workshops for Beginners
 
 **Organizers** : Jiaying Wu, Yijia Pan
 
-**Guest speaker** : [Earo Wang](https://earo.me), [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
+**Guest speakers** : [Earo Wang](https://earo.me), [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
 **Helpers** : Amy Tran, David Kontrobarsky, Dun Yong Tan, Geethanjali Gangula, James Louis Nguyen, Jefanny Suryawan, Rachell Ng, Rowina Nathan, Sao Yang Hew, Thi Minh Chau Nguyen, Weihao Li, William Tran, Yih Ting Eng, Yuru Sun, Zhuangyi Zhu, Zihui Li
 
