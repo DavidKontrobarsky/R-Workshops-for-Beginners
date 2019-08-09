@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 
 # R Workshops for Beginners
 
+**Short link to this repo:** http://bit.ly/MonashBA-R
+
 Advisers : 
 
 * [Dianne Cook](http://dicook.org)
@@ -28,7 +30,7 @@ Organizers :
 
 ## Workshop Contents:
 
-* Workshop 1 - Introduction to R and RStudio (9 August)
+* Workshop 1 - [Introduction to R and RStudio (9 August)]((https://ebsmonash.shinyapps.io/workshop1_intro/))
      
      * Speaker: [Dianne Cook](http://dicook.org)
 
@@ -49,6 +51,8 @@ Organizers :
      * Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
 * Workshop 6 - Data Wrangling 2 (13 September)
+
+     * Speakers: David Kontrobarsky, Geethanjali Gangula, William Tran
 
 ![](images/Hexwall.png)
 
