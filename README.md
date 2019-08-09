@@ -2,19 +2,15 @@
 R Workshops for Beginners
 =========================
 
-**Short link to this repo:** <http://bit.ly/MonashBA-R>
+#### Short link to this repo: <http://bit.ly/MonashBA-R>
 
-Advisers :
+**Advisers** : [Dianne Cook](http://dicook.org), [Patricia Menéndez](https://www.patriciamenendez.com)
 
--   [Dianne Cook](http://dicook.org)
+**Organizers** : Jiaying Wu, Yijia Pan
 
--   [Patricia Menéndez](https://www.patriciamenendez.com)
+**Guest speaker** : [Earo Wang](https://earo.me), [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
-Organizers :
-
--   Jiaying Wu
-
--   Yijia Pan
+**Helpers** : Amy Tran, David Kontrobarsky, Dun Yong Tan, Geethanjali Gangula, James Louis Nguyen, Jefanny Suryawan, Rachell Ng, Rowina Nathan, Sao Yang Hew, Thi Minh Chau Nguyen, Weihao Li, William Tran, Yih Ting Eng, Yuru Sun, Zhuangyi Zhu, Zihui Li
 
 Workshop Contents
 -----------------
