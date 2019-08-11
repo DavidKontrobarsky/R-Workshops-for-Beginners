@@ -19,8 +19,57 @@ knitr::opts_chunk$set(echo = FALSE,
 tutorial_html_dependency()
 ```
 
+```{r}
+# Check wether the pakcages exist and install the rquired pakage
+check_package <- function(package_name){
+  if(!package_name %in% installed.packages())
+    install.packages(package_name)
+}
+
+check_package("rmarkdown")
+check_package("learnr")
+check_package("ggplot2")
+check_package("tidyverse")
+check_package("rmapshaper")
+check_package("sugarbag")
+check_package("randomcoloR")
+check_package("ggthemes")
+```
 
 # Reproducible Reporting
+
+## Instructors for Workshop 2
+
+#### **Speaker** : Jiaying Wu
+
+#### **Adviser** : [Patricia Menéndez](https://www.patriciamenendez.com/)
+
+####**Helpers** :
+
+* David Kontrobarsky
+
+* Dun Yong Tan
+
+* Geethanjali Gangula
+
+* James Louis Nguyen
+
+* Rowina Nathan
+
+* Sao Yang Hew
+
+* Weihao Li
+
+* Yijia Pan
+
+* Zhuangyi Zhu
+
+* Zihui Li
+
+Workshop 2 material prepared by : Jiaying Wu, Dianne Cook
+
+#### Workshop Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
+
 
 ## What is R Markdown?
 
@@ -385,6 +434,10 @@ knitr::opts_chunk$set(
 
 ## Resources
 
+### Online Books
+
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
 ### Cheat sheet
 
 * [R Markdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
@@ -401,9 +454,9 @@ knitr::opts_chunk$set(
 
 * [Getting started with R Markdown](https://resources.rstudio.com/the-essentials-of-data-science/getting-started-with-r-markdown-60-02)
 
-* [Reproduible Reporting](https://resources.rstudio.com/the-essentials-of-data-science/reproducible-reporting-58-03)
+* [Reproducible Reporting](https://resources.rstudio.com/the-essentials-of-data-science/reproducible-reporting-58-03)
 
-* [Interctive Reporting](https://resources.rstudio.com/the-essentials-of-data-science/interactive-reporting-60-01)
+* [Interactive Reporting](https://resources.rstudio.com/the-essentials-of-data-science/interactive-reporting-60-01)
 
 
 ## Prevue
@@ -440,6 +493,28 @@ ggplot(complete_data, aes(x = long, y = lat, group = interaction(GID_2, polygon)
   theme_map()
 ```
 
+
+## Survey and Feedback
+
+### Survey
+
+Please finish the survey **before 18 August 2019**, no personal detail will record within the survey.
+
+**It only take 5 minutes.**
+
+Survey link : https://docs.google.com/forms/d/e/1FAIpQLSeCRbW9K2ruXpHc1qDEhWxKV7Su3Ac7yFcc52oA4zbnKpGiJA/viewform
+
+We will learn how to clean this survey data in Workshop 5 - Data Wrangling 1.
+
+### Feedback
+
+Please provide your feedback for workshop 2, your feedback will help us improve the future experience of workshops.
+
+**3 minutes feedback** : https://docs.google.com/forms/d/e/1FAIpQLSdHG5T4GpxHI9WpfhA-5Xb6w-Mg_28mYT1TNFxKtvuLEV2HSw/viewform
+
+#### Once you finished the survey or feedback, you can collect a hexagonal sticker from the helpers in next Workshop. 
+
+![](images/Hexwall.png){width="100%" height="100%"}
 
 
 

@@ -19,6 +19,8 @@ Workshop Contents
 
     -   Speaker: [Dianne Cook](http://dicook.org)
 
+    -   Woorkshop 1 slides: <a href="workshop1/workshop1_intro.Rmd">Rmd</a>
+
 -   Workshop 2 - Introduction to R Markdown (16 August)
 
     -   Speaker: Jiaying Wu
@@ -56,8 +58,7 @@ Time and Location
 
 <details><summary>Sign up</summary>
 <p>
-    
-**Scan** the QR code to sign up:
+<br> **Scan** the QR code to sign up:
 
 <img src="images/Signup_QRcode.png" style="width:40.0%" style="height:40.0%" />
 
@@ -68,8 +69,7 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 <details><summary>Installation</summary>
 <p>
-    
-**Please install R and RStudio before you attend the workshop**.
+<br> **Please install R and RStudio before you attend the workshop**.
 
 -   [Install R](https://cran.csiro.au)
 
@@ -80,8 +80,7 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 <details><summary>Poster for R Workshops</summary>
 <p>
-    
-![](images/poster_black.png)
+<br> ![](images/poster_black.png)
 
 </p>
 </details>
