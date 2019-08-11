@@ -84,7 +84,7 @@ mapshot(map, file = "Map.png")
 
 <details><summary>Sign up</summary>
 <p>
-<br />
+
 **Scan** the QR code to sign up:
 
 ![](images/Signup_QRcode.png){width="40%" height="40%"}
@@ -96,7 +96,8 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 <details><summary>Installation</summary>
 <p>
-<br />
+
+
 **Please install R and RStudio before you attend the workshop**.
 
 * [Install R](https://cran.csiro.au)
@@ -108,7 +109,7 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 <details><summary>Poster for R Workshops</summary>
 <p>
-<br />
+
 ![](images/poster_black.png)
 
 </p>
