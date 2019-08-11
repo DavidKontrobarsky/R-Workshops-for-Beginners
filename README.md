@@ -19,7 +19,7 @@ Workshop Contents
 
     -   Speaker: [Dianne Cook](http://dicook.org)
 
-    -   Woorkshop 1 slides: <a href="workshop1/workshop1_intro.Rmd" download>Rmd</a>
+    -   Slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
 
 -   Workshop 2 - Introduction to R Markdown (16 August)
 
