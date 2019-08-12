@@ -38,11 +38,29 @@ check_package("ggthemes")
 
 # Reproducible Reporting
 
+## Set up
+
+#### **Please set up your computer with folowing instructions:**
+
+#### 1. Please enter this link into your web browser : http://bit.ly/MonashBA-R
+
+#### 2. Go down to `Workshop Contents`, then click `Introduction to R Markdown(16 August)` to open the material of workshop 2.
+
+![](images/workshop2_slideLink.png){width="50%" height="50%"}
+
+#### 3. Open your RStudio
+
+#### 4. Open the project you created last week. 
+
+For example, i cretaed a proect name shiba before. Now, i want to open it.
+
+![](images/Open_roject.png){width="50%" height="50%"}
+
 ## Instructors for Workshop 2
 
-#### **Speaker** : Jiaying Wu
+#### **Speaker** : Jiaying Wu (Raymond)
 
-#### **Adviser** : [Patricia Menéndez](https://www.patriciamenendez.com/)
+#### **Adviser** : [Dr Patricia Menéndez](https://www.patriciamenendez.com/)
 
 ####**Helpers** :
 
@@ -60,15 +78,15 @@ check_package("ggthemes")
 
 * Weihao Li
 
-* Yijia Pan
+* Yijia Pan (Jane)
 
 * Zhuangyi Zhu
 
-* Zihui Li
+* Zihui Li (Damon)
 
 Workshop 2 material prepared by : Jiaying Wu, Dianne Cook
 
-#### Workshop Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
+#### Workshop Information : http://bit.ly/MonashBA-R
 
 
 ## What is R Markdown?
@@ -178,6 +196,10 @@ When you knit your file, [Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdow
 
 ### **Explore Time (15 mins)**
 
+Type the following markdown language into this website : https://www.markdowntutorial.com/lesson/1/
+
+![](images/workshop2_markdown.png){width="80%" height="80%"}
+
 ### Headings
 
 `#` is a top level heading, or section
@@ -273,17 +295,19 @@ Cell 3        Cell 4
 
 ### Math
 
+(**Write math in Rmarkdown requires LaTeX, it might take significant amount of time to install. Please try it after workshop**)
+
 It will appear verbatim between `$` characters.
 
 For example:
 
 ```
-$A = \pi * r^{2}$
+$E = mc^{2}$
 ```
 
 Produces:
 
-$A = \pi * r^{2}$
+$E = m c^{2}$
 
 
 More detail about writing math in R Markdown: [Latex Cheatsheet](https://wch.github.io/latexsheet/)
@@ -449,6 +473,8 @@ knitr::opts_chunk$set(
 ### Online course
 
 * [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+* [Markdown Tutorial](https://www.markdowntutorial.com)
 
 ### Video
 
