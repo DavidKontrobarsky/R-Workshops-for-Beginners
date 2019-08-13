@@ -102,5 +102,5 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 ## Poster for R Workshops
 
-![](images/poster_black.png){width="70%" height="70%"}
+![](images/poster_black.png)
 

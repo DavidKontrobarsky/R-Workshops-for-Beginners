@@ -77,4 +77,4 @@ Installation
 Poster for R Workshops
 ----------------------
 
-<img src="images/poster_black.png" style="width:70.0%" style="height:70.0%" />
+![](images/poster_black.png)
