@@ -2,7 +2,7 @@
 R Workshops for Beginners
 =========================
 
-#### Short link to this website: <http://bit.ly/MonashBA-R>
+#### Short link to the website: <http://bit.ly/MonashBA_R2>
 
 **Advisers** : [Dianne Cook](http://dicook.org), [Patricia Menéndez](https://www.patriciamenendez.com)
 

@@ -49,7 +49,7 @@ tutorial_html_dependency()
 
 Workshop 1 material prepared by : Jiaying Wu, Dianne Cook
 
-#### Workshop Information : https://github.com/Jiaying-Wu/R-Workshops-for-Beginners
+#### Workshop Information : http://bit.ly/MonashBA_R2
 
 
 

@@ -42,7 +42,7 @@ check_package("ggthemes")
 
 #### **Please set up your computer with the following instructions:**
 
-#### 1. Please enter this link into your web browser : http://bit.ly/MonashBA-R
+#### 1. Please enter this link into your web browser : http://bit.ly/MonashBA_R2
 
 #### 2. Go down to `Workshop Contents`, then click `Introduction to R Markdown(16 August)` to open the material of workshop 2.
 
@@ -86,7 +86,7 @@ For example, we cretaed a project shiba before. Now, we want to open it.
 
 Workshop 2 material prepared by : Jiaying Wu, Dianne Cook
 
-#### Workshop Information : http://bit.ly/MonashBA-R
+#### Workshop Information : http://bit.ly/MonashBA_R2
 
 
 ## What is R Markdown?
