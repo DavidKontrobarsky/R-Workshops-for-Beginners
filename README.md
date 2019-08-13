@@ -19,27 +19,37 @@ Workshop Contents
 
     -   Speaker: [Dianne Cook](http://dicook.org)
 
-    -   Workshop 1 slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
+    -   Download slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
 
 -   Workshop 2 - Introduction to R Markdown (16 August)
 
     -   Speaker: Jiaying Wu
 
+    -   Download slides
+
 -   Workshop 3 - Data Visualization (23 August)
 
     -   Speaker: Yijia Pan
+
+    -   Download slides
 
 -   Workshop 4 - Data Types and Import Data (30 August)
 
     -   Speaker: [Earo Wang](https://earo.me)
 
+    -   Download slides
+
 -   Workshop 5 - Data Wrangling 1 (6 September)
 
     -   Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
+    -   Download slides
+
 -   Workshop 6 - Data Wrangling 2 (13 September)
 
     -   Speakers: David Kontrobarsky, Geethanjali Gangula, William Tran
+
+    -   Download slides
 
 ![](images/Hexwall.png)
 
