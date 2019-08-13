@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 # R Workshops for Beginners
 
-#### Short link to this repo: http://bit.ly/MonashBA-R
+#### Short link to this website: http://bit.ly/MonashBA-R
 
 **Advisers** : [Dianne Cook](http://dicook.org), [Patricia Menéndez](https://www.patriciamenendez.com)
 
@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
      
      * Speaker: [Dianne Cook](http://dicook.org)
      
-     * Woorkshop 1 slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
+     * Workshop 1 slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
 
 * Workshop 2 - Introduction to R Markdown (16 August)
      
@@ -82,8 +82,7 @@ mapshot(map, file = "Map.png")
 
 ![](images/Leaflet_location.png){width="50%" height="50%"}
 
-<details><summary>Sign up</summary>
-<p>
+## Sign up
 
 **Scan** the QR code to sign up:
 
@@ -91,12 +90,8 @@ mapshot(map, file = "Map.png")
 
 Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
 
-</p>
-</details>
 
-<details><summary>Installation</summary>
-<p>
-
+## Installation
 
 **Please install R and RStudio before you attend the workshop**.
 
@@ -104,13 +99,8 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 * [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-</p>
-</details>
 
-<details><summary>Poster for R Workshops</summary>
-<p>
+## Poster for R Workshops
 
-![](images/poster_black.png)
+![](images/poster_black.png){width="70%" height="70%"}
 
-</p>
-</details>

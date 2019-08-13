@@ -2,7 +2,7 @@
 R Workshops for Beginners
 =========================
 
-#### Short link to this repo: <http://bit.ly/MonashBA-R>
+#### Short link to this website: <http://bit.ly/MonashBA-R>
 
 **Advisers** : [Dianne Cook](http://dicook.org), [Patricia Menéndez](https://www.patriciamenendez.com)
 
@@ -19,7 +19,7 @@ Workshop Contents
 
     -   Speaker: [Dianne Cook](http://dicook.org)
 
-    -   Slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
+    -   Workshop 1 slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
 
 -   Workshop 2 - Introduction to R Markdown (16 August)
 
@@ -56,8 +56,8 @@ Time and Location
 
 <img src="images/Leaflet_location.png" style="width:50.0%" style="height:50.0%" />
 
-<details><summary>Sign up</summary>
-<p>
+Sign up
+-------
 
 **Scan** the QR code to sign up:
 
@@ -65,11 +65,8 @@ Time and Location
 
 Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
 
-</p>
-</details>
-
-<details><summary>Installation</summary>
-<p>
+Installation
+------------
 
 **Please install R and RStudio before you attend the workshop**.
 
@@ -77,13 +74,7 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 
 -   [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-</p>
-</details>
+Poster for R Workshops
+----------------------
 
-<details><summary>Poster for R Workshops</summary>
-<p>
-
-![](images/poster_black.png)
-
-</p>
-</details>
+<img src="images/poster_black.png" style="width:70.0%" style="height:70.0%" />
