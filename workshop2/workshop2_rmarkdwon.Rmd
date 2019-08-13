@@ -543,6 +543,7 @@ Please provide your feedback for workshop 2, your feedback will help us improve 
 
 ![](images/Hexwall.png){width="100%" height="100%"}
 
+([R script to neatly align hexagon stickers](https://github.com/mitchelloharawild/hexwall), by Mitchell O'Hara-Wild)
 
 
 
