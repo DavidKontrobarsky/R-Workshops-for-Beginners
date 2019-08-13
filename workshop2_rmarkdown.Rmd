@@ -20,7 +20,7 @@ tutorial_html_dependency()
 ```
 
 ```{r}
-# Check wether the pakcages exist and install the rquired pakage
+# Check wether the packages exist and install the required pakage
 check_package <- function(package_name){
   if(!package_name %in% installed.packages())
     install.packages(package_name)
@@ -40,11 +40,15 @@ check_package("ggthemes")
 
 ## Set up
 
+<<<<<<< HEAD:workshop2_rmarkdwon.Rmd
 #### **Please set up your computer with the following instructions:**
+=======
+#### **Please set up your computer with following instructions:**
+>>>>>>> e11b71fd909853888685ffbab56d7bf5eb66c3c0:workshop2_rmarkdown.Rmd
 
 #### 1. Please enter this link into your web browser : http://bit.ly/MonashBA-R
 
-#### 2. Go down to `Workshop Contents`, then click `Introduction to R Markdown(16 August)` to open the material of workshop 2.
+#### 2. Go down to `Workshop Contents`, then click `Introduction to R Markdown(16 August)` to open the material for workshop 2.
 
 ![](images/workshop2_slideLink.png){width="50%" height="50%"}
 
@@ -52,7 +56,11 @@ check_package("ggthemes")
 
 #### 4. Open the project you created last week. 
 
+<<<<<<< HEAD:workshop2_rmarkdwon.Rmd
 For example, we cretaed a project shiba before. Now, we want to open it.
+=======
+For example, I cretaed a proect name shiba before. Now, I want to open it.
+>>>>>>> e11b71fd909853888685ffbab56d7bf5eb66c3c0:workshop2_rmarkdown.Rmd
 
 ![](images/Open_roject.png){width="50%" height="50%"}
 
@@ -93,7 +101,7 @@ Workshop 2 material prepared by : Jiaying Wu, Dianne Cook
 
 When you are writing a report and doing analysis with some software, you might need to download your result, write text, and insert the result into your word processor (e.g. Microsoft Word).
 
-But R Markdown allow you embed R code in a Markdown document, produce **textual output** along with **graphics** in a **single file**. 
+But R Markdown allows you to embed R code in a Markdown document, produce **textual output** along with **graphics** in a **single file**. 
 
 ### A quick tour of R Markdown
 
@@ -214,7 +222,7 @@ Type the following markdown language into this website : https://www.markdowntut
 
 `-` or `*` or `+` on the beginning of several lines makes a bullet list.
 
-You can create a Sub-lists by:
+You can create Sub-lists by:
 
 ```
 * Item A
@@ -327,7 +335,7 @@ produces:
 
 ### Insert Images
 
-You can insert an image in two way:
+You can insert an image in two ways:
 
 * a URL (if the image is hosted online)
 
