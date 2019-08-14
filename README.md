@@ -19,13 +19,13 @@ Workshop Contents
 
     -   Speaker: [Dianne Cook](http://dicook.org)
 
-    -   Download slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro">Rmd</a>
+    -   Download slides: <a href="workshop1/workshop1_intro.Rmd" download="workshop1_intro.Rmd">Rmd</a>
 
--   Workshop 2 - Introduction to R Markdown (16 August)
+-   Workshop 2 - [Introduction to R Markdown (16 August)](https://ebsmonash.shinyapps.io/workshop2_rmarkdown/)
 
     -   Speaker: Jiaying Wu
 
-    -   Download slides
+    -   Download slides: <a href="workshop2/workshop2_rmarkdown.Rmd" download="workshop2_rmarkdown.Rmd">Rmd</a>
 
 -   Workshop 3 - Data Visualization (23 August)
 
