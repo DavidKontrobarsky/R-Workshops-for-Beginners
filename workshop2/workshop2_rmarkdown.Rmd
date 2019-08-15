@@ -80,7 +80,7 @@ For example, we cretaed a project shiba before. Now, we want to open it.
 
 * Yijia Pan (Jane)
 
-* Zhuangyi Zhu
+* Zhuangyi Zhu (Orya)
 
 * Zihui Li (Damon)
 
@@ -196,10 +196,6 @@ When you knit your file, [Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdow
 ![](images/Rmarkdown_basics.png){width="80%" height="80%"}
 
 ### **Explore Time (15 mins)**
-
-Type the following markdown language into this website : https://www.markdowntutorial.com/lesson/1/
-
-![](images/workshop2_markdown.png){width="80%" height="80%"}
 
 ### Headings
 
