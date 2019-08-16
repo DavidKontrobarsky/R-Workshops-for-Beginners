@@ -60,7 +60,7 @@ For example, we cretaed a project shiba before. Now, we want to open it.
 
 #### **Speaker** : Jiaying Wu (Raymond)
 
-#### **Adviser** : [Dr Patricia Menéndez](https://www.patriciamenendez.com/)
+#### **Adviser** : [Dr Patricia Menéndez](https://research.monash.edu/en/persons/patricia-menendez-galvan)
 
 ####**Helpers** :
 

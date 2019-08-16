@@ -16,13 +16,18 @@ knitr::opts_chunk$set(
 
 #### Short link to the website: http://bit.ly/MonashBA_R2
 
-**Advisers** : [Dianne Cook](http://dicook.org), [Patricia Menéndez](https://www.patriciamenendez.com)
+**Advisers** : [Dianne Cook](http://dicook.org), [Patricia Menéndez](https://research.monash.edu/en/persons/patricia-menendez-galvan)
 
 **Organizers** : Jiaying Wu, Yijia Pan
 
 **Guest speakers** : [Earo Wang](https://earo.me), [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
-**Helpers** : Amy Tran, David Kontrobarsky, Dun Yong Tan, Geethanjali Gangula, James Louis Nguyen, Jefanny Suryawan, Rachell Ng, Rowina Nathan, Sao Yang Hew, Thi Minh Chau Nguyen, Weihao Li, William Tran, Yih Ting Eng, Yuru Sun, Zhuangyi Zhu, Zihui Li
+**Helpers:** 
+------              ------                -------                    ---------
+Amy Tran            David Kontrobarsky    Dun Yong Tan               Geethanjali Gangula
+James Louis Nguyen  Jefanny Suryawan      Rachell Ng Rowina Nathan   Sao Yang Hew
+Sao Yang Hew        Thi Minh Chau Nguyen  Weihao Li                  William Tran
+Yih Ting Eng        Yuru Sun              Zhuangyi Zhu               Zihui Li
 
 ## Workshop Contents
 
