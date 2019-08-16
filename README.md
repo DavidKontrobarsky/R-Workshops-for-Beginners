@@ -42,6 +42,7 @@ R Workshops for Beginners
 
 </tr>
 </table>
+
 Workshop Contents
 -----------------
 
