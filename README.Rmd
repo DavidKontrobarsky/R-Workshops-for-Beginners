@@ -24,7 +24,34 @@ knitr::opts_chunk$set(
 
 **Helpers:** 
 
-```{r}
+<table>
+<tr>
+    <td>Amy Tran</td>
+    <td>David Kontrobarsky</td>
+    <td>Dun Yong Tan</td>
+    <td>Geethanjali Gangula</td>
+</tr>
+<tr>
+    <td>James Louis Nguyen</td>
+    <td>Jefanny Suryawan</td>
+    <td>Rachell Ng</td>
+    <td>Rowina Nathan</td>
+</tr>
+<tr>
+    <td>Sao Yang Hew</td>
+    <td>Thi Minh Chau Nguyen</td>
+    <td>Weihao Li</td>
+    <td>William Tran</td>
+</tr>
+<tr>
+    <td>Yih Ting Eng</td>
+    <td>Yuru Sun</td>
+    <td>Zhuangyi Zhu</td>
+    <td>Zihui Li</td>
+</tr>
+</table>
+
+```{r eval=FALSE}
 tb <- tibble::tibble(
   c("Amy Tran", "David Kontrobarsky", "Dun Yong Tan", "Geethanjali Gangula"),
   c("James Louis Nguyen", "Jefanny Suryawan", "Rachell Ng","Rowina Nathan"),

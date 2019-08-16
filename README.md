@@ -12,13 +12,36 @@ R Workshops for Beginners
 
 **Helpers:**
 
-|                     |                    |                      |              |
-|:--------------------|:-------------------|:---------------------|:-------------|
-| Amy Tran            | James Louis Nguyen | Sao Yang Hew         | Yih Ting Eng |
-| David Kontrobarsky  | Jefanny Suryawan   | Thi Minh Chau Nguyen | Yuru Sun     |
-| Dun Yong Tan        | Rachell Ng         | Weihao Li            | Zhuangyi Zhu |
-| Geethanjali Gangula | Rowina Nathan      | William Tran         | Zihui Li     |
+<table>
+<tr>
+    <td>Amy Tran</td>
+    <td>David Kontrobarsky</td>
+    <td>Dun Yong Tan</td>
+    <td>Geethanjali Gangula</td>
 
+</tr>
+<tr>
+    <td>James Louis Nguyen</td>
+    <td>Jefanny Suryawan</td>
+    <td>Rachell Ng</td>
+    <td>Rowina Nathan</td>
+
+</tr>
+<tr>
+    <td>Sao Yang Hew</td>
+    <td>Thi Minh Chau Nguyen</td>
+    <td>Weihao Li</td>
+    <td>William Tran</td>
+
+</tr>
+<tr>
+    <td>Yih Ting Eng</td>
+    <td>Yuru Sun</td>
+    <td>Zhuangyi Zhu</td>
+    <td>Zihui Li</td>
+
+</tr>
+</table>
 Workshop Contents
 -----------------
 
