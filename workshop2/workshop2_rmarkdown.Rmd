@@ -486,7 +486,9 @@ knitr::opts_chunk$set(
 
 ### **Next workshop** we will talk about **Data Visualization**
 
-```{r map,cache=TRUE,cache.path='cache/',fig.height=8,fig.width=8}
+![](images/random_aus_map.png){width="80%" height="80%"}
+
+```{r map,cache=TRUE,cache.path='cache/',fig.height=8,fig.width=8,eval=FALSE}
 # Library
 library(tidyverse)
 library(rmapshaper)
