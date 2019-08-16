@@ -10,12 +10,14 @@ R Workshops for Beginners
 
 **Guest speakers** : [Earo Wang](https://earo.me), [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
-| **Helpers:**       |                      |                          |                     |
-|--------------------|----------------------|--------------------------|---------------------|
-| Amy Tran           | David Kontrobarsky   | Dun Yong Tan             | Geethanjali Gangula |
-| James Louis Nguyen | Jefanny Suryawan     | Rachell Ng Rowina Nathan | Sao Yang Hew        |
-| Sao Yang Hew       | Thi Minh Chau Nguyen | Weihao Li                | William Tran        |
-| Yih Ting Eng       | Yuru Sun             | Zhuangyi Zhu             | Zihui Li            |
+**Helpers:**
+
+|                     |                    |                      |              |
+|:--------------------|:-------------------|:---------------------|:-------------|
+| Amy Tran            | James Louis Nguyen | Sao Yang Hew         | Yih Ting Eng |
+| David Kontrobarsky  | Jefanny Suryawan   | Thi Minh Chau Nguyen | Yuru Sun     |
+| Dun Yong Tan        | Rachell Ng         | Weihao Li            | Zhuangyi Zhu |
+| Geethanjali Gangula | Rowina Nathan      | William Tran         | Zihui Li     |
 
 Workshop Contents
 -----------------
