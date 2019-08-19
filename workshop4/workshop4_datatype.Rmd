@@ -714,11 +714,9 @@ class(as.data.frame(ggplot2::midwest))
 
 - [Advanced R](https://adv-r.hadley.nz/)
 
-
 ### Cheat Sheets
 
 - [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-
 
 ### Videos
 
@@ -726,10 +724,13 @@ class(as.data.frame(ggplot2::midwest))
 
 - [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
 
-
 ### Blogs
 
 - [R-bloggers](https://www.r-bloggers.com)
+
+### Community
+
+- [RStudio community](https://community.rstudio.com)
 
 
 ## Feedback
