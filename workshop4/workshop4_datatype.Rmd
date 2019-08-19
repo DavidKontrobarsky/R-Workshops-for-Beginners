@@ -7,6 +7,17 @@ runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
+# Check wether the pakcages exist and install the rquired packages
+check_package <- function(package_name){
+  if(!package_name %in% installed.packages())
+    install.packages(package_name)
+}
+
+check_package("readr")
+check_package("readxl")
+check_package("tibble")
+
+
 library(learnr)
 knitr::opts_chunk$set(echo = FALSE,   
                       message = FALSE,
@@ -23,8 +34,89 @@ tutorial_html_dependency()
 library(readr)
 ```
 
-
 # Explore Data
+
+## Set up
+
+#### **Please set up your computer with the following instructions:**
+
+#### 1. Please Open your RStudio
+
+#### 2. Open the project you created before. 
+
+For example, we created a project shiba before. Now, we want to open it.
+
+![](images/Open_project.png){width="60%" height="60%"}
+
+#### 3. Create a R Markdown file,
+
+![](images/Rmarkdown_creat.png){width="50%" height="50%"}
+
+Then select `HTML` output format.
+
+![](images/Rmd_output_format.png){width="60%" height="60%"}
+
+#### 4. Enter the link into your web browser : http://bit.ly/MonashBA_R2
+
+#### 5. Go down to `Workshop Contents`, then click `Data Types and Import Data (30 August)` to open the material of workshop 4.
+
+![](images/workshop3_slideLink.png){width="60%" height="60%"}
+
+#### 6. Download the following file, 
+
+* `CO2.tsv`
+
+* `datasets.csv`
+
+* `deaths.xlsx`
+
+* `geometry.xlsx`
+
+* `iris.csv`
+
+* `mtcars.dta`
+
+* `mtcars.sas7bdat`
+
+* `mtcars.sav`
+
+* `rock.csv`
+
+then save it under the `data` sub directory of your project.
+
+![](images/Data_subdirectory.png){width="60%" height="60%"}
+
+
+## Instructors for Workshop 4
+
+#### **Speaker** : [Earo Wang](https://earo.me)
+
+####**Helpers** :
+
+* Amy Tran
+
+* Dun Yong Tan
+
+* Geethanjali Gangula
+
+* James Louis Nguyen
+
+* Jefanny Suryawan
+
+* Jiaying Wu (Raymond)
+
+* Rachell Ng
+
+* Sao Yang Hew
+
+* Yuru Sun (Christina)
+
+* Yijia Pan (Jane)
+
+* Zihui Li (Damon)
+
+Workshop 4 material prepared by : Jiaying Wu, Patricia Menéndez, Earo Wang
+
 
 ## Data Import and Export
 
@@ -126,7 +218,7 @@ read_csv("data/rock.csv")
 
 ### Exercise ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJdqyYaKrHLuQIavnUazs3LvZEWSKfOMmdmSsIFYvBHUMRta9m){width="15%" height="15%"}
 
-Import the following files (saved in your `data` subdirectory) into R using functions in `readr` package:
+Import the following files (saved in your `data` sub directory) into R using functions in `readr` package:
 
 * `chocolates.csv`
 
@@ -356,7 +448,7 @@ You can ask R to determine the type of object using `typeof()`.
 
 ### Numbers
 
-**Double** vectors somtimes known as **numeric** vectors. Number in R **default** as **double**. when you see a number like `1` in R, which you might think of as integer. The type actually as double. 
+**Double** vectors sometimes known as **numeric** vectors. Number in R **default** as **double**. when you see a number like `1` in R, which you might think of as integer. The type actually as double. 
 
 ```{r echo=TRUE}
 typeof(c(1, 2, 3))
@@ -612,9 +704,6 @@ class(ggplot2::midwest)
 class(as.data.frame(ggplot2::midwest))
 ```
 
-
-
-
 ## Resources
 
 ### Online Books
@@ -643,5 +732,16 @@ class(as.data.frame(ggplot2::midwest))
 - [R-bloggers](https://www.r-bloggers.com)
 
 
+## Feedback
+
+Please provide your feedback for workshop 4, your feedback will help us improve the future experience of workshops.
+
+**3 minutes feedback** : https://docs.google.com/forms/d/e/1FAIpQLScRjehJX4KTrF03kXFbLwh7Ouiknkhhj_BrnHaGNigthV9vKQ/viewform
+
+#### Once you completed the feedback, you can collect a hexagonal sticker from the helpers in next Workshop. 
+
+![](images/Hexwall.png){width="100%" height="100%"}
+
+([R script to neatly align hexagon stickers](https://github.com/mitchelloharawild/hexwall), by Mitchell O'Hara-Wild)
 
 

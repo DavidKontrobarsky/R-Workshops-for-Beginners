@@ -54,7 +54,7 @@ Then select `HTML` output format.
 
 ![](images/workshop3_slideLink.png){width="60%" height="60%"}
 
-Then save it under the `data` subdirectory of your project.
+Then save it under the `data` sub directory of your project.
 
 ![](images/Data_subdirectory.png){width="60%" height="60%"}
 
@@ -460,13 +460,41 @@ mtcars %>%
 ```
 
 
+## Resources
+
+### Online Books
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+
+- [Advanced R](https://adv-r.hadley.nz/)
+
+
+### Cheat Sheets
+
+- [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+
+### Videos
+
+- [Data Science Essntials](https://resources.rstudio.com/the-essentials-of-data-science)
+
+- [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
+
+
+### Blogs
+
+- [R-bloggers](https://www.r-bloggers.com)
+
+
 ## Feedback
 
 Please provide your feedback for workshop 3, your feedback will help us improve the future experience of workshops.
 
 **3 minutes feedback** : https://docs.google.com/forms/d/e/1FAIpQLScNvF28ZglZt6EHdjKvr8wyJK9tVep85kl1rtGZPb4SydnLHg/viewform
 
-#### Once you finished the survey or feedback, you can collect a hexagonal sticker from the helpers in next Workshop. 
+#### Once you completed the feedback, you can collect a hexagonal sticker from the helpers in next Workshop. 
 
 ![](images/Hexwall.png){width="100%" height="100%"}
 
