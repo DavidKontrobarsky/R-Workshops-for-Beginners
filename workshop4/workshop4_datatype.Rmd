@@ -60,7 +60,7 @@ Then select `HTML` output format.
 
 #### 5. Go down to `Workshop Contents`, then click `Data Types and Import Data (30 August)` to open the material of workshop 4.
 
-![](images/workshop3_slideLink.png){width="60%" height="60%"}
+![](images/workshop4_slideLink.png){width="90%" height="90%"}
 
 #### 6. Download the following file, 
 
