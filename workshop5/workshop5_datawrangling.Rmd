@@ -46,7 +46,7 @@ tutorial_html_dependency()
 
 #### 4. Open the project you created before. 
 
-For example, we cretaed a project shiba before. Now, we want to open it.
+For example, we created a project shiba before. Now, we want to open it.
 
 ![](images/Open_project.png){width="60%" height="60%"}
 
