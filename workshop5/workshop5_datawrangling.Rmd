@@ -1,0 +1,108 @@
+---
+title: "Data Wrangling 1"
+output: 
+  learnr::tutorial:
+    css: "css/logo.css"
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+# Check wether the pakcages exist and install the rquired packages
+check_package <- function(package_name){
+  if(!package_name %in% installed.packages())
+    install.packages(package_name)
+}
+
+check_package("rmarkdown")
+check_package("learnr")
+
+
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE,   
+                      message = FALSE,
+                      warning = FALSE,
+                      collapse = TRUE,
+                      fig.height = 4,
+                      fig.width = 6,
+                      fig.align = "center",
+                      cache = FALSE)
+tutorial_html_dependency()
+```
+
+
+# Data Wrangling
+
+## Set up
+
+#### **Please set up your computer with the following instructions:**
+
+#### 1. Please enter the link into your web browser : http://bit.ly/MonashBA_R2
+
+#### 2. Go down to `Workshop Contents`, then click `Data Wrangling 1 (6 September)` to open the material of workshop 5.
+
+![](images/workshop5_slideLink.png){width="60%" height="60%"}
+
+#### 3. Open your RStudio
+
+#### 4. Open the project you created before. 
+
+For example, we cretaed a project shiba before. Now, we want to open it.
+
+![](images/Open_project.png){width="60%" height="60%"}
+
+
+## Instructors for Workshop 5
+
+#### **Speaker** : [Mitchell O’Hara-Wild](https://www.mitchelloharawild.com)
+
+####**Helpers** :
+
+* Amy Tran
+
+* Geethanjali Gangula
+
+* Jefanny Suryawan
+
+* Jiaying Wu (Raymond)
+
+* Sao Yang Hew
+
+* Weihao Li
+
+* William Tran
+
+* Yijia Pan (Jane)
+
+* Yih Ting Eng
+
+* Zihui Li (Damon)
+
+Workshop 5 material prepared by : Jiaying Wu, Mitchell O’Hara-Wild
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Feedback
+
+Please provide your feedback for workshop 5, your feedback will help us improve the future experience of workshops.
+
+**3 minutes feedback** : 
+
+
+#### Once you completed the feedback, you can collect a hexagonal sticker from the helpers in next Workshop. 
+
+![](images/Hexwall.png){width="100%" height="100%"}
+
+([R script to neatly align hexagon stickers](https://github.com/mitchelloharawild/hexwall), by Mitchell O'Hara-Wild)
+
+
