@@ -59,7 +59,7 @@ Then save it under the `data` sub directory of your project.
 ![](images/Data_subdirectory.png){width="60%" height="60%"}
 
 
-## Instructors for Workshop 5
+## Instructors for Workshop 3
 
 #### **Speaker** : Yijia Pan (Jane)
 
