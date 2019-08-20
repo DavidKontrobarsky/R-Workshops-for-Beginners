@@ -65,6 +65,8 @@ Then save it under the `data` sub directory of your project.
 
 ####**Helpers** :
 
+* Sayani Gupta
+
 * Amy Tran
 
 * David Kontrobarsky
