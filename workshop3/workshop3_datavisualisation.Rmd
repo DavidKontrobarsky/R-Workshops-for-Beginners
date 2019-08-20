@@ -63,7 +63,7 @@ Then save it under the `data` sub directory of your project.
 
 #### **Speaker** : Yijia Pan (Jane)
 
-####**Helpers** :
+#### **Helpers** :
 
 * Sayani Gupta
 
@@ -102,7 +102,7 @@ library(gridExtra)
 library(readr)
 ```
 
-An interesting chocolate data set with diverse ingredients in chocolates. Firstly, library `readr` and then use `read_csv()` function to import the chocolate data set.
+An interesting chocolate data set with diverse ingredients in chocolates. Firstly, library `readr` and then use `read_csv()` function to import the chocolate data set. (The data was originally collected by scraping the nutritional details available at the manufacturers web sites.)
 
 ```{r}
 library(readr)
@@ -148,6 +148,20 @@ ggplot(data = chocolates, aes(x = Sugars_g, y = Calories, color = Type)) +
   geom_point() + 
   ggtitle("The relationship between calories and sugars relative to chocolate types") +
   xlab("Sugars")
+```
+
+### Now let's improve it
+
+One problem with the default colour scheme is that when only two colours are needed, the two are not colour blind proof. This means that these two colours look the same for a person with the common red/green colour blindness.
+
+We can change the default colour palette pretty easily.
+
+```{r plot1b}
+ggplot(data = chocolates, aes(x = Sugars_g, y = Calories, color = Type)) + 
+  geom_point() + 
+  ggtitle("The relationship between calories and sugars relative to chocolate types") +
+  xlab("Sugars") +
+  scale_color_brewer(palette="Dark2")
 ```
 
 ## Scatter plot
@@ -231,7 +245,7 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, color = hp)) +
   ylab("Miles/(US) gallon")
 ```
 
-### Selecting point color 
+### Using a fixed point color 
 
 ```{r plot5}
 ggplot(data = mtcars, aes(x = wt, y = mpg)) + 
@@ -240,7 +254,7 @@ ggplot(data = mtcars, aes(x = wt, y = mpg)) +
   ylab("Miles/(US) gallon")
 ```
 
-### Selecting point shapes
+### Mapping a variable to point shapes
 
 ```{r plot6}
 ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(cyl))) + 
@@ -250,7 +264,7 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(cyl))) +
   ylab("Miles/(US) gallon")
 ```
 
-### Selecting point sizes
+### Mapping a variable to point sizes
 
 ```{r plot7}
 ggplot(data = mtcars, aes(x = wt, y = mpg, size = factor(cyl))) + 
@@ -260,7 +274,7 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, size = factor(cyl))) +
   ylab("Miles/(US) gallon")
 ```
 
-### Selecting point transparency
+### Mapping a variable to point transparency
 
 ```{r plot8}
 ggplot(data = mtcars, aes(x = wt, y = mpg, alpha = factor(cyl))) + 
@@ -272,8 +286,6 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, alpha = factor(cyl))) +
 
 ### Combining color and shape 
 
-#### What you can get from this graph?
-
 ```{r plot9}
 ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(am), color = hp)) + 
   geom_point() +
@@ -282,9 +294,7 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(am), color = hp)) +
   scale_color_gradient(low="blue", high="red")
 ```
 
-* Manual cars have high efficiency of using petrol 
-
-* One manual car has the highest horsepower -- think about sports cars
+* Generally, using colour for one variable, and shape for another makes a very difficult to read plot. This is what you see here, its difficult to learn anything from the plot because there is too much to digest.
 
 ### Adding a vertical line 
 
@@ -318,6 +328,15 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_line() +
   xlab("Engine Displacement (Litres)") +
   ylab("Highway Miles per Gallon")
+```
+
+For this data, the line plot doesn't make much sense. A more usual example is to make a time series plot, like this one below.
+
+```{r plot11b}
+data(economics)
+ggplot(data=economics, aes(x=date, y=pce)) +
+  geom_line() +
+  ylab("personal consumption ($bil)")
 ```
 
 ## Faceting 
@@ -365,21 +384,40 @@ ggplot(data = mpg, aes(x = drv, y = hwy, fill = drv)) +
 * we only need y axis in the `aes()` 
 
 ```{r plot15}
-ggplot(data = mpg, aes(hwy)) + 
+ggplot(data = mpg, aes(x=hwy)) + 
   geom_histogram(binwidth = 0.6) 
 ```
 
+Changing the binwidth for the bars is important for making a histogram. Using 1 for the binwidth is more reasonable for this data, because `hwy` is provided as an integer.
+
+```{r plot15b}
+ggplot(data = mpg, aes(x=hwy)) + 
+  geom_histogram(binwidth = 1) 
+```
+
+
 ### Bar chart
 
+A barchart and a histogram walked into a bar, and no-one could tell them apart! They are not identical twins, but rather fraternal. A bar chart is used for a categorical variable, and typically has a gap between bars indicating that there is a gap between measurements. Histograms are used for continuous measurements, and you need to decide on an appropriate binning strategy to make a good one.
+
 ```{r plot16}
-ggplot(data = mpg, aes(hwy)) + 
+ggplot(data = mpg, aes(x=hwy)) + 
+  geom_bar()
+```
+
+Funnily enough, because `hwy` is an integer, the barchart of it is the same as the histogram with binwidth=1.
+
+Better to use a categorical variable to show off a barchart.
+
+```{r plot16b}
+ggplot(data = mpg, aes(x=class)) + 
   geom_bar()
 ```
 
 ### Count of `drv` in bar chart 
 
 ```{r plot17}
-ggplot(data = mpg, aes(hwy, fill = drv)) + 
+ggplot(data = mpg, aes(x=class, fill = drv)) + 
   geom_bar() +
   scale_fill_brewer(palette="Dark2")
 ```
@@ -389,7 +427,7 @@ ggplot(data = mpg, aes(hwy, fill = drv)) +
 When cars are moving using front wheels on highway, they tend to drive more miles per gallon instead of using all 4 wheels or only rear wheels.
 
 ```{r plot18}
-ggplot(data = mpg, aes(hwy, fill = drv)) + 
+ggplot(data = mpg, aes(x=class, fill = drv)) + 
   geom_bar(position="fill") +
   scale_fill_brewer(palette="Dark2")
 ```
@@ -399,21 +437,8 @@ ggplot(data = mpg, aes(hwy, fill = drv)) +
 When cars are moving on the highway, they are more likely to use 4 wheels or just front wheels. 
 
 ```{r plot19}
-ggplot(data = mpg, aes(x = hwy, fill = drv)) + 
+ggplot(data = mpg, aes(x=class, fill = drv)) + 
   geom_bar(position="dodge") +
-  scale_fill_brewer(palette="Dark2")
-```
-
-### What can you get from this complicated graph? 
-
-- Different types of cars use different wheels to move as they may have different functions 
-
-- Small cars tend to use petrol more efficiently on highway than large cars 
-
-```{r plot20}
-ggplot(data = mpg, aes(x = hwy, fill = drv)) + 
-  geom_bar(position="dodge") +
-  facet_wrap(~class) +
   scale_fill_brewer(palette="Dark2")
 ```
 
@@ -469,6 +494,10 @@ mtcars %>%
 - [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org)
 
 - [R for Data Science](https://r4ds.had.co.nz/)
+
+- [Data Visualization: A practical introduction](https://socviz.co)
+
+- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
 
 - [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
 

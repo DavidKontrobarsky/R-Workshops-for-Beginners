@@ -55,44 +55,26 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="section-open-the-project-you-created-before." class="section level4">
 <h4>2. Open the project you created before.</h4>
 <p>For example, we created a project shiba before. Now, we want to open it.</p>
-<div class="figure">
-<img src="images/Open_project.png" style="width:60.0%" style="height:60.0%" />
-
-</div>
+<p><img src="images/Open_project.png" style="width:60.0%;height:60.0%" /></p>
 </div>
 <div id="section-create-a-r-markdown-file" class="section level4">
 <h4>3. Create a R Markdown file,</h4>
-<div class="figure">
-<img src="images/Rmarkdown_creat.png" style="width:50.0%" style="height:50.0%" />
-
-</div>
+<p><img src="images/Rmarkdown_creat.png" style="width:50.0%;height:50.0%" /></p>
 <p>Then select <code>HTML</code> output format.</p>
-<div class="figure">
-<img src="images/Rmd_output_format.png" style="width:60.0%" style="height:60.0%" />
-
-</div>
+<p><img src="images/Rmd_output_format.png" style="width:60.0%;height:60.0%" /></p>
 </div>
 <div id="section-enter-the-link-into-your-web-browser-httpbit.lymonashba_r2" class="section level4">
 <h4>4. Enter the link into your web browser : <a href="http://bit.ly/MonashBA_R2" class="uri">http://bit.ly/MonashBA_R2</a></h4>
 </div>
 <div id="section-go-down-to-workshop-contents-then-click-data-visualisation-23-august-to-open-the-material-of-workshop-3." class="section level4">
 <h4>5. Go down to <code>Workshop Contents</code>, then click <code>Data Visualisation (23 August)</code> to open the material of workshop 3.</h4>
-<div class="figure">
-<img src="images/workshop3_slideLink.png" style="width:60.0%" style="height:60.0%" />
-
-</div>
+<p><img src="images/workshop3_slideLink.png" style="width:60.0%;height:60.0%" /></p>
 </div>
 <div id="section-click-chocolate.csv-to-download-the-csv-file" class="section level4">
 <h4>6. Click <code>chocolate.csv</code> to download the csv file,</h4>
-<div class="figure">
-<img src="images/workshop3_slideLink.png" style="width:60.0%" style="height:60.0%" />
-
-</div>
+<p><img src="images/workshop3_slideLink.png" style="width:60.0%;height:60.0%" /></p>
 <p>Then save it under the <code>data</code> sub directory of your project.</p>
-<div class="figure">
-<img src="images/Data_subdirectory.png" style="width:60.0%" style="height:60.0%" />
-
-</div>
+<p><img src="images/Data_subdirectory.png" style="width:60.0%;height:60.0%" /></p>
 </div>
 </div>
 <div id="section-instructors-for-workshop-3" class="section level2">
@@ -127,7 +109,7 @@ library(learnr)
 library(ggplot2)
 library(gridExtra)
 library(readr)</code></pre>
-<p>An interesting chocolate data set with diverse ingredients in chocolates. Firstly, library <code>readr</code> and then use <code>read_csv()</code> function to import the chocolate data set.</p>
+<p>An interesting chocolate data set with diverse ingredients in chocolates. Firstly, library <code>readr</code> and then use <code>read_csv()</code> function to import the chocolate data set. (The data was originally collected by scraping the nutritional details available at the manufacturers web sites.)</p>
 <pre class="r"><code>library(readr)
 chocolates &lt;- read_csv(&quot;data/chocolates.csv&quot;)</code></pre>
 <ul>
@@ -184,6 +166,17 @@ chocolates &lt;- read_csv(&quot;data/chocolates.csv&quot;)</code></pre>
   xlab(&quot;Sugars&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot1-1.png" width="624" /></p>
 </div>
+<div id="section-now-lets-improve-it" class="section level3">
+<h3>Now let’s improve it</h3>
+<p>One problem with the default colour scheme is that when only two colours are needed, the two are not colour blind proof. This means that these two colours look the same for a person with the common red/green colour blindness.</p>
+<p>We can change the default colour palette pretty easily.</p>
+<pre class="r"><code>ggplot(data = chocolates, aes(x = Sugars_g, y = Calories, color = Type)) + 
+  geom_point() + 
+  ggtitle(&quot;The relationship between calories and sugars relative to chocolate types&quot;) +
+  xlab(&quot;Sugars&quot;) +
+  scale_color_brewer(palette=&quot;Dark2&quot;)</code></pre>
+<p><img src="workshop3_datavisualisation_files/figure-html/plot1b-1.png" width="624" /></p>
+</div>
 </div>
 <div id="section-scatter-plot" class="section level2">
 <h2>Scatter plot</h2>
@@ -196,7 +189,7 @@ chocolates &lt;- read_csv(&quot;data/chocolates.csv&quot;)</code></pre>
 <ul>
 <li><p>Motor Trend Car Road Tests – the data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).</p></li>
 <li><p>Use <code>help()</code> function to find more information</p></li>
-<li>Important variables:
+<li><p>Important variables:</p>
 <ul>
 <li>mpg – Miles/(US) gallon</li>
 <li>cyl – Number of cylinders</li>
@@ -271,16 +264,16 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot4-1.png" width="624" /></p>
 </div>
 </div>
-<div id="section-selecting-point-color" class="section level3">
-<h3>Selecting point color</h3>
+<div id="section-using-a-fixed-point-color" class="section level3">
+<h3>Using a fixed point color</h3>
 <pre class="r"><code>ggplot(data = mtcars, aes(x = wt, y = mpg)) + 
   geom_point(color = &quot;blue&quot;) +
   xlab(&quot;Weight (1000 lbs)&quot;) +
   ylab(&quot;Miles/(US) gallon&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot5-1.png" width="624" /></p>
 </div>
-<div id="section-selecting-point-shapes" class="section level3">
-<h3>Selecting point shapes</h3>
+<div id="section-mapping-a-variable-to-point-shapes" class="section level3">
+<h3>Mapping a variable to point shapes</h3>
 <pre class="r"><code>ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(cyl))) + 
   geom_point() + 
   labs(shape = &quot;cyl&quot;) +
@@ -288,8 +281,8 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
   ylab(&quot;Miles/(US) gallon&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot6-1.png" width="624" /></p>
 </div>
-<div id="section-selecting-point-sizes" class="section level3">
-<h3>Selecting point sizes</h3>
+<div id="section-mapping-a-variable-to-point-sizes" class="section level3">
+<h3>Mapping a variable to point sizes</h3>
 <pre class="r"><code>ggplot(data = mtcars, aes(x = wt, y = mpg, size = factor(cyl))) + 
   geom_point() +
   labs(size = &quot;cyl&quot;) +
@@ -297,8 +290,8 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
   ylab(&quot;Miles/(US) gallon&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot7-1.png" width="624" /></p>
 </div>
-<div id="section-selecting-point-transparency" class="section level3">
-<h3>Selecting point transparency</h3>
+<div id="section-mapping-a-variable-to-point-transparency" class="section level3">
+<h3>Mapping a variable to point transparency</h3>
 <pre class="r"><code>ggplot(data = mtcars, aes(x = wt, y = mpg, alpha = factor(cyl))) + 
   geom_point() + 
   labs(alpha = &quot;cyl&quot;) +
@@ -308,8 +301,6 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
 </div>
 <div id="section-combining-color-and-shape" class="section level3">
 <h3>Combining color and shape</h3>
-<div id="section-what-you-can-get-from-this-graph" class="section level4">
-<h4>What you can get from this graph?</h4>
 <pre class="r"><code>ggplot(data = mtcars, aes(x = wt, y = mpg, shape = factor(am), color = hp)) + 
   geom_point() +
   labs(x = &quot;Weight (1000 lbs)&quot;, y = &quot;Miles per gallon&quot;, color = &quot;Gross horsepower&quot;) +
@@ -317,10 +308,8 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
   scale_color_gradient(low=&quot;blue&quot;, high=&quot;red&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot9-1.png" width="624" /></p>
 <ul>
-<li><p>Manual cars have high efficiency of using petrol</p></li>
-<li><p>One manual car has the highest horsepower – think about sports cars</p></li>
+<li>Generally, using colour for one variable, and shape for another makes a very difficult to read plot. This is what you see here, its difficult to learn anything from the plot because there is too much to digest.</li>
 </ul>
-</div>
 </div>
 <div id="section-adding-a-vertical-line" class="section level3">
 <h3>Adding a vertical line</h3>
@@ -353,6 +342,12 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
   xlab(&quot;Engine Displacement (Litres)&quot;) +
   ylab(&quot;Highway Miles per Gallon&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot11-1.png" width="624" /></p>
+<p>For this data, the line plot doesn’t make much sense. A more usual example is to make a time series plot, like this one below.</p>
+<pre class="r"><code>data(economics)
+ggplot(data=economics, aes(x=date, y=pce)) +
+  geom_line() +
+  ylab(&quot;personal consumption ($bil)&quot;)</code></pre>
+<p><img src="workshop3_datavisualisation_files/figure-html/plot11b-1.png" width="624" /></p>
 </div>
 </div>
 <div id="section-faceting" class="section level2">
@@ -394,19 +389,29 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
 <li><p>Using <code>binwidth()</code> to adjust the width of each bin</p></li>
 <li><p>we only need y axis in the <code>aes()</code></p></li>
 </ul>
-<pre class="r"><code>ggplot(data = mpg, aes(hwy)) + 
+<pre class="r"><code>ggplot(data = mpg, aes(x=hwy)) + 
   geom_histogram(binwidth = 0.6) </code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot15-1.png" width="624" /></p>
+<p>Changing the binwidth for the bars is important for making a histogram. Using 1 for the binwidth is more reasonable for this data, because <code>hwy</code> is provided as an integer.</p>
+<pre class="r"><code>ggplot(data = mpg, aes(x=hwy)) + 
+  geom_histogram(binwidth = 1) </code></pre>
+<p><img src="workshop3_datavisualisation_files/figure-html/plot15b-1.png" width="624" /></p>
 </div>
 <div id="section-bar-chart" class="section level3">
 <h3>Bar chart</h3>
-<pre class="r"><code>ggplot(data = mpg, aes(hwy)) + 
+<p>A barchart and a histogram walked into a bar, and no-one could tell them apart! They are not identical twins, but rather fraternal. A bar chart is used for a categorical variable, and typically has a gap between bars indicating that there is a gap between measurements. Histograms are used for continuous measurements, and you need to decide on an appropriate binning strategy to make a good one.</p>
+<pre class="r"><code>ggplot(data = mpg, aes(x=hwy)) + 
   geom_bar()</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot16-1.png" width="624" /></p>
+<p>Funnily enough, because <code>hwy</code> is an integer, the barchart of it is the same as the histogram with binwidth=1.</p>
+<p>Better to use a categorical variable to show off a barchart.</p>
+<pre class="r"><code>ggplot(data = mpg, aes(x=class)) + 
+  geom_bar()</code></pre>
+<p><img src="workshop3_datavisualisation_files/figure-html/plot16b-1.png" width="624" /></p>
 </div>
 <div id="section-count-of-drv-in-bar-chart" class="section level3">
 <h3>Count of <code>drv</code> in bar chart</h3>
-<pre class="r"><code>ggplot(data = mpg, aes(hwy, fill = drv)) + 
+<pre class="r"><code>ggplot(data = mpg, aes(x=class, fill = drv)) + 
   geom_bar() +
   scale_fill_brewer(palette=&quot;Dark2&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot17-1.png" width="624" /></p>
@@ -414,7 +419,7 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
 <div id="section-compositional-bar-charts" class="section level3">
 <h3>Compositional bar charts</h3>
 <p>When cars are moving using front wheels on highway, they tend to drive more miles per gallon instead of using all 4 wheels or only rear wheels.</p>
-<pre class="r"><code>ggplot(data = mpg, aes(hwy, fill = drv)) + 
+<pre class="r"><code>ggplot(data = mpg, aes(x=class, fill = drv)) + 
   geom_bar(position=&quot;fill&quot;) +
   scale_fill_brewer(palette=&quot;Dark2&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot18-1.png" width="624" /></p>
@@ -422,22 +427,10 @@ grid.arrange(p1, p2, nrow = 1)</code></pre>
 <div id="section-side-by-side-bar-charts" class="section level3">
 <h3>Side-by-side bar charts</h3>
 <p>When cars are moving on the highway, they are more likely to use 4 wheels or just front wheels.</p>
-<pre class="r"><code>ggplot(data = mpg, aes(x = hwy, fill = drv)) + 
+<pre class="r"><code>ggplot(data = mpg, aes(x=class, fill = drv)) + 
   geom_bar(position=&quot;dodge&quot;) +
   scale_fill_brewer(palette=&quot;Dark2&quot;)</code></pre>
 <p><img src="workshop3_datavisualisation_files/figure-html/plot19-1.png" width="624" /></p>
-</div>
-<div id="section-what-can-you-get-from-this-complicated-graph" class="section level3">
-<h3>What can you get from this complicated graph?</h3>
-<ul>
-<li><p>Different types of cars use different wheels to move as they may have different functions</p></li>
-<li><p>Small cars tend to use petrol more efficiently on highway than large cars</p></li>
-</ul>
-<pre class="r"><code>ggplot(data = mpg, aes(x = hwy, fill = drv)) + 
-  geom_bar(position=&quot;dodge&quot;) +
-  facet_wrap(~class) +
-  scale_fill_brewer(palette=&quot;Dark2&quot;)</code></pre>
-<p><img src="workshop3_datavisualisation_files/figure-html/plot20-1.png" width="624" /></p>
 </div>
 </div>
 <div id="section-advanced-plotting" class="section level2">
@@ -488,6 +481,8 @@ mtcars %&gt;%
 <ul>
 <li><p><a href="https://ggplot2-book.org">ggplot2: Elegant Graphics for Data Analysis</a></p></li>
 <li><p><a href="https://r4ds.had.co.nz/">R for Data Science</a></p></li>
+<li><p><a href="https://socviz.co">Data Visualization: A practical introduction</a></p></li>
+<li><p><a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a></p></li>
 <li><p><a href="https://bookdown.org/rdpeng/rprogdatascience/">R Programming for Data Science</a></p></li>
 <li><p><a href="https://adv-r.hadley.nz/">Advanced R</a></p></li>
 </ul>
@@ -524,10 +519,7 @@ mtcars %&gt;%
 <p><strong>3 minutes feedback</strong> : <a href="https://docs.google.com/forms/d/e/1FAIpQLScNvF28ZglZt6EHdjKvr8wyJK9tVep85kl1rtGZPb4SydnLHg/viewform" class="uri">https://docs.google.com/forms/d/e/1FAIpQLScNvF28ZglZt6EHdjKvr8wyJK9tVep85kl1rtGZPb4SydnLHg/viewform</a></p>
 <div id="section-once-you-completed-the-feedback-you-can-collect-a-hexagonal-sticker-from-the-helpers-in-next-workshop." class="section level4">
 <h4>Once you completed the feedback, you can collect a hexagonal sticker from the helpers in next Workshop.</h4>
-<div class="figure">
-<img src="images/Hexwall.png" style="width:100.0%" style="height:100.0%" />
-
-</div>
+<p><img src="images/Hexwall.png" style="width:100.0%;height:100.0%" /></p>
 (<a href="https://github.com/mitchelloharawild/hexwall">R script to neatly align hexagon stickers</a>, by Mitchell O’Hara-Wild) 
 <script type="application/shiny-prerendered" data-context="server-start">
 # Check wether the pakcages exist and install the rquired packages
@@ -559,7 +551,7 @@ learnr:::register_http_handlers(session, metadata = NULL)
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","broom","cellranger","cli","colorspace","compiler","crayon","datasets","digest","dplyr","evaluate","fansi","forcats","generics","GGally","ggplot2","glue","graphics","grDevices","grid","gridExtra","gtable","haven","hms","htmltools","htmlwidgets","httpuv","httr","jsonlite","knitr","labeling","later","lattice","lazyeval","learnr","lubridate","magrittr","markdown","methods","mime","modelr","munsell","nlme","pillar","pkgconfig","plyr","promises","purrr","R6","RColorBrewer","Rcpp","readr","readxl","reshape","reshape2","rlang","rmarkdown","rprojroot","rstudioapi","rvest","scales","shiny","stats","stringi","stringr","tibble","tidyr","tidyselect","tidyverse","tools","utf8","utils","vctrs","withr","xfun","xml2","xtable","yaml","zeallot"]},{"type":"character","attributes":{},"value":["0.2.1","1.1.4","3.6.0","0.5.2","1.1.0","1.1.0","1.4-1","3.6.0","1.3.4","3.6.0","0.6.20","0.8.3","0.14","0.4.0","0.4.0","0.0.2","1.4.0","3.2.0","1.3.1.9000","3.6.0","3.6.0","3.6.0","2.3","0.3.0","2.1.1","0.5.0","0.3.6","1.3","1.5.1","1.4.0","1.6","1.23","0.3","0.8.0","0.20-38","0.2.2","0.9.2.1","1.7.4","1.5","1.0","3.6.0","0.7","0.1.4","0.5.0","3.1-140","1.4.2","2.0.2","1.8.4","1.0.1","0.3.2","2.4.0","1.1-2","1.0.2","1.3.1","1.3.1","0.8.8","1.4.3","0.4.0","1.14","1.3-2","0.10","0.3.4","1.0.0","1.3.2","3.6.0","1.4.3","1.4.0","2.1.3","0.8.3","0.2.5","1.2.1","3.6.0","1.1.4","3.6.0","0.2.0","2.1.2","0.8","1.2.0","1.8-4","2.2.0","0.1.0"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","broom","cellranger","cli","colorspace","compiler","crayon","datasets","digest","dplyr","evaluate","fansi","forcats","generics","GGally","ggplot2","glue","graphics","grDevices","grid","gridExtra","gtable","haven","hms","htmltools","htmlwidgets","httpuv","httr","jsonlite","knitr","labeling","later","lattice","lazyeval","learnr","lubridate","magrittr","markdown","methods","mime","modelr","munsell","nlme","pillar","pkgconfig","plyr","promises","purrr","R6","RColorBrewer","Rcpp","readr","readxl","reshape","reshape2","rlang","rmarkdown","rprojroot","rstudioapi","rvest","scales","shiny","stats","stringi","stringr","tibble","tidyr","tidyselect","tidyverse","tools","utf8","utils","vctrs","withr","xfun","xml2","xtable","yaml","zeallot"]},{"type":"character","attributes":{},"value":["0.2.1","1.1.4","3.6.1","0.5.2","1.1.0","1.1.0","1.4-1","3.6.1","1.3.4","3.6.1","0.6.20","0.8.3","0.14","0.4.0","0.4.0","0.0.2","1.4.0","3.2.1","1.3.1","3.6.1","3.6.1","3.6.1","2.3","0.3.0","2.1.1","0.5.0","0.3.6","1.3","1.5.1","1.4.1","1.6","1.23","0.3","0.8.0","0.20-38","0.2.2","0.9.2.1","1.7.4","1.5","1.0","3.6.1","0.7","0.1.4","0.5.0","3.1-140","1.4.2","2.0.2","1.8.4","1.0.1","0.3.2","2.4.0","1.1-2","1.0.2","1.3.1","1.3.1","0.8.8","1.4.3","0.4.0","1.14","1.3-2","0.10","0.3.4","1.0.0","1.3.2","3.6.1","1.4.3","1.4.0","2.1.3","0.8.3","0.2.5","1.2.1","3.6.1","1.1.4","3.6.1","0.2.0","2.1.2","0.8","1.2.0","1.8-4","2.2.0","0.1.0"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>
