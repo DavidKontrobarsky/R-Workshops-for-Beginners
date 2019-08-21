@@ -58,7 +58,7 @@ Workshop Contents
 
     -   Download slides: <a href="workshop2/workshop2_rmarkdown.Rmd" download="workshop2_rmarkdown.Rmd">Rmd</a>
 
--   Workshop 3 - Data Visualisation (23 August)
+-   Workshop 3 - [Data Visualisation (23 August)]((https://ebsmonash.shinyapps.io/workshop3_datavisualisation/))
 
     -   Speaker: Yijia Pan
 
