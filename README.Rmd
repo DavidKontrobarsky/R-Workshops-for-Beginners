@@ -30,7 +30,6 @@ knitr::opts_chunk$set(
     <td>David Kontrobarsky</td>
     <td>Dun Yong Tan</td>
     <td>Geethanjali Gangula</td>
-    
 </tr>
 <tr>
     <td>James Louis Nguyen</td>
@@ -43,14 +42,12 @@ knitr::opts_chunk$set(
     <td>Sao Yang Hew</td>
     <td>Sherry Zhang</td>
     <td>Thi Minh Chau Nguyen</td>
-
 </tr>
 <tr>
     <td>Weihao Li</td>
     <td>William Tran</td>
     <td>Yih Ting Eng</td>
     <td>Yuru Sun</td>
-
 </tr>
 <tr>
     <td>Zhuangyi Zhu</td>
@@ -106,19 +103,14 @@ knitr::kable(tb)
      <td><a href="workshop4/data/CO2.tsv" download="CO2.tsv">CO2.tsv</a></td>
      <td><a href="workshop4/data/datasets.csv" download="datasets.csv">datasets.csv</a></td>
      <td><a href="workshop4/data/deaths.xlsx" download="deaths.xlsx">deaths.xlsx</a></td>
-     
-     </tr>
-     <tr>
      <td><a href="workshop4/data/geometry.xlsx" download="geometry.xlsx">geometry.xlsx</a></td>
      <td><a href="workshop4/data/iris.csv" download="iris.csv">iris.csv</a></td>
-     <td><a href="workshop4/data/mtcars.dta" download="mtcars.dta">mtcars.dta</a></td>
-     
      </tr>
      <tr>
+     <td><a href="workshop4/data/mtcars.dta" download="mtcars.dta">mtcars.dta</a></td>
      <td><a href="workshop4/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a></td>
      <td><a href="workshop4/mtcars.sav" download="mtcars.sav">mtcars.sav</a></td>
      <td><a href="workshop4/rock.csv" download="rock.csv">rock.csv</a></td>
-     
      </tr>
      </table>
 

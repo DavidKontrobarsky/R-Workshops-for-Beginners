@@ -63,7 +63,7 @@ Workshop Contents
 
     -   Download slides: <a href="workshop2/workshop2_rmarkdown.Rmd" download="workshop2_rmarkdown.Rmd">Rmd</a>
 
--   Workshop 3 - [Data Visualisation (23 August)](https://ebsmonash.shinyapps.io/workshop3_datavisualisation/)
+-   Workshop 3 - [Data Visualisation (23 August)]((https://ebsmonash.shinyapps.io/workshop3_datavisualisation/))
 
     -   Speaker: Yijia Pan
 
@@ -90,19 +90,17 @@ Workshop Contents
     <td>
     <a href="workshop4/data/deaths.xlsx" download="deaths.xlsx">deaths.xlsx</a>
     </td>
-    </tr>
-    <tr>
     <td>
     <a href="workshop4/data/geometry.xlsx" download="geometry.xlsx">geometry.xlsx</a>
     </td>
     <td>
     <a href="workshop4/data/iris.csv" download="iris.csv">iris.csv</a>
     </td>
+    </tr>
+    <tr>
     <td>
     <a href="workshop4/data/mtcars.dta" download="mtcars.dta">mtcars.dta</a>
     </td>
-    </tr>
-    <tr>
     <td>
     <a href="workshop4/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a>
     </td>
@@ -114,7 +112,7 @@ Workshop Contents
     </td>
     </tr>
     </table>
-    
+
 -   Workshop 5 - Data Wrangling 1 (6 September)
 
     -   Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
