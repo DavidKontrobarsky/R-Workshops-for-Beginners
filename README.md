@@ -77,8 +77,44 @@ Workshop Contents
 
     -   Download slides
 
-    -   Download data: <a href="workshop4/data/CO2.tsv" download="CO2.tsv">CO2.tsv</a>, <a href="workshop4/data/datasets.csv" download="datasets.csv">datasets.csv</a>, <a href="workshop4/data/deaths.xlsx" download="deaths.xlsx">deaths.xlsx</a>, <a href="workshop4/data/geometry.xlsx" download="geometry.xlsx">geometry.xlsx</a>, <a href="workshop4/data/iris.csv" download="iris.csv">iris.csv</a>, <a href="workshop4/data/mtcars.dta" download="mtcars.dta">mtcars.dta</a>, <a href="workshop4/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a>, <a href="workshop4/mtcars.sav" download="mtcars.sav">mtcars.sav</a>, <a href="workshop4/rock.csv" download="rock.csv">rock.csv</a>
+    -   Download data:
 
+    <table>
+    <tr>
+    <td>
+    <a href="workshop4/data/CO2.tsv" download="CO2.tsv">CO2.tsv</a>
+    </td>
+    <td>
+    <a href="workshop4/data/datasets.csv" download="datasets.csv">datasets.csv</a>
+    </td>
+    <td>
+    <a href="workshop4/data/deaths.xlsx" download="deaths.xlsx">deaths.xlsx</a>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <a href="workshop4/data/geometry.xlsx" download="geometry.xlsx">geometry.xlsx</a>
+    </td>
+    <td>
+    <a href="workshop4/data/iris.csv" download="iris.csv">iris.csv</a>
+    </td>
+    <td>
+    <a href="workshop4/data/mtcars.dta" download="mtcars.dta">mtcars.dta</a>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <a href="workshop4/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a>
+    </td>
+    <td>
+    <a href="workshop4/mtcars.sav" download="mtcars.sav">mtcars.sav</a>
+    </td>
+    <td>
+    <a href="workshop4/rock.csv" download="rock.csv">rock.csv</a>
+    </td>
+    </tr>
+    </table>
+    
 -   Workshop 5 - Data Wrangling 1 (6 September)
 
     -   Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
