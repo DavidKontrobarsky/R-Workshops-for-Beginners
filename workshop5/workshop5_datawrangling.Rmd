@@ -80,9 +80,23 @@ For example, we created a project shiba before. Now, we want to open it.
 Workshop 5 material prepared by : Jiaying Wu, Mitchell O’Hara-Wild
 
 
+## Library
+
+```
+library(tidyverse)
+```
+
+```{r message=TRUE}
+library(tidyverse)
+```
 
 
+### Import data
 
+```{r}
+raw_survey <- read_csv("data/raw_surveyData.csv")
+summary(raw_survey)
+```
 
 
 

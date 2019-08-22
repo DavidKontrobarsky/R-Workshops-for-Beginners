@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
 
 <table>
 <tr>
+    <td>Sayani Gupta</td>
     <td>Amy Tran</td>
     <td>David Kontrobarsky</td>
     <td>Dun Yong Tan</td>
@@ -36,16 +37,16 @@ knitr::opts_chunk$set(
     <td>Jefanny Suryawan</td>
     <td>Rachell Ng</td>
     <td>Rowina Nathan</td>
+    <td>Sao Yang Hew</td>
 </tr>
 <tr>
-    <td>Sao Yang Hew</td>
     <td>Thi Minh Chau Nguyen</td>
     <td>Weihao Li</td>
     <td>William Tran</td>
-</tr>
-<tr>
     <td>Yih Ting Eng</td>
     <td>Yuru Sun</td>
+</tr>
+<tr>
     <td>Zhuangyi Zhu</td>
     <td>Zihui Li</td>
 </tr>

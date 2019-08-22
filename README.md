@@ -14,6 +14,7 @@ R Workshops for Beginners
 
 <table>
 <tr>
+    <td>Sayani Gupta</td>
     <td>Amy Tran</td>
     <td>David Kontrobarsky</td>
     <td>Dun Yong Tan</td>
@@ -25,18 +26,18 @@ R Workshops for Beginners
     <td>Jefanny Suryawan</td>
     <td>Rachell Ng</td>
     <td>Rowina Nathan</td>
+    <td>Sao Yang Hew</td>
 
 </tr>
 <tr>
-    <td>Sao Yang Hew</td>
     <td>Thi Minh Chau Nguyen</td>
     <td>Weihao Li</td>
     <td>William Tran</td>
+    <td>Yih Ting Eng</td>
+    <td>Yuru Sun</td>
 
 </tr>
 <tr>
-    <td>Yih Ting Eng</td>
-    <td>Yuru Sun</td>
     <td>Zhuangyi Zhu</td>
     <td>Zihui Li</td>
 
@@ -58,7 +59,7 @@ Workshop Contents
 
     -   Download slides: <a href="workshop2/workshop2_rmarkdown.Rmd" download="workshop2_rmarkdown.Rmd">Rmd</a>
 
--   Workshop 3 - [Data Visualisation (23 August)](https://ebsmonash.shinyapps.io/workshop3_datavisualisation/)
+-   Workshop 3 - [Data Visualisation (23 August)]((https://ebsmonash.shinyapps.io/workshop3_datavisualisation/))
 
     -   Speaker: Yijia Pan
 
