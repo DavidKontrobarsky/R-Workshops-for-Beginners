@@ -14,7 +14,6 @@ R Workshops for Beginners
 
 <table>
 <tr>
-    <td>Sayani Gupta</td>
     <td>Amy Tran</td>
     <td>David Kontrobarsky</td>
     <td>Dun Yong Tan</td>
@@ -26,11 +25,16 @@ R Workshops for Beginners
     <td>Jefanny Suryawan</td>
     <td>Rachell Ng</td>
     <td>Rowina Nathan</td>
-    <td>Sao Yang Hew</td>
 
 </tr>
 <tr>
+    <td>Sayani Gupta</td>
+    <td>Sao Yang Hew</td>
+    <td>Sherry Zhang</td>
     <td>Thi Minh Chau Nguyen</td>
+
+</tr>
+<tr>
     <td>Weihao Li</td>
     <td>William Tran</td>
     <td>Yih Ting Eng</td>
