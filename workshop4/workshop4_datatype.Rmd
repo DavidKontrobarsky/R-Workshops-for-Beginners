@@ -93,7 +93,7 @@ then save it under the `data` sub directory of your project.
 
 ####**Helpers** :
 
-* Amy Tran
+* David Kontrobarsky
 
 * Dun Yong Tan
 
@@ -108,6 +108,8 @@ then save it under the `data` sub directory of your project.
 * Rachell Ng
 
 * Sao Yang Hew
+
+* Weihao Li
 
 * Yuru Sun (Christina)
 
