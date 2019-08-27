@@ -2,7 +2,7 @@
 title: "Introduction to R Markdown"
 output: 
   learnr::tutorial:
-    css: "css/logo.css"
+    css: "css/style.css"
 runtime: shiny_prerendered
 ---
 
@@ -42,19 +42,20 @@ check_package("ggthemes")
 
 #### **Please set up your computer with the following instructions:**
 
-#### 1. Please enter this link into your web browser : http://bit.ly/MonashBA_R2
+1. Please enter this link into your web browser : http://bit.ly/MonashBA_R2
 
-#### 2. Go down to `Workshop Contents`, then click `Introduction to R Markdown(16 August)` to open the material of workshop 2.
+2. Go down to `Workshop Contents`, then click `Introduction to R Markdown(16 August)` to open the material of workshop 2.
 
 ![](images/workshop2_slideLink.png){width="50%" height="50%"}
 
-#### 3. Open your RStudio
+3. Open your RStudio
 
-#### 4. Open the project you created last week. 
+4. Open the project you created last week. 
 
 For example, we cretaed a project shiba before. Now, we want to open it.
 
 ![](images/Open_project.png){width="50%" height="50%"}
+
 
 ## Instructors for Workshop 2
 

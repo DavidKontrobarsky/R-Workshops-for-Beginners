@@ -2,7 +2,7 @@
 title: "Data types and Input"
 output: 
   learnr::tutorial:
-    css: "css/logo.css"
+    css: "css/style.css"
 runtime: shiny_prerendered
 ---
 
@@ -40,15 +40,15 @@ library(readr)
 
 #### **Please set up your computer with the following instructions:**
 
-#### 1. Please Open your RStudio
+1. Please Open your RStudio
 
-#### 2. Open the project you created before. 
+2. Open the project you created before. 
 
 For example, we created a project shiba before. Now, we want to open it.
 
 ![](images/Open_project.png){width="60%" height="60%"}
 
-#### 3. Create a R Markdown file,
+3. Create a R Markdown file,
 
 ![](images/Rmarkdown_creat.png){width="50%" height="50%"}
 
@@ -56,13 +56,13 @@ Then select `HTML` output format.
 
 ![](images/Rmd_output_format.png){width="60%" height="60%"}
 
-#### 4. Enter the link into your web browser : http://bit.ly/MonashBA_R2
+4. Enter the link into your web browser : http://bit.ly/MonashBA_R2
 
-#### 5. Go down to `Workshop Contents`, then click `Data Types and Import Data (30 August)` to open the material of workshop 4.
+5. Go down to `Workshop Contents`, then click `Data Types and Import Data (30 August)` to open the material of workshop 4.
 
 ![](images/workshop4_slideLink.png){width="90%" height="90%"}
 
-#### 6. Download the following file, 
+6. Download the following file, 
 
 * `CO2.tsv`
 

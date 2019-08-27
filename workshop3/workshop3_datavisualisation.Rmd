@@ -1,6 +1,8 @@
 ---
 title: "Data Visualisation"
-output: learnr::tutorial
+output: 
+  learnr::tutorial:
+    css: "css/style.css"
 runtime: shiny_prerendered
 ---
 
@@ -28,15 +30,15 @@ knitr::opts_chunk$set(
 
 #### **Please set up your computer with the following instructions:**
 
-#### 1. Please Open your RStudio
+1. Please Open your RStudio
 
-#### 2. Open the project you created before. 
+2. Open the project you created before. 
 
 For example, we created a project shiba before. Now, we want to open it.
 
 ![](images/Open_project.png){width="60%" height="60%"}
 
-#### 3. Create a R Markdown file,
+3. Create a R Markdown file,
 
 ![](images/Rmarkdown_creat.png){width="50%" height="50%"}
 
@@ -44,13 +46,13 @@ Then select `HTML` output format.
 
 ![](images/Rmd_output_format.png){width="60%" height="60%"}
 
-#### 4. Enter the link into your web browser : http://bit.ly/MonashBA_R2
+4. Enter the link into your web browser : http://bit.ly/MonashBA_R2
 
-#### 5. Go down to `Workshop Contents`, then click `Data Visualisation (23 August)` to open the material of workshop 3.
+5. Go down to `Workshop Contents`, then click `Data Visualisation (23 August)` to open the material of workshop 3.
 
 ![](images/workshop3_slideLink.png){width="60%" height="60%"}
 
-#### 6. Click `chocolate.csv` to download the csv file, 
+6. Click `chocolate.csv` to download the csv file, 
 
 ![](images/workshop3_slideLink.png){width="60%" height="60%"}
 

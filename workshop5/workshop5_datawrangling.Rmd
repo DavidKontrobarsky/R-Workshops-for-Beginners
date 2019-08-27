@@ -2,7 +2,7 @@
 title: "Data Wrangling 1"
 output: 
   learnr::tutorial:
-    css: "css/logo.css"
+    css: "css/style.css"
 runtime: shiny_prerendered
 ---
 
@@ -34,7 +34,7 @@ tutorial_html_dependency()
 
 ## Survey
 
-### **Please scan the QR code to finish the survey, we are going to learn how to clean this survey data in the this workshop.**
+**Please scan the QR code to finish the survey, we are going to learn how to clean this survey data in the this workshop.**
 
 ![](images/SurveyQRcode.png){width="60%" height="60%"}
 
@@ -43,27 +43,50 @@ tutorial_html_dependency()
 
 #### **Please set up your computer with the following instructions:**
 
-#### 1. Please enter the link into your web browser : http://bit.ly/MonashBA_R2
+1. Please enter the link into your web browser : http://bit.ly/MonashBA_R2
 
-#### 2. Go down to `Workshop Contents`, then click `Data Wrangling 1 (6 September)` to open the material of workshop 5.
+2. Go down to `Workshop Contents`, then click `Data Wrangling 1 (6 September)` to open the material of workshop 5.
 
 ![](images/workshop5_slideLink.png){width="60%" height="60%"}
 
-#### 3. Open your RStudio
+3. Open your RStudio
 
-#### 4. Open the project you created before. 
+4. Open the project you created before. 
 
 For example, we created a project shiba before. Now, we want to open it.
 
 ![](images/Open_project.png){width="60%" height="60%"}
 
-#### 5. Create a R Markdown file,
+5. Create a R Markdown file,
 
 ![](images/Rmarkdown_creat.png){width="50%" height="50%"}
 
 Then select `HTML` output format.
 
 ![](images/Rmd_output_format.png){width="60%" height="60%"}
+
+
+## **tidyr** ![](https://tidyr.tidyverse.org/logo.png){width="10%" height="10%"}
+
+A package that resshapes the layout of tables.
+
+Two main functions:
+
+* `gather()`
+
+* `spread()`
+
+
+
+## dplyr
+
+
+
+
+
+## stringr
+
+
 
 
 ## Instructors for Workshop 5

@@ -2,7 +2,7 @@
 title: "Introduction to R and RStudio"
 output: 
   learnr::tutorial:
-    css: "css/logo.css"
+    css: "css/style.css"
 runtime: shiny_prerendered
 ---
 
