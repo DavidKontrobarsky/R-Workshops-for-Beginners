@@ -446,6 +446,15 @@ If you want to save your results or figures, you need to "write" it down from R.
 
 - [RStudio Essntials](https://resources.rstudio.com)
 
+### Webinars
+
+- [RStudio webinars](https://github.com/rstudio/webinars)
+
+
+### Community
+
+- [RStudio community](https://community.rstudio.com)
+
 
 ### Blogs
 

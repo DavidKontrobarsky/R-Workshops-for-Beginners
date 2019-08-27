@@ -47,6 +47,7 @@ R Workshops for Beginners
 
 </tr>
 </table>
+<br>
 
 Workshop Contents
 -----------------
@@ -63,7 +64,7 @@ Workshop Contents
 
     -   Download slides: <a href="workshop2/workshop2_rmarkdown.Rmd" download="workshop2_rmarkdown.Rmd">Rmd</a>
 
--   Workshop 3 - [Data Visualisation (23 August)](https://ebsmonash.shinyapps.io/workshop3_datavisualisation/)
+-   Workshop 3 - [Data Visualisation (23 August)]((https://ebsmonash.shinyapps.io/workshop3_datavisualisation/))
 
     -   Speaker: Yijia Pan
 
@@ -112,6 +113,7 @@ Workshop Contents
     </td>
     </tr>
     </table>
+    <br>
 
 -   Workshop 5 - Data Wrangling 1 (6 September)
 
@@ -140,14 +142,44 @@ Time and Location
 
 <img src="images/Leaflet_location.png" style="width:50.0%" style="height:50.0%" />
 
-Sign up
--------
+Resources
+---------
 
-**Scan** the QR code to sign up:
+#### Online Books
 
-<img src="images/Signup_QRcode.png" style="width:40.0%" style="height:40.0%" />
+-   [R for Data Science](https://r4ds.had.co.nz/)
 
-Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
+-   [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+
+-   [Advanced R](https://adv-r.hadley.nz/)
+
+-   [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+-   [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+
+-   [Data Visualization: A practical introduction](https://socviz.co)
+
+-   [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org)
+
+#### RStudio Resources
+
+-   [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+-   [Data Science Essntials](https://resources.rstudio.com/the-essentials-of-data-science)
+
+-   [RStudio webinars](https://github.com/rstudio/webinars)
+
+-   [RStudio community](https://community.rstudio.com)
+
+-   [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+#### Other Resources
+
+-   [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
+
+-   [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+-   [R-bloggers](https://www.r-bloggers.com)
 
 Installation
 ------------
@@ -157,6 +189,15 @@ Installation
 -   [Install R](https://cran.csiro.au)
 
 -   [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
+
+Sign up
+-------
+
+**Scan** the QR code to sign up:
+
+<img src="images/Signup_QRcode.png" style="width:40.0%" style="height:40.0%" />
+
+Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
 
 Poster for R Workshops
 ----------------------

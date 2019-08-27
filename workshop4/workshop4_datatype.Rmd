@@ -706,6 +706,7 @@ class(ggplot2::midwest)
 class(as.data.frame(ggplot2::midwest))
 ```
 
+
 ## Resources
 
 ### Online Books
@@ -726,13 +727,17 @@ class(as.data.frame(ggplot2::midwest))
 
 - [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
 
-### Blogs
+### Webinars
 
-- [R-bloggers](https://www.r-bloggers.com)
+- [RStudio webinars](https://github.com/rstudio/webinars)
 
 ### Community
 
 - [RStudio community](https://community.rstudio.com)
+
+### Blogs
+
+- [R-bloggers](https://www.r-bloggers.com)
 
 
 ## Feedback

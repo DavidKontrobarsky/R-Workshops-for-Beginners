@@ -513,6 +513,10 @@ mtcars %>%
 
 - [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
 
+### Webinars
+
+- [RStudio webinars](https://github.com/rstudio/webinars)
+
 ### Blogs
 
 - [R-bloggers](https://www.r-bloggers.com)

@@ -32,6 +32,13 @@ tutorial_html_dependency()
 
 # Data Wrangling
 
+## Survey
+
+### **Please scan the QR code to finish the survey, we are going to learn how to clean this survey data in the this workshop.**
+
+![](images/SurveyQRcode.png){width="60%" height="60%"}
+
+
 ## Set up
 
 #### **Please set up your computer with the following instructions:**
@@ -49,6 +56,14 @@ tutorial_html_dependency()
 For example, we created a project shiba before. Now, we want to open it.
 
 ![](images/Open_project.png){width="60%" height="60%"}
+
+#### 5. Create a R Markdown file,
+
+![](images/Rmarkdown_creat.png){width="50%" height="50%"}
+
+Then select `HTML` output format.
+
+![](images/Rmd_output_format.png){width="60%" height="60%"}
 
 
 ## Instructors for Workshop 5
@@ -77,26 +92,12 @@ For example, we created a project shiba before. Now, we want to open it.
 
 * Zihui Li (Damon)
 
-Workshop 5 material prepared by : Jiaying Wu, Mitchell O’Hara-Wild
+Workshop 5 material prepared by : Mitchell O’Hara-Wild, Jiaying Wu
 
 
-## Library
-
-```
-library(tidyverse)
-```
-
-```{r message=TRUE}
-library(tidyverse)
-```
 
 
-### Import data
 
-```{r}
-raw_survey <- read_csv("data/raw_surveyData.csv")
-summary(raw_survey)
-```
 
 
 
@@ -104,7 +105,7 @@ summary(raw_survey)
 
 ## Resources
 
-### Online Books
+#### Online Books
 
 - [R for Data Science](https://r4ds.had.co.nz/)
 
@@ -112,23 +113,35 @@ summary(raw_survey)
 
 - [Advanced R](https://adv-r.hadley.nz/)
 
-### Cheat Sheets
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+
+- [Data Visualization: A practical introduction](https://socviz.co)
+
+- [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org)
+
+#### RStudio Resources
 
 - [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
-### Videos
-
 - [Data Science Essntials](https://resources.rstudio.com/the-essentials-of-data-science)
+
+- [RStudio webinars](https://github.com/rstudio/webinars)
+
+- [RStudio community](https://community.rstudio.com)
+
+- [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+
+#### Other Resources
 
 - [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
 
-### Blogs
+- [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
 
 - [R-bloggers](https://www.r-bloggers.com)
 
-### Community
-
-- [RStudio community](https://community.rstudio.com)
 
 
 ## Feedback

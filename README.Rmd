@@ -54,6 +54,7 @@ knitr::opts_chunk$set(
     <td>Zihui Li</td>
 </tr>
 </table>
+<br>
 
 ```{r eval=FALSE}
 tb <- tibble::tibble(
@@ -113,6 +114,7 @@ knitr::kable(tb)
      <td><a href="workshop4/rock.csv" download="rock.csv">rock.csv</a></td>
      </tr>
      </table>
+<br>
 
 * Workshop 5 - Data Wrangling 1 (6 September)
 
@@ -156,13 +158,45 @@ mapshot(map, file = "Map.png")
 
 ![](images/Leaflet_location.png){width="50%" height="50%"}
 
-## Sign up
 
-**Scan** the QR code to sign up:
+## Resources
 
-![](images/Signup_QRcode.png){width="40%" height="40%"}
+#### Online Books
 
-Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+
+- [Advanced R](https://adv-r.hadley.nz/)
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+
+- [Data Visualization: A practical introduction](https://socviz.co)
+
+- [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org)
+
+#### RStudio Resources
+
+- [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+- [Data Science Essntials](https://resources.rstudio.com/the-essentials-of-data-science)
+
+- [RStudio webinars](https://github.com/rstudio/webinars)
+
+- [RStudio community](https://community.rstudio.com)
+
+- [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+
+#### Other Resources
+
+- [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
+
+- [R Markdown form R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+- [R-bloggers](https://www.r-bloggers.com)
 
 
 ## Installation
@@ -172,6 +206,15 @@ Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5e
 * [Install R](https://cran.csiro.au)
 
 * [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
+
+
+## Sign up
+
+**Scan** the QR code to sign up:
+
+![](images/Signup_QRcode.png){width="40%" height="40%"}
+
+Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
 
 
 ## Poster for R Workshops
