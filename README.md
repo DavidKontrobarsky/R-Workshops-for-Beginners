@@ -47,6 +47,8 @@ R Workshops for Beginners
 
 </tr>
 </table>
+<br>
+
 Workshop Contents
 -----------------
 
@@ -111,6 +113,8 @@ Workshop Contents
     </td>
     </tr>
     </table>
+    <br>
+
 -   Workshop 5 - Data Wrangling 1 (6 September)
 
     -   Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)

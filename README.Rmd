@@ -54,6 +54,7 @@ knitr::opts_chunk$set(
     <td>Zihui Li</td>
 </tr>
 </table>
+<br>
 
 ```{r eval=FALSE}
 tb <- tibble::tibble(
@@ -113,7 +114,7 @@ knitr::kable(tb)
      <td><a href="workshop4/rock.csv" download="rock.csv">rock.csv</a></td>
      </tr>
      </table>
-
+<br>
 
 * Workshop 5 - Data Wrangling 1 (6 September)
 
