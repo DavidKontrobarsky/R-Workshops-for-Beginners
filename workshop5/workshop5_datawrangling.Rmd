@@ -15,7 +15,9 @@ check_package <- function(package_name){
 
 check_package("rmarkdown")
 check_package("learnr")
-
+check_package("tidyr")
+check_package("dplyr")
+check_package("stringr")
 
 library(learnr)
 knitr::opts_chunk$set(echo = FALSE,   
@@ -28,9 +30,6 @@ knitr::opts_chunk$set(echo = FALSE,
                       cache = FALSE)
 tutorial_html_dependency()
 ```
-
-
-# Data Wrangling
 
 ## Survey
 
@@ -66,30 +65,7 @@ Then select `HTML` output format.
 ![](images/Rmd_output_format.png){width="60%" height="60%"}
 
 
-## **tidyr** ![](https://tidyr.tidyverse.org/logo.png){width="10%" height="10%"}
-
-A package that resshapes the layout of tables.
-
-Two main functions:
-
-* `gather()`
-
-* `spread()`
-
-
-
-## dplyr
-
-
-
-
-
-## stringr
-
-
-
-
-## Instructors for Workshop 5
+## Instructors for workshop 5
 
 #### **Speaker** : [Mitchell O’Hara-Wild](https://www.mitchelloharawild.com)
 
@@ -118,12 +94,91 @@ Two main functions:
 Workshop 5 material prepared by : Mitchell O’Hara-Wild, Jiaying Wu
 
 
+## Tidy data
+
+### [**tidyr**](https://tidyr.tidyverse.org/) ![](https://tidyr.tidyverse.org/logo.png){width="10%" height="10%"}
+
+The goal of `tidyr` is to **reshape** your **data** into **tidy** format.
+
+1. Each variable is in a column.
+
+2. Each observation is a row.
+
+3. Each value is a cell.
+
+
+#### What can ![](https://tidyr.tidyverse.org/logo.png){width="6%" height="6%"} do?
+
+Two main functions:
+
+* [gather()](https://tidyr.tidyverse.org/reference/gather.html): collapses multiple columns into two columns.
+
+* [spread()](https://tidyr.tidyverse.org/reference/spread.html): takes two columns, and spreads into multiple columns.
+
+#### Cheat sheet
+
+Click the link to download the pdf file of [tidyr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
+
+
+## Data manipulation
+
+### [**dplyr**](https://dplyr.tidyverse.org/) ![](https://dplyr.tidyverse.org/logo.png){width="10%" height="10%"}
+
+
+#### What can ![](https://dplyr.tidyverse.org/logo.png){width="6%" height="6%"} do?
+
+Five main functions:
+
+* [mutate()](https://dplyr.tidyverse.org/reference/mutate.html): adds new variables that are functions of existing variables.
+
+* [select()](https://dplyr.tidyverse.org/reference/select.html): picks variables based on their names.
+
+* [filter()](https://dplyr.tidyverse.org/reference/filter.html): picks cases based on their values.
+
+* [summarise()](https://dplyr.tidyverse.org/reference/summarise.html): reduces multiple values down to a single summary.
+
+* [arrange()](https://dplyr.tidyverse.org/reference/arrange.html): changes the ordering of the rows.
+
+
+
+#### Cheat sheet
+
+Click the link to download the pdf file of [dplyr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
 
 
 
 
+## String manipulation
+
+### [**stringr**](https://stringr.tidyverse.org/) ![](https://stringr.tidyverse.org/logo.png){width="10%" height="10%"}
 
 
+
+#### What can ![](https://stringr.tidyverse.org/logo.png){width="6%" height="6%"} do?
+
+**All functions** in stringr **start with** `str_` and take a vector of strings as the first argument.
+
+Eight main verbs:
+
+* [str_detect(x, pattern)](https://stringr.tidyverse.org/reference/str_detect.html): tells you if there’s any match to the pattern.
+
+* [str_count(x, pattern)](https://stringr.tidyverse.org/reference/str_count.html): counts the number of patterns.
+
+* [str_subset(x, pattern)](https://stringr.tidyverse.org/reference/str_subset.html): extracts the matching components.
+
+* [str_locate(x, pattern)](https://stringr.tidyverse.org/reference/str_locate.html): gives the position of the match.
+
+* [str_extract(x, pattern)](https://stringr.tidyverse.org/reference/str_extract.html): extracts the text of the match.
+
+* [str_match(x, pattern)](https://stringr.tidyverse.org/reference/str_match.html): extracts parts of the match defined by parentheses.
+
+* [str_replace(x, pattern, replacement)](https://stringr.tidyverse.org/reference/str_replace.html): replaces the matches with new text.
+
+* [str_split(x, pattern)](https://stringr.tidyverse.org/reference/str_split.html): splits up a string into multiple pieces.
+
+#### Cheat sheet
+
+Click the link to download the pdf file of [stringr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf)
 
 
 ## Resources

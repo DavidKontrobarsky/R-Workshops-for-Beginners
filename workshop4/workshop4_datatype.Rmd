@@ -16,7 +16,7 @@ check_package <- function(package_name){
 check_package("readr")
 check_package("readxl")
 check_package("tibble")
-
+check_package("ggplot2")
 
 library(learnr)
 knitr::opts_chunk$set(echo = FALSE,   
