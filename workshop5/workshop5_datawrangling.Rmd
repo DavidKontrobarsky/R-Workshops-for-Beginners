@@ -124,6 +124,7 @@ Click the link to download the pdf file of [tidyr cheat sheet](https://github.co
 
 ### [**dplyr**](https://dplyr.tidyverse.org/) ![](https://dplyr.tidyverse.org/logo.png){width="10%" height="10%"}
 
+`dplyr` is a grammar of data manipulation, it provided a set of verbs that help you solve the common data manipulation challenges.
 
 #### What can ![](https://dplyr.tidyverse.org/logo.png){width="6%" height="6%"} do?
 
@@ -139,20 +140,16 @@ Five main functions:
 
 * [arrange()](https://dplyr.tidyverse.org/reference/arrange.html): changes the ordering of the rows.
 
-
-
 #### Cheat sheet
 
 Click the link to download the pdf file of [dplyr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
-
-
 
 
 ## String manipulation
 
 ### [**stringr**](https://stringr.tidyverse.org/) ![](https://stringr.tidyverse.org/logo.png){width="10%" height="10%"}
 
-
+The `stringr` package provide a set of functions help you easier to working with strings.
 
 #### What can ![](https://stringr.tidyverse.org/logo.png){width="6%" height="6%"} do?
 
