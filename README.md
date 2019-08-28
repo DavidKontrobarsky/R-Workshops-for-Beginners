@@ -64,7 +64,7 @@ Workshop Contents
 
     -   Download slides: <a href="workshop2/workshop2_rmarkdown.Rmd" download="workshop2_rmarkdown.Rmd">Rmd</a>
 
--   Workshop 3 - [Data Visualisation (23 August)]((https://ebsmonash.shinyapps.io/workshop3_datavisualisation/))
+-   Workshop 3 - [Data Visualisation (23 August)](https://ebsmonash.shinyapps.io/workshop3_datavisualisation/)
 
     -   Speaker: Yijia Pan
 
@@ -72,11 +72,11 @@ Workshop Contents
 
     -   Download data: <a href="workshop3/data/chocolates.csv" download="chocolates.csv">chocolates.csv</a>
 
--   Workshop 4 - Data Types and Import Data (30 August)
+-   Workshop 4 - [Data Types and Import Data (30 August)](https://ebsmonash.shinyapps.io/workshop4_datatype/)
 
     -   Speaker: [Earo Wang](https://earo.me)
 
-    -   Download slides
+    -   Download slides: <a href="workshop4/workshop4_datatype.Rmd" download="workshop4_datatype.Rmd">Rmd</a>
 
     -   Download data:
 
