@@ -44,6 +44,8 @@ R Workshops for Beginners
 <tr>
     <td>Zhuangyi Zhu</td>
     <td>Zihui Li</td>
+    <td></td>
+    <td></td>
 
 </tr>
 </table>
@@ -110,6 +112,8 @@ Workshop Contents
     </td>
     <td>
     <a href="workshop4/data/rock.csv" download="rock.csv">rock.csv</a>
+    </td>
+    <td>
     </td>
     </tr>
     </table>

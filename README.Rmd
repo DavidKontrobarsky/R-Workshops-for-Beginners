@@ -52,6 +52,8 @@ knitr::opts_chunk$set(
 <tr>
     <td>Zhuangyi Zhu</td>
     <td>Zihui Li</td>
+    <td></td>
+    <td></td>
 </tr>
 </table>
 <br>
@@ -112,6 +114,7 @@ knitr::kable(tb)
      <td><a href="workshop4/data/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a></td>
      <td><a href="workshop4/data/mtcars.sav" download="mtcars.sav">mtcars.sav</a></td>
      <td><a href="workshop4/data/rock.csv" download="rock.csv">rock.csv</a></td>
+     <td></td>
      </tr>
      </table>
 <br>
