@@ -103,13 +103,13 @@ Workshop Contents
     <a href="workshop4/data/mtcars.dta" download="mtcars.dta">mtcars.dta</a>
     </td>
     <td>
-    <a href="workshop4/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a>
+    <a href="workshop4/data/mtcars.sas7bdat" download="mtcars.sas7bdat">mtcars.sas7bdat</a>
     </td>
     <td>
-    <a href="workshop4/mtcars.sav" download="mtcars.sav">mtcars.sav</a>
+    <a href="workshop4/data/mtcars.sav" download="mtcars.sav">mtcars.sav</a>
     </td>
     <td>
-    <a href="workshop4/rock.csv" download="rock.csv">rock.csv</a>
+    <a href="workshop4/data/rock.csv" download="rock.csv">rock.csv</a>
     </td>
     </tr>
     </table>
