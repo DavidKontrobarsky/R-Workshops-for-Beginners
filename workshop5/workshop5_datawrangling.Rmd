@@ -178,6 +178,20 @@ Eight main verbs:
 Click the link to download the pdf file of [stringr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf)
 
 
+## Analyse survey data
+
+Before we start to analyse, download the following file.
+
+* <a href="workshop5/survey_description.pdf" download="survey_description.pdf">Question description</a>
+
+* <a href="workshop5/survey_data.csv" download="survey_data.csv">Survey Data</a>
+
+Then save it under the `data` sub directory of your project.
+
+![](images/Data_subdirectory.png){width="60%" height="60%"}
+
+
+
 ## Resources
 
 #### Online Books

@@ -123,7 +123,11 @@ knitr::kable(tb)
 
      * Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
      
-     * Download slides
+     * Download slides: <a href="workshop5/workshop5_datawrangling.Rmd" download="workshop5_datawrangling.Rmd"></a>
+     
+     * Survey description: <a href="workshop5/survey_description.pdf" download="survey_description.pdf">Question description</a>
+     
+     * Survey data: <a href="workshop5/survey_data.csv" download="survey_data.csv"></a>
 
 * Workshop 6 - Data Wrangling 2 (13 September)
 
