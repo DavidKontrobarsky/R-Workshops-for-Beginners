@@ -186,8 +186,6 @@ Before we start to analyse, download the following file from this website: http:
 
 * Survey Data
 
-![](images/download_survey.png){width="60%" height="60%"}
-
 Save it into the `data` subdirectory of your project.
 
 ![](images/Data_subdirectory.png){width="60%" height="60%"}
