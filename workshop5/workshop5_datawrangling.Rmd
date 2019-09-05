@@ -180,17 +180,23 @@ Click the link to download the pdf file of [stringr cheat sheet](https://github.
 
 ## Analyse survey data
 
-Before we start to analyse, download the following file.
+Before we start to analyse, download the following file from this website: http://bit.ly/MonashBA_R2
 
-* <a href="workshop5/survey_description.pdf" download="survey_description.pdf">Question description</a>
+* Survey description
 
-* <a href="workshop5/survey_data.csv" download="survey_data.csv">Survey Data</a>
+* Survey Data
 
-Then save it under the `data` sub directory of your project.
+![](images/download_survey.png){width="60%" height="60%"}
+
+Save it into the `data` subdirectory of your project.
 
 ![](images/Data_subdirectory.png){width="60%" height="60%"}
 
+Then
 
+![](https://media2.giphy.com/media/3ohuPwKuAoQYBgPEHK/giphy.gif)
+
+(gif from https://giphy.com/explore/lets-have-some-fun)
 
 ## Resources
 

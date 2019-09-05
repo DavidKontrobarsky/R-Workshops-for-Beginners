@@ -125,9 +125,9 @@ knitr::kable(tb)
      
      * Download slides: <a href="workshop5/workshop5_datawrangling.Rmd" download="workshop5_datawrangling.Rmd"></a>
      
-     * Survey description: <a href="workshop5/survey_description.pdf" download="survey_description.pdf">Question description</a>
+     * <a href="workshop5/data/survey_description.pdf" download="survey_description.pdf">Survey description</a>
      
-     * Survey data: <a href="workshop5/survey_data.csv" download="survey_data.csv"></a>
+     * <a href="workshop5/data/survey_data.csv" download="survey_data.csv"></a>Survey data
 
 * Workshop 6 - Data Wrangling 2 (13 September)
 
