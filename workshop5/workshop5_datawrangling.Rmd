@@ -141,7 +141,7 @@ Makes it easy to work with tidyverse packages that have been covered in earlier 
 
 ```{r, eval = FALSE, echo = TRUE}
 library(readr)
-survey <- read_csv("https://jiaying-wu.github.io/R-Workshops-for-Beginners/workshop5/survey_data.csv")
+survey <- read_csv("https://jiaying-wu.github.io/R-Workshops-for-Beginners/workshop5/data/survey_data.csv")
 survey
 ```
 ```{r, echo = FALSE}
