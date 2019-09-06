@@ -31,12 +31,33 @@ knitr::opts_chunk$set(echo = FALSE,
 tutorial_html_dependency()
 ```
 
+```{r data-prep, eval = FALSE}
+library(tidyverse)
+library(lubridate)
+tsibble::tourism %>% 
+  group_by(State, Purpose) %>% 
+  index_by(Year = year(Quarter)) %>% 
+  summarise(Trips = sum(Trips)) %>% 
+  ungroup() %>% 
+  mutate(State = recode(State,
+    `New South Wales` = "NSW",
+    `Northern Territory` = "NT",
+    `Queensland` = "QLD",
+    `South Australia` = "SA",
+    `Tasmania` = "TAS",
+    `Victoria` = "VIC",
+    `Western Australia` = "WA"
+  )) %>% 
+  unite("what", State, Purpose) %>% 
+  spread(what, Trips) %>% 
+  write_csv("workshop5/data/tourism.csv")
+```
+
 ## Survey
 
-**Please scan the QR code to finish the survey, we are going to learn how to clean this survey data in the this workshop.**
+**Please scan or click the QR code to finish the survey, we are going to learn how to clean this survey data in the this workshop.**
 
-![](images/SurveyQRcode.png){width="60%" height="60%"}
-
+[![](images/SurveyQRcode.png){width="60%" height="60%"}](https://docs.google.com/forms/d/1Y-HqDZ6tcJEMc9Y8Ky23Hwv-hQLTJ8jj0tQXsQXRssQ)
 
 ## Set up
 
@@ -48,9 +69,9 @@ tutorial_html_dependency()
 
 ![](images/workshop5_slideLink.png){width="60%" height="60%"}
 
-3. Open your RStudio
+3. Open your RStudio.
 
-4. Open the project you created before. 
+4. Open the project you created before.
 
 For example, we created a project shiba before. Now, we want to open it.
 
@@ -69,7 +90,7 @@ Then select `HTML` output format.
 
 #### **Speaker** : [Mitchell O’Hara-Wild](https://www.mitchelloharawild.com)
 
-####**Helpers** :
+#### **Helpers** :
 
 * Amy Tran
 
@@ -106,14 +127,107 @@ The goal of `tidyr` is to **reshape** your **data** into **tidy** format.
 
 3. Each value is a cell.
 
+![Tidy data from R4DS](images/tidy.png){width="100%"}
+*The rules of tidy data, R for Data Science* <https://r4ds.had.co.nz/tidy-data.html>
 
-#### What can ![](https://tidyr.tidyverse.org/logo.png){width="6%" height="6%"} do?
+#### Why do we want tidy data?
 
-Two main functions:
+If the data is arranged into a tidy format, the interesting bits easy to see.
 
-* [gather()](https://tidyr.tidyverse.org/reference/gather.html): collapses multiple columns into two columns.
+Makes it easy to work with tidyverse packages that have been covered in earlier workshops.
 
-* [spread()](https://tidyr.tidyverse.org/reference/spread.html): takes two columns, and spreads into multiple columns.
+#### Is our survey data tidy?
+
+```{r, eval = FALSE, echo = TRUE}
+library(readr)
+survey <- read_csv("https://jiaying-wu.github.io/R-Workshops-for-Beginners/workshop5/data/survey_data.csv")
+survey
+```
+```{r, echo = FALSE}
+library(readr)
+survey <- read_csv("data/survey_data.csv")
+survey
+```
+
+* What are the variables, observations and values?
+* Are the variable names sensible?
+* Are the data types correct (think about [last week's workshop](https://ebsmonash.shinyapps.io/workshop4_datatype/))
+
+#### Is this data tidy?
+```{r, eval = FALSE, echo = TRUE}
+library(readr)
+tourism <- read_csv("https://jiaying-wu.github.io/R-Workshops-for-Beginners/workshop5/data/tourism.csv")
+tourism
+```
+```{r, echo = FALSE}
+library(readr)
+tourism <- read_csv("data/tourism.csv")
+tourism
+```
+
+#### Data in the wild
+
+Find some data online, is it tidy?
+
+Ideas:
+
+* Data from the ABS
+* Australian baby names
+
+![Is the data world a utopia or distopia?](images/disutopia.jpg){width="50%"}
+
+*Utopia/Distopia by [Dylan Glynn](https://web.archive.org/web/20130501081545/http://www.dylanglynn.com/utopia-dystopia/)*
+
+### How do we make data tidy? ![](https://tidyr.tidyverse.org/logo.png){width="6%" height="6%" float="right"}
+
+#### Restructure the columns
+
+* [`gather()`](https://tidyr.tidyverse.org/reference/gather.html): collapses multiple columns into two columns.
+
+![Gather animation](images/gather.gif){width="80%"}
+
+* [`spread()`](https://tidyr.tidyverse.org/reference/spread.html): takes two columns, and spreads into multiple columns.
+
+![Spread animation](images/spread.gif){width="80%"}
+
+*[gather() and spread() animations](https://github.com/apreshill/teachthat) by [Alison Hill](https://github.com/apreshill)*
+
+```{r gather, echo = TRUE}
+library(tidyr)
+tourism <- tourism %>% 
+  gather("State_Purpose", "Nights", -Year)
+tourism
+```
+
+Is this tidy data now?
+
+#### Split and combine columns
+
+* [`separate()`](https://tidyr.tidyverse.org/reference/separate.html): splits a single column into several by some separator.
+
+* [`unite()`](https://tidyr.tidyverse.org/reference/unite.html): combines multiple columns into one by some separator.
+
+```{r separate, echo = TRUE}
+tourism <- tourism %>% 
+  separate(State_Purpose, into = c("State", "Purpose"), by = "_")
+tourism
+```
+
+Is this tidy data now?
+
+#### Data within data
+
+* [`nest()`](https://tidyr.tidyverse.org/reference/nest.html): compact a section of data into a cell/value.
+
+* [`unnest()`](https://tidyr.tidyverse.org/reference/unnest.html): expand a dataset into the original data.
+
+```{r nest, echo = TRUE}
+tourism <- tourism %>% 
+  nest(Year, Purpose, Nights)
+tourism
+```
+
+Is this tidy data now?
 
 #### Cheat sheet
 
@@ -155,7 +269,7 @@ The `stringr` package provide a set of functions help you easier to working with
 
 **All functions** in stringr **start with** `str_` and take a vector of strings as the first argument.
 
-Eight main verbs:
+Eight useful functions:
 
 * [str_detect(x, pattern)](https://stringr.tidyverse.org/reference/str_detect.html): tells you if there’s any match to the pattern.
 
@@ -172,6 +286,11 @@ Eight main verbs:
 * [str_replace(x, pattern, replacement)](https://stringr.tidyverse.org/reference/str_replace.html): replaces the matches with new text.
 
 * [str_split(x, pattern)](https://stringr.tidyverse.org/reference/str_split.html): splits up a string into multiple pieces.
+
+
+#### What is a pattern?
+
+![https://xkcd.com/208/](https://imgs.xkcd.com/comics/regular_expressions.png)
 
 #### Cheat sheet
 
