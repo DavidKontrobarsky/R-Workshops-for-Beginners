@@ -119,7 +119,7 @@ Workshop Contents
     </table>
     <br>
 
--   Workshop 5 - Data Wrangling 1 (6 September)
+-   Workshop 5 - [Data Wrangling 1 (6 September)]((https://ebsmonash.shinyapps.io/workshop5_datawrangling/)
 
     -   Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
