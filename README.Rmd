@@ -127,7 +127,7 @@ knitr::kable(tb)
      
      * <a href="workshop5/data/survey_description.pdf" download="survey_description.pdf">Survey description</a>
      
-     * <a href="workshop5/data/survey_data.csv" download="survey_data.csv"></a>Survey data
+     * <a href="workshop5/data/survey_data.csv" download="survey_data.csv">Survey data</a>
 
 * Workshop 6 - Data Wrangling 2 (13 September)
 
