@@ -27,6 +27,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.height = 4,
                       fig.width = 6,
                       fig.align = "center",
+                      paged.print = FALSE,
                       cache = FALSE)
 tutorial_html_dependency()
 ```
@@ -127,7 +128,7 @@ The goal of `tidyr` is to **reshape** your **data** into **tidy** format.
 
 3. Each value is a cell.
 
-![Tidy data from R4DS](images/tidy.png){width="100%"}
+![](images/tidy.png){width="100%"}
 *The rules of tidy data, R for Data Science* <https://r4ds.had.co.nz/tidy-data.html>
 
 #### Why do we want tidy data?
@@ -140,7 +141,7 @@ Makes it easy to work with tidyverse packages that have been covered in earlier 
 
 ```{r, eval = FALSE, echo = TRUE}
 library(readr)
-survey <- read_csv("https://jiaying-wu.github.io/R-Workshops-for-Beginners/workshop5/data/survey_data.csv")
+survey <- read_csv("https://jiaying-wu.github.io/R-Workshops-for-Beginners/workshop5/survey_data.csv")
 survey
 ```
 ```{r, echo = FALSE}
@@ -184,11 +185,11 @@ Ideas:
 
 * [`gather()`](https://tidyr.tidyverse.org/reference/gather.html): collapses multiple columns into two columns.
 
-![Gather animation](images/gather.gif){width="80%"}
+![](images/gather.gif){width="80%"}
 
 * [`spread()`](https://tidyr.tidyverse.org/reference/spread.html): takes two columns, and spreads into multiple columns.
 
-![Spread animation](images/spread.gif){width="80%"}
+![](images/spread.gif){width="80%"}
 
 *[gather() and spread() animations](https://github.com/apreshill/teachthat) by [Alison Hill](https://github.com/apreshill)*
 
@@ -233,6 +234,17 @@ Is this tidy data now?
 
 Click the link to download the pdf file of [tidyr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
 
+## Survey data
+
+Before we start to analyse, download the following file from this website: http://bit.ly/MonashBA_R2
+
+* Survey description
+
+* Survey Data
+
+Save it into the `data` subdirectory of your project.
+
+![](images/Data_subdirectory.png){width="60%" height="60%"}
 
 ## Data manipulation
 
@@ -240,24 +252,241 @@ Click the link to download the pdf file of [tidyr cheat sheet](https://github.co
 
 `dplyr` is a grammar of data manipulation, it provided a set of verbs that help you solve the common data manipulation challenges.
 
-#### What can ![](https://dplyr.tidyverse.org/logo.png){width="6%" height="6%"} do?
+#### The survey data is tidy, but there is room for improvement!
 
-Five main functions:
+```{r}
+survey
+```
 
-* [mutate()](https://dplyr.tidyverse.org/reference/mutate.html): adds new variables that are functions of existing variables.
+* Column names are long and hard to code with.
+* Some survey answers can be simplified.
 
-* [select()](https://dplyr.tidyverse.org/reference/select.html): picks variables based on their names.
+Think about last week's [data types workshop](https://ebsmonash.shinyapps.io/workshop4_datatype/).
 
-* [filter()](https://dplyr.tidyverse.org/reference/filter.html): picks cases based on their values.
+![](images/spongebob-tidy.gif){width="50%"}
 
-* [summarise()](https://dplyr.tidyverse.org/reference/summarise.html): reduces multiple values down to a single summary.
+#### Simplifying the column names
 
-* [arrange()](https://dplyr.tidyverse.org/reference/arrange.html): changes the ordering of the rows.
+* [`rename()`](https://dplyr.tidyverse.org/reference/rename.html): changes a name of a column.
+
+```{r rename, echo = TRUE}
+library(dplyr)
+survey <- survey %>% 
+  rename(
+    uni_year = `Q1.What year of uni are you in?`,
+    degree_type = `Q2.Do you study a single or double degree?`,
+    travel_method = `Q3.Do you use public or private transport?`,
+    travel_time = `Q4.How long does it take to come to uni? (Enter the number of minutes, as a number only.)`,
+    hours_facebook = `Q5.Hours on facebook per week?(Enter a number only)`,
+    hours_twitter = `Q6.Hours on Twitter? (Enter a number only)`,
+    favourite_sport = `Q7.What is your favourite sport?`,
+    superpower = `Q8.If you could have a super power what would it be?`,
+    own_pets = `Q9.What pets do you have?`,
+    class_days = `Q10.Which day you need to attend the class?`,
+    like_cheese = `Q11.I like cheese.`,
+    see_ausopen = `Q12.Have you been to the Australian Open?`,
+    shirt_sizes = `Q13.Would you rather your shirts be always two sizes too big or one size too small?`,
+    read_books = `Q14.How many books did you read last year?`
+  )
+survey
+```
+
+#### Thinking about data types
+
+* [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html): adds or changes variables that are functions of existing variables.
+
+##### Which questions have limited options?
+
+```{r factor, echo = TRUE}
+survey <- survey %>% 
+  mutate(
+    uni_year = factor(uni_year),
+    degree_type = factor(degree_type),
+    travel_method = factor(travel_method),
+    see_ausopen = factor(see_ausopen),
+    shirt_sizes = factor(shirt_sizes),
+    read_books = ordered(read_books, levels = c("A. 0", "B. 1-5", "C. 6-10", "D. 10-20", "E. more than 20"))
+  )
+```
+
+##### Which questions should be numbers?
+
+Are they?
+```{r, echo = TRUE}
+survey$travel_time
+survey$hours_facebook
+survey$hours_twitter
+```
+
+Fixing the mess.
+
+```{r number, echo = TRUE}
+library(readr)
+survey <- survey %>% 
+  mutate(
+    travel_time = parse_number(travel_time),
+    hours_twitter = parse_number(hours_twitter)
+  )
+```
+
+Why don't we need to change the `hours_facebook` variable to a number?
+
+##### Fixing the timestamp
+
+```{r time, echo = TRUE}
+library(lubridate)
+survey <- survey %>% 
+  mutate(
+    Timestamp = ymd_hms(Timestamp, tz = "Australia/Melbourne")
+  )
+```
+
+##### What should we do with `own_pets` and `class_days`?
+
+Some ideas:
+
+1. Leave them as they are?
+2. Split them up into a nested list?
+
+```{r nested, echo = TRUE}
+library(stringr) # More on this later!
+survey <- survey %>% 
+  mutate(
+    own_pets = str_split(own_pets, ";"),
+    class_days = str_split(class_days, ";")
+  )
+```
+
+### Ta-da!
+
+![](images/simpsons-tidy.webp)
+
+```{r, echo = TRUE}
+survey
+```
+
+#### Now for some fun!
+
+![](https://media2.giphy.com/media/3ohuPwKuAoQYBgPEHK/giphy.gif)
+
+(gif from https://giphy.com/explore/lets-have-some-fun)
+
+#### Looking at certain observations
+
+* [`filter()`](https://dplyr.tidyverse.org/reference/filter.html): picks cases based on their values.
+
+![](images/filter.gif)
+
+The rows which return `TRUE` will be kept in the data. So to keep only the people who like cheese:
+
+```{r}
+survey %>% 
+  filter(like_cheese)
+```
+
+And to remove them, we can use `!` (NOT) to find people who do NOT like cheese (`!like_cheese`).
+
+```{r}
+survey %>% 
+  filter(!like_cheese)
+```
+
+You can also make comparisons with `==`, `!=`, `>`, `>=`, `<`, `<=`. You can combine comparisons with `|` (OR) and `&` (AND).
+
+```{r}
+survey %>% 
+  filter(travel_method == "Public")
+```
+
+#### Sorting the data
+
+* [`arrange()`](https://dplyr.tidyverse.org/reference/arrange.html): changes the ordering of the rows.
+
+The survey data is correctly ordered by the time of submission. Suppose we wanted to see who has the least travel time to uni?
+
+```{r}
+survey %>% 
+  arrange(travel_time)
+```
+
+Hmm - a little suspicious. What about the longest travel time? Sort it in descending order with `desc()`!
+
+```{r}
+survey %>% 
+  arrange(desc(travel_time))
+```
+
+We could of course also find the maximum using `filter()` - but be careful to remove the missing values.
+
+```{r}
+survey %>% 
+  filter(travel_time == max(travel_time, na.rm= TRUE))
+```
+
+#### Computing summary values
+
+* [`summarise()`](https://dplyr.tidyverse.org/reference/summarise.html): reduces multiple values down to a single summary.
+
+Can be used with any code that returns only one value, such as `mean()`, `sum()`, `min()`, `max()`, etc.
+
+```{r}
+survey %>% 
+  summarise(avg_travel_time = mean(travel_time, na.rm = TRUE))
+```
+
+What is the median time people spend on facebook and twitter?
+```{r}
+survey %>% 
+  summarise(social_hours = median(hours_facebook + hours_twitter, na.rm = TRUE))
+```
+
+#### Operating in groups
+
+* [`group_by()`](https://dplyr.tidyverse.org/reference/group_by.html): perform future operations in groups.
+
+A super powerful feature of `dplyr` for data manipulation! Apply future `dplyr` functions on various different groups.
+
+Is the average travel time different between travel type?
+
+```{r}
+survey %>% 
+  group_by(travel_method) %>% 
+  summarise(avg_travel_time = mean(travel_time, na.rm = TRUE))
+```
+
+```{r}
+survey %>% 
+  group_by(degree_type, uni_year) %>% 
+  summarise(total = n())
+```
+
+#### The power is in your hands!
+
+![](images/power.webp)
+
+
+#### Use this power wisely :)
+
+```{r, echo = TRUE, eval = FALSE}
+survey %>% 
+  filter(row_number() %in% sample(seq_len(n()), size = n()/2))
+
+# Or more simply with a shortcut:
+survey %>% 
+  sample_frac(0.5)
+```
+
+```{r, echo = FALSE}
+survey %>% 
+  sample_frac(0.5)
+```
+
+
+![](images/filter2.gif)
 
 #### Cheat sheet
 
 Click the link to download the pdf file of [dplyr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
-
 
 ## String manipulation
 
@@ -271,49 +500,35 @@ The `stringr` package provide a set of functions help you easier to working with
 
 Eight useful functions:
 
-* [str_detect(x, pattern)](https://stringr.tidyverse.org/reference/str_detect.html): tells you if there’s any match to the pattern.
+* [`str_detect(x, pattern)`](https://stringr.tidyverse.org/reference/str_detect.html): tells you if there’s any match to the pattern.
 
-* [str_count(x, pattern)](https://stringr.tidyverse.org/reference/str_count.html): counts the number of patterns.
+* [`str_count(x, pattern)`](https://stringr.tidyverse.org/reference/str_count.html): counts the number of patterns.
 
-* [str_subset(x, pattern)](https://stringr.tidyverse.org/reference/str_subset.html): extracts the matching components.
+* [`str_subset(x, pattern)`](https://stringr.tidyverse.org/reference/str_subset.html): extracts the matching components.
 
-* [str_locate(x, pattern)](https://stringr.tidyverse.org/reference/str_locate.html): gives the position of the match.
+* [`str_locate(x, pattern)`](https://stringr.tidyverse.org/reference/str_locate.html): gives the position of the match.
 
-* [str_extract(x, pattern)](https://stringr.tidyverse.org/reference/str_extract.html): extracts the text of the match.
+* [`str_extract(x, pattern)`](https://stringr.tidyverse.org/reference/str_extract.html): extracts the text of the match.
 
-* [str_match(x, pattern)](https://stringr.tidyverse.org/reference/str_match.html): extracts parts of the match defined by parentheses.
+* [`str_match(x, pattern)`](https://stringr.tidyverse.org/reference/str_match.html): extracts parts of the match defined by parentheses.
 
-* [str_replace(x, pattern, replacement)](https://stringr.tidyverse.org/reference/str_replace.html): replaces the matches with new text.
+* [`str_replace(x, pattern,` replacement)](https://stringr.tidyverse.org/reference/str_replace.html): replaces the matches with new text.
 
-* [str_split(x, pattern)](https://stringr.tidyverse.org/reference/str_split.html): splits up a string into multiple pieces.
+* [`str_split(x, pattern)`](https://stringr.tidyverse.org/reference/str_split.html): splits up a string into multiple pieces.
 
 
 #### What is a pattern?
 
-![https://xkcd.com/208/](https://imgs.xkcd.com/comics/regular_expressions.png)
+![https://xkcd.com/208/](https://imgs.xkcd.com/comics/regular_expressions.png){width="75%"}
+
+A pattern is a friendly word for "regular expression". It is a language for extracting sections of text from a document.
+
+[![](images/regexr.png)](https://regexr.com/){width="60%"}
+https://regexr.com/
 
 #### Cheat sheet
 
 Click the link to download the pdf file of [stringr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf)
-
-
-## Analyse survey data
-
-Before we start to analyse, download the following file from this website: http://bit.ly/MonashBA_R2
-
-* Survey description
-
-* Survey Data
-
-Save it into the `data` subdirectory of your project.
-
-![](images/Data_subdirectory.png){width="60%" height="60%"}
-
-Then
-
-![](https://media2.giphy.com/media/3ohuPwKuAoQYBgPEHK/giphy.gif)
-
-(gif from https://giphy.com/explore/lets-have-some-fun)
 
 ## Resources
 
