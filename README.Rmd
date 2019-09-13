@@ -147,6 +147,7 @@ knitr::kable(tb)
      <td><a href="workshop6/data/mortality.xlsx" download="mortality.xlsx">mortality.xlsx</a></td>
      <td><a href="workshop6/data/rock.csv" download="rock.csv">rock.csv</a></td>
      <td><a href="workshop6/data/survey.csv" download="survey.csv">survey.csv</a></td>
+     td><a href="workshop6/data/painters.csv" download="painters.csv">painters.csv</a></td>
      </tr>
      </table>
 <br>
