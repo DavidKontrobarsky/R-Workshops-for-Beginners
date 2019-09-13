@@ -49,8 +49,13 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <ol style="list-style-type: decimal">
 <li><p>Enter the link into your web browser : <a href="http://bit.ly/MonashBA_R2" class="uri">http://bit.ly/MonashBA_R2</a></p></li>
 <li><p>Go down to <code>Workshop Contents</code>, then click <code>Data Wrangling 2</code> to open the material of workshop</p></li>
+<li><p>Download the csv files which are a part of the workshop</p></li>
 </ol>
-<p>The helpers for today are:</p>
+<div id="section-speakers-david-kontrobarsky-geethanjali-gangula-william-tran" class="section level4">
+<h4><strong>Speakers</strong>: David Kontrobarsky, Geethanjali Gangula, William Tran</h4>
+</div>
+<div id="section-helpers" class="section level4">
+<h4><strong>Helpers</strong>:</h4>
 <ul>
 <li><p>Amy Tran</p></li>
 <li><p>Jefanny Suryawan</p></li>
@@ -60,6 +65,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Yuru Sun (Christina)</p></li>
 <li><p>Yih Ting Eng</p></li>
 </ul>
+</div>
 </div>
 <div id="section-what-are-missing-values" class="section level2">
 <h2>What are missing values?</h2>
@@ -84,7 +90,11 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 </div>
 <div id="section-visualising-missing-data" class="section level2">
-<h2>Visualising Missing Data <img src="http://visdat.njtierney.com/reference/figures/visdat-logo.png" style="width:10.0%" style="height:10.0%" /></h2>
+<h2>Visualising Missing Data</h2>
+<div class="figure">
+<img src="http://visdat.njtierney.com/reference/figures/visdat-logo.png" style="width:15.0%" style="height:15.0%" />
+
+</div>
 <div id="section-types-of-missing-data" class="section level3">
 <h3>Types of missing data</h3>
 <pre class="r"><code>library(visdat)
@@ -110,8 +120,12 @@ vis_dat(survey)</code></pre>
 </ul>
 </div>
 </div>
-<div id="section-naniar" class="section level2">
-<h2><a href="http://naniar.njtierney.com">naniar</a> <img src="images/naniar.png" style="width:10.0%" style="height:10.0%" /></h2>
+<div id="section-summarising-and-manipulating-missing-data" class="section level2">
+<h2>Summarising and Manipulating Missing Data</h2>
+<div class="figure">
+<img src="images/naniar.png" style="width:15.0%" style="height:15.0%" />
+
+</div>
 <p><a href="http://naniar.njtierney.com">naniar</a> is an important package which can summarise, visualise and manipulate missing data.</p>
 <p>It provides us with:</p>
 <ul>
@@ -119,8 +133,8 @@ vis_dat(survey)</code></pre>
 <li><p>shorthand and numerical summaries of missing data</p></li>
 <li><p>visualisation of missing data</p></li>
 </ul>
-<div id="section-summarise-missing-data" class="section level3">
-<h3>Summarise missing data</h3>
+<div id="section-summarising-missing-data" class="section level3">
+<h3>Summarising missing data</h3>
 <pre class="r"><code>library(naniar)
 miss_summary(survey)</code></pre>
 <div data-pagedtable="false">
@@ -134,8 +148,8 @@ miss_summary(survey)</code></pre>
 <li><p><code>miss_case_prop</code> - The proportion of cases with <span class="math inline">\(k\)</span> missings</p></li>
 </ul>
 </div>
-<div id="section-extend-ploting-missing-data-in-ggplot2" class="section level3">
-<h3>Extend ploting missing data in ggplot2</h3>
+<div id="section-plotting-missing-data-in-ggplot2" class="section level3">
+<h3>Plotting missing data in ggplot2</h3>
 <p>ggplot gives us a warning if there are missing values.</p>
 <pre class="r"><code>ggplot(survey_tidy,aes(x = uni_year, y = hours_facebook)) +
   geom_boxplot() + 
@@ -158,9 +172,9 @@ miss_summary(survey)</code></pre>
 <li><p>Create a heatmap to identify the proportion of character and integer variables</p></li>
 <li><p>Make a vismiss plot and summarise the missing data</p></li>
 </ul>
-<div id="section-lets-review" class="section level3">
-<h3>Let’s Review</h3>
 </div>
+<div id="section-lets-review" class="section level2">
+<h2>Let’s Review!</h2>
 </div>
 <div id="section-workshop-1---introduction-to-r-and-rstudio" class="section level2">
 <h2>Workshop 1 - Introduction to R and RStudio</h2>
@@ -316,7 +330,7 @@ mortality</code></pre>
 </div>
 <div id="section-workshop-5---data-wrangling" class="section level2">
 <h2>Workshop 5 - Data Wrangling</h2>
-<p><img src="images/datawrangling.jpg" style="width:100.0%" style="height:100.0%" /><br />
+<p><img src="images/datawrangling.jpg" style="width:50.0%" style="height:50.0%" /><br />
 <br></p>
 <p><strong>Credit to R memes for Statistical Fiends reddit page</strong></p>
 <p>Last week, in workshop 5 we learnt about data wrangling on the survey data. This is a key skill for analysts as most data in the real world doesn’t come in the correct format.</p>
@@ -412,7 +426,7 @@ table2_tidy</code></pre>
 <div id="section-your-turn-1" class="section level2">
 <h2>Your Turn!</h2>
 <ol style="list-style-type: decimal">
-<li>Load the data into R</li>
+<li>Load the data into R (painters.csv)</li>
 </ol>
 <ul>
 <li><code>read_csv()</code></li>
@@ -424,15 +438,14 @@ table2_tidy</code></pre>
 <li><code>glimpse()</code></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Tidy the data with <code>dplyr</code> and <code>tidyr</code></p></li>
-<li><p>Handle missing values <code>naniar</code></p></li>
+<li><p>Explore the <code>dplyr</code> and <code>tidyr</code> packages to tidy the data</p></li>
 <li><p>Create plots to understand the dataset</p></li>
 </ol>
 <ul>
 <li><code>ggplot()</code></li>
 </ul>
 <ol start="6" style="list-style-type: decimal">
-<li>Knit the Rmd file into html</li>
+<li>Knit the Rmd file into HTML</li>
 </ol>
 
 <script type="application/shiny-prerendered" data-context="server-start">
@@ -451,6 +464,8 @@ check_package <- function(package_name){
   if(!package_name %in% installed.packages())
     install.packages(package_name)
 }
+
+# Remove the # below will help you check and install the required pakckages.
 
 #check_package("tidyverse")
 #check_package("learnr")

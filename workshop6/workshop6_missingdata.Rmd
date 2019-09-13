@@ -45,7 +45,10 @@ check_package <- function(package_name){
 
 2. Go down to `Workshop Contents`, then click `Data Wrangling 2` to open the material of workshop
 
-The helpers for today are:
+3. Download the csv files which are a part of the workshop
+
+#### **Speakers**: David Kontrobarsky, Geethanjali Gangula, William Tran
+#### **Helpers**:
 
 * Amy Tran
 
@@ -84,7 +87,9 @@ There are several reasons as to why there may be missing values in dataset. For 
 ![](images/missings.png)
 
 
-## Visualising Missing Data ![](http://visdat.njtierney.com/reference/figures/visdat-logo.png){width="10%" height="10%"}
+## Visualising Missing Data 
+
+![](http://visdat.njtierney.com/reference/figures/visdat-logo.png){width="15%" height="15%"}
 
 ### Types of missing data
 
@@ -159,8 +164,9 @@ vis_miss(survey)
 
 * This type of plot exclusively tells us what values are missing and not
 
+## Summarising and Manipulating Missing Data 
 
-## [naniar](http://naniar.njtierney.com) ![](images/naniar.png){width="10%" height="10%"}
+![](images/naniar.png){width="15%" height="15%"}
 
 [naniar](http://naniar.njtierney.com) is an important package which can summarise, visualise and manipulate missing data. 
 
@@ -172,7 +178,7 @@ It provides us with:
 
 * visualisation of missing data
 
-### Summarise missing data
+### Summarising missing data
 
 ```{r}
 library(naniar)
@@ -185,8 +191,7 @@ miss_summary(survey)
 
 * `miss_case_prop` - The proportion of cases with $k$ missings
 
-
-### Extend ploting missing data in ggplot2
+### Plotting missing data in ggplot2
 
 ggplot gives us a warning if there are missing values. 
 
@@ -216,7 +221,7 @@ ggplot(survey_tidy, aes(x = uni_year,y = hours_facebook)) +
 * Make a vismiss plot and summarise the missing data
 
 
-### Let's Review
+## Let's Review!
 
 ## Workshop 1 - Introduction to R and RStudio
 
@@ -403,7 +408,7 @@ The Haven package allows us to read in datafiles from other statistical software
 
 ## Workshop 5 - Data Wrangling
 
-![](images/datawrangling.jpg){width="100%" height="100%"}  
+![](images/datawrangling.jpg){width="50%" height="50%"}  
 <br>
 
 **Credit to R memes for Statistical Fiends reddit page**
@@ -507,7 +512,7 @@ table2_tidy %>%
 
 ## Your Turn! 
 
-1. Load the data into R
+1. Load the data into R (painters.csv)
 
 * `read_csv()`
  
@@ -515,15 +520,13 @@ table2_tidy %>%
 
 * `glimpse()`
  
-3. Tidy the data with `dplyr` and `tidyr`
+3. Explore the `dplyr` and `tidyr` packages to tidy the data
 
-4. Handle missing values `naniar`
-
-5. Create plots to understand the dataset
+4. Create plots to understand the dataset
 
 * `ggplot()`
  
-6. Knit the Rmd file into html
+6. Knit the Rmd file into HTML
  
 
 
