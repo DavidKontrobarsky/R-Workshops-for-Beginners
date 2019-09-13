@@ -22,6 +22,8 @@ check_package <- function(package_name){
     install.packages(package_name)
 }
 
+# Remove the # below will help you check and install the required pakckages.
+
 #check_package("tidyverse")
 #check_package("learnr")
 #check_package("gridExtra")

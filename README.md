@@ -123,13 +123,13 @@ Workshop Contents
 
     -   Speaker: [Mitchell O'Hara-Wild](https://www.mitchelloharawild.com)
 
-    -   Download slides: <a href="workshop5/workshop5_datawrangling.Rmd" download="workshop5_datawrangling.Rmd">Rmd</a>
+    -   Download slides: <a href="workshop5/workshop5_datawrangling.Rmd" download="workshop5_datawrangling.Rmd"></a>
 
     -   <a href="workshop5/data/survey_description.pdf" download="survey_description.pdf">Survey description</a>
 
     -   <a href="workshop5/data/survey_data.csv" download="survey_data.csv">Survey data</a>
 
--   Workshop 6 - Data Wrangling 2 (13 September)
+-   Workshop 6 - [Data Wrangling 2 (13 September)]((https://ebsmonash.shinyapps.io/workshop6_missingdata/))
 
     -   Speakers: David Kontrobarsky, Geethanjali Gangula, William Tran
 
