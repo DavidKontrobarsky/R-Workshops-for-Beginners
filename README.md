@@ -129,7 +129,7 @@ Workshop Contents
 
     -   <a href="workshop5/data/survey_data.csv" download="survey_data.csv">Survey data</a>
 
--   Workshop 6 - [Data Wrangling 2 (13 September)]((https://ebsmonash.shinyapps.io/workshop6_missingdata/))
+-   Workshop 6 - [Data Wrangling 2 (13 September)](https://ebsmonash.shinyapps.io/workshop6_missingdata/)
 
     -   Speakers: David Kontrobarsky, Geethanjali Gangula, William Tran
 
