@@ -22,19 +22,19 @@ check_package <- function(package_name){
     install.packages(package_name)
 }
 
-check_package("tidyverse")
-check_package("learnr")
-check_package("gridExtra")
-check_package("GGally")
-check_package("gapminder")
-check_package("lubridate")
-check_package("visdat")
-check_package("naniar")
-check_package("readxl")
+#check_package("tidyverse")
+#check_package("learnr")
+#check_package("gridExtra")
+#check_package("GGally")
+#check_package("gapminder")
+#check_package("lubridate")
+#check_package("visdat")
+#check_package("naniar")
+#check_package("readxl")
 
-check_package("devtools")
-if(!"DSR" %in% installed.packages())
-    devtools::install_github("garrettgman/DSR")
+#check_package("devtools")
+#if(!"DSR" %in% installed.packages())
+#    devtools::install_github("garrettgman/DSR")
 ```
 
 ## Introduction and set up
@@ -521,7 +521,7 @@ table2_tidy %>%
 
 * `ggplot()`
  
-6. Knit the Rmd file into Html
+6. Knit the Rmd file into html
  
 
 

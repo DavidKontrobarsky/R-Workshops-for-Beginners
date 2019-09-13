@@ -91,7 +91,7 @@ then save it under the `data` sub directory of your project.
 
 #### **Speaker** : [Earo Wang](https://earo.me)
 
-####**Helpers** :
+#### **Helpers** :
 
 * David Kontrobarsky
 
@@ -723,7 +723,7 @@ class(as.data.frame(ggplot2::midwest))
 
 ### Videos
 
-- [Data Science Essntials](https://resources.rstudio.com/the-essentials-of-data-science)
+- [Data Science Essentials](https://resources.rstudio.com/the-essentials-of-data-science)
 
 - [useR! 2018 beginners tutorial: RCurious](https://www.youtube.com/watch?v=AmqxVDlfKQY)
 
