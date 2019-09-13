@@ -133,7 +133,35 @@ Workshop Contents
 
     -   Speakers: David Kontrobarsky, Geethanjali Gangula, William Tran
 
-    -   Download slides
+    -   Download slides: <a href="workshop6/workshop6_missingdata.Rmd" download="workshop6_missingdata.Rmd">Rmd</a>
+
+    -   Download data:
+
+    <table>
+    <tr>
+    <td>
+    <a href="workshop6/data/CO2.tsv" download="CO2.tsv">CO2.tsv</a>
+    </td>
+    <td>
+    <a href="workshop6/data/deaths.xlsx" download="deaths.xlsx">deaths.xlsx</a>
+    </td>
+    <td>
+    <a href="workshop6/data/iris.csv" download="iris.csv">iris.csv</a>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <a href="workshop6/data/mortality.xlsx" download="mortality.xlsx">mortality.xlsx</a>
+    </td>
+    <td>
+    <a href="workshop6/data/rock.csv" download="rock.csv">rock.csv</a>
+    </td>
+    <td>
+    <a href="workshop6/data/survey.csv" download="survey.csv">survey.csv</a>
+    </td>
+    </tr>
+    </table>
+    <br>
 
 ![](images/Hexwall.png)
 
