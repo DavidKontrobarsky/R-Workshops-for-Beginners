@@ -20,7 +20,7 @@ check_package("dplyr")
 check_package("stringr")
 
 library(learnr)
-knitr::opts_chunk$set(echo = FALSE,   
+knitr::opts_chunk$set(echo = TRUE,   
                       message = FALSE,
                       warning = FALSE,
                       collapse = TRUE,
@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = FALSE,
 tutorial_html_dependency()
 ```
 
-```{r data-prep, eval = FALSE}
+```{r data-prep, eval = FALSE, echo = FALSE}
 library(tidyverse)
 library(lubridate)
 tsibble::tourism %>% 
