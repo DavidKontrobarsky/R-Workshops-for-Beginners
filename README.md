@@ -159,6 +159,8 @@ Workshop Contents
     <td>
     <a href="workshop6/data/survey.csv" download="survey.csv">survey.csv</a>
     </td>
+    td&gt;<a href="workshop6/data/painters.csv" download="painters.csv">painters.csv</a>
+    </td>
     </tr>
     </table>
     <br>
