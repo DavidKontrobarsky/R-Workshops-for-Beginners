@@ -148,11 +148,11 @@ Workshop Contents
     <td>
     <a href="workshop6/data/iris.csv" download="iris.csv">iris.csv</a>
     </td>
-    </tr>
-    <tr>
     <td>
     <a href="workshop6/data/mortality.xlsx" download="mortality.xlsx">mortality.xlsx</a>
     </td>
+    </tr>
+    <tr>
     <td>
     <a href="workshop6/data/rock.csv" download="rock.csv">rock.csv</a>
     </td>
@@ -161,6 +161,8 @@ Workshop Contents
     </td>
     <td>
     <a href="workshop6/data/painters.csv" download="painters.csv">painters.csv</a>
+    </td>
+    <td>
     </td>
     </tr>
     </table>
