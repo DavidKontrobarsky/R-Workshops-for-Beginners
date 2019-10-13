@@ -231,15 +231,6 @@ Installation
 
 -   [Install RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-Sign up
--------
-
-**Scan** the QR code to sign up:
-
-<img src="images/Signup_QRcode.png" style="width:40.0%" style="height:40.0%" />
-
-Or **click** this [**link**](https://docs.google.com/forms/d/1umPW5ooUfOoKhLB-5ehamH9tKTphBEtyc5G6EXfYpN8/viewform?edit_requested=true).
-
 Poster for R Workshops
 ----------------------
 
